@@ -1,0 +1,1574 @@
+ANIMAL REVOLUTION (Working Title)
+GAME DESIGN DOCUMENT
+Version 0.1
+Created: April 30, 2026
+
+	==================================================
+	1. HIGH CONCEPT
+	==================================================
+
+Animal Revolution is a cozy-dark satire management and exploration game inspired by George Orwell’s Animal Farm and modern factory farming systems.
+
+The player begins as one of two revolutionary dogs living in a human-owned apartment building. After overthrowing their owner, the dogs begin transforming the building into an animal-run society. As the sanctuary expands, animals take over different systems within the tower:
+- Rodents grow vegetables
+- Cats manage meat production
+- Fish maintain water systems
+- Spiders provide medicine
+- Parrots lure in more humans
+- Dogs govern leadership, trade, and propaganda
+
+The player gradually shifts from obedient revolutionary to independent decision-maker as the ruling dog becomes increasingly lazy and privileged.
+
+The game blends:
+- Top/down 2D exploration
+- Floor-by-floor management
+- Day/night cycle
+- Automation progression
+- Moral and ideological choices
+
+Tone:
+Cute, cozy pixel world with deeply satirical systems.
+
+	==================================================
+	2. CORE THEMES
+	==================================================
+
+- Revolution and corruption
+- Factory farming satire
+- Class systems
+- Labor exploitation
+- Ethical reform
+- Comfort vs oppression
+- Political hierarchy
+- Resource optimization
+
+Core Question:
+Can a revolution avoid becoming the thing it overthrew?
+
+	==================================================
+	3. GAMEPLAY STRUCTURE
+	==================================================
+
+CORE LOOP:
+Explore -> Build -> Recruit -> Automate -> Expand -> Decide
+
+EARLY GAME:
+- Manual labor
+- Capture humans
+- Build rooftop garden
+- Gather resources (wood, plastic)
+- Rodent construction ->
+- Build simple housing
+- Recruit first animals
+- Unlock cats
+- Human farming begins
+
+MID GAME:
+
+/ unlock fish, spiders and birds
+- Therapy systems
+- Build tank ->
+- automizing 
+- start selling products (store)
+- Sickness and medicine
+- build outdoor area to humans
+-> make quality products
+- recruit new humans (parrots will help)
+- spiders create medicine
+
+LATE GAME:
+
+- Wise elder can be found
+- Ethical branching paths
+- Potential vegan sanctuary route
+- Potential dog takeover route
+
+	==================================================
+	4. WORLD STRUCTURE
+	==================================================
+
+SETTING:
+A large occupied, U-shaped apartment building gradually overtaken by animals. Two wings, animal and human. 
+
+BUILDING LAYOUT:
+Number presents floor number
+
+
+6. ROOFTOP:
+- Vegetable garden
+- Medicinal herb garden
+- Maintenance hut
+- Rodent society
+
+ANIMAL WING:
+
+	5. PENTHOUSE / DOG FLOOR:
+	- Dog apartments
+	- Leadership center
+	- Outside relations
+
+	4. EMPTY FLOOR (first hamster found)
+	- gather recources
+
+	3. CAT FLOOR:
+	- Cats
+	
+	2. THERAPY FLOOR
+	- mostly empty to find recources 
+
+	1. SPIDER HOSPITAL
+	- Spider hospital
+	- Make this floor dark!
+
+	0. BASEMENT:
+	- Fish tank
+	- Water purification
+	- Irrigation systems
+
+HUMAN WING:
+
+	5. PENTHOUSE :
+	- Birds nests
+
+	4. 3. MID FLOORS:
+	- Human containment
+
+	2. VICITOR CENTER
+	- capture humans here!
+
+	1. SHOP
+	- sell products
+
+	0. BASEMENT
+	-?
+	- vegan recourse center?
+
+
+YARD:
+- in the middle of the building. Enter from floor 1.
+- human feeding area
+- Late-game free-range human yard
+
+
+HIDDEN / QUIET AREAS:
+- rooftop shed, home of the monkey
+
+	==================================================
+	5. DAY / NIGHT CYCLE
+	==================================================
+
+DAY:
+- Player explores
+- Builds
+- Talks to animals
+- Completes missions
+- Manages systems manually
+
+NIGHT:
+- Cats butcher humans (while asleep)
+- Fish clean tanks
+- Sanctuary processes resources
+- Happiness updates
+- Automation occurs
+
+Morning Report:
+- Vegetables grown
+- Meat produced
+- Cat mental health
+- Human health
+- Water quality
+
+	==================================================
+	6. SPECIES SYSTEMS
+	==================================================
+
+DOGS (Ruling Class / Orwell’s Pigs)
+Role:
+- Leadership
+- Store management
+- Human luring
+- Propaganda
+- Tutorial guidance
+
+Needs:
+- Comfort
+- Spacious housing
+- Authority
+
+Arc:
+Liberators -> Leaders -> Elite Class
+
+---
+
+PLAYER DOG
+Starts under command of second dog.
+Eventually makes independent ideological choices.
+
+---
+
+SECOND DOG (Leader)
+- Gives quests
+- Teaches systems
+- Represents corruption of power
+
+---
+
+CATS (Working Class)
+Role:
+- Human butchery
+- Meat production
+- Processing
+
+Needs:
+- Meat
+- Therapy
+- Rest
+
+Theme:
+Labor trauma, exploitation, survival necessity
+
+---
+
+RODENTS (Mass Labor)
+Includes:
+- Rats
+- Hamsters
+- Rabbits
+
+Role:
+- Gardening
+- Construction
+- Scrap sorting
+
+Needs:
+- Vegetables
+- Shelter
+
+Theme:
+Passive workforce, simple survival
+
+---
+
+FISH (Infrastructure)
+Role:
+- Water purification
+- Tank maintenance
+- Irrigation support
+
+Needs:
+- Clean water
+- Functional tank
+
+Theme:
+Invisible essential labor
+
+---
+
+SPIDERS (Medical Class)
+Includes:
+- Tarantula doctor
+- Small spider nurses
+
+Role:
+- Medicine
+- Human disease prevention
+- Animal healthcare
+- Herbalism
+
+Needs:
+- Medicinal herbs
+- Quiet
+- Cleanliness
+
+Theme:
+Truth, biology, healing
+
+---
+
+PARROTS (Propaganda / Recruitment)
+Role:
+- Mimic humans
+- Lure outsiders
+- Marketing
+- Messaging
+
+Needs:
+- Socialization
+- Seeds
+- Enrichment
+
+Theme:
+Advertising, manipulation
+
+---
+
+WISE ELDER (Late Game)
+Possible species:
+- Monkey
+- some super random animal?
+
+Role:
+- Moral philosophy
+- Rights discussion
+- Alternate endings
+- Vegan path
+
+Theme:
+Conscience, reflection
+
+	==================================================
+	7. HUMAN SYSTEM
+	==================================================
+
+EARLY:
+- Captured owner
+- Emergency meat source
+
+MID:
+- Managed livestock
+- Fed with rooftop scraps
+- Milk + meat systems
+
+LATE:
+- Free-range yard
+- Premium production
+- Ethical choices
+
+Human Needs:
+- Food scraps
+- Water
+- Sleep
+- Space
+- Health
+
+System Philosophy:
+Better care = better yield
+
+Theme:
+Factory farming inversion
+
+	==================================================
+	8. RESOURCE SYSTEMS
+	==================================================
+
+PRIMARY:
+- Vegetables
+- Water
+- Meat
+- Milk
+- Herbs
+- Scraps
+- housing
+
+SECONDARY:
+- Therapy
+- Cleanliness
+- Happiness
+- Human health
+
+	==================================================
+	9. HAPPINESS SYSTEM
+	==================================================
+
+Failure is soft, not catastrophic.
+
+Unhappy species:
+- Work slower
+- Produce less
+- Dialogue changes
+
+Happy species:
+- Bonuses
+- Better automation
+- Unlock upgrades
+
+Examples:
+Cats -> Better butchery
+Rodents -> Faster gardening
+Fish -> Cleaner systems
+Humans -> Better yield
+
+	==================================================
+	10. STORY ARC
+	==================================================
+
+CHAPTER 1:
+The First Bite
+- Overthrow owner
+- Claim apartment
+
+CHAPTER 2:
+Food Security
+- Build rooftop garden
+- Rodent recruitment
+
+CHAPTER 3:
+Industrialization
+- Cats
+- Human farming
+- Therapy
+
+CHAPTER 4:
+Expansion
+- Cellar tank
+- Fish systems
+- Spider
+- More floors
+
+CHAPTER 5:
+Reflection
+- Monkey can be found
+- Reform vs exploitation
+
+	==================================================
+	11. POSSIBLE ENDINGS
+	==================================================
+
+ENDING A:
+Industrial Dog Empire
+
+ENDING B:
+Balanced Animal Kingdom
+
+ENDING C:
+Vegan Sanctuary Liberation
+
+	==================================================
+	12. VISUAL STYLE
+	==================================================
+
+- Cute pixel art, 32 x 32 tiles
+- Cozy apartment building
+- Warm colors
+- Clean UI
+- Satirical contrast
+
+Style Goal:
+Adorable world, unsettling systems
+
+	==================================================
+	13. MVP (FIRST PLAYABLE BUILD)
+	==================================================
+
+Required:
+- dog movement (left, right, up, down)
+- Elevator
+- Owner takeover
+- Rooftop garden
+- Rodent helpers
+- Basic day/night
+- Resource bars
+
+Future systems can expand from this foundation.
+
+	==================================================
+	14. DESIGN PILLAR
+	==================================================
+
+“Build comfort on top of unsettling systems.”
+
+Animal Revolution is a cozy political satire where management, morality, and revolution slowly intertwine.
+
+
+	==================================================
+	15. PLAYER CORE ACTIONS & INTERACTION SYSTEMS
+	==================================================
+
+MOVEMENT:
+- Walk
+- Ride elevator
+- Use staircase (slow, secretive, optional)
+- Explore unlocked floors
+- Open unlocked doors
+- Attack (humans)
+
+INTERACTION:
+- Talk to animals
+- Talk to humans
+- Recruit animals
+- Recruit humans
+(- Assign jobs to recruited animals) -> will automatically do this)
+- Interact with environment
+- Collect items
+- Carry items (5 inventory slots at start)
+- Drop/use items
+- Carry products to store
+- Destroy walls between apartments
+
+ITEM TYPES:
+- Water bottle
+- Seeds
+- Scrap wood
+- Plastic pieces
+- Tape
+- Hot glue
+- Pillows
+- Herbs
+- Hose
+- Food products
+
+NPC LABOR:
+Hamsters:
+- Dig soil
+- Build simple structures (wood + nails + tape)
+- Build hose from:
+  Plastic + Tape + Hot Glue
+- Build beds (pillows + wood)
+- Basic construction
+
+Dogs:
+- Leadership
+- Recruitment
+- Shopkeeping
+- Expansion
+
+Cats:
+- Night butchery
+- Meat systems
+
+Fish:
+- Water purification
+
+Spiders:
+- Medical care
+- Herbal healing
+
+Therapy animal!
+- tend cats
+
+	==================================================
+	16. WEEK ONE GAMEPLAY FLOW
+	==================================================
+
+DAY 1:
+- Overthrow owner
+- Claim apartment
+- Explore hallway
+- Find elevator
+- Meet granny + poodle
+- Return home
+- Sleep
+
+DAY 2:
+- Explore apartment
+- Find water bottle
+- Reach rooftop
+- Find hamster
+- Find seeds
+- Plant seeds
+- Water manually
+- Sleep
+
+DAY 3:
+- Free poodle
+- Capture granny
+- Explore timed apartments
+- Water crops
+- Find scrap wood
+- Hamster requests house
+- Sleep
+
+DAY 4:
+- learn to destroy walls (from leader dog)
+- Water crops
+- Explore dog floor + hamster floor
+- Gather seeds
+- Gather scrap wood
+- Build hamster shelter
+- Sleep
+
+DAY 5:
+- First harvest
+- Gather crops
+- Replant
+- Leader dog dissatisfied with vegetables alone
+- Expand apartment takeover
+- Sleep
+
+DAY 6:
+- New dogs recruited
+- Find pillows
+- Hamsters build dog beds
+- Expand dog housing
+- Water crops
+- Sleep
+
+DAY 7:
+- Cat floor opens
+- Explore cat floor
+- Cats introduced
+- Moral shift begins
+
+	==================================================
+	17. STRUCTURAL EXPANSION
+	==================================================
+
+Players can destroy walls between apartments.
+
+PURPOSE:
+- Gather wood
+- Expand living spaces
+- Improve morale
+- Create larger class divisions
+- Symbolize destruction of old systems
+
+EARLY:
+- Manual clawing
+
+MID:
+- animal assistance
+
+Possibly LATE:
+- Automated renovation
+
+DESIGN NOTE:
+Wall destruction should always provide useful fallback gameplay if the player runs out of tasks.
+Mark the walls that can be destroyed with different colour!
+
+	==================================================
+	18. ECONOMY & BILLS
+	==================================================
+
+BUILDING REQUIRES:
+- Electricity payments
+- Water payments
+
+SHOP:
+- Sell excess vegetables
+- Sell milk
+- Sell meat
+- Sell later premium products
+
+VISITOR CENTER:
+- Attract new humans
+- Expand recruitment
+- Increase production
+
+FAILURE STATE:
+Bills should create inconvenience, not total collapse.
+
+Examples:
+- Elevator slows
+- Lights dim
+- Water pressure weakens
+
+Late Game:
+- Expand to neighboring buildings
+- Full industrialization OR ethical reform
+
+
+
+	==================================================
+	19. FARMING SYSTEM
+	==================================================
+
+CORE PURPOSE:
+Farming is the first major renewable survival system and the foundation of early-game food security.
+
+EARLY GAME:
+- Player manually plants
+- Player manually waters
+- Limited seeds
+- Limited planting space
+- Hamsters assist later
+- Fish eventually improve automation
+
+==================================================
+19A. ROOFTOP FARM LAYOUT
+==================================================
+
+STARTING ROOFTOP:
+- 4 planting pots total (not all necessarily available immediately)
+- Recommended early unlock pacing:
+  - Week 1 Start: 1–2 pots active
+  - Later: Additional pots unlocked
+- Each pot:
+  - 4x4 planting grid (16 spaces)
+  - 1 plant per square
+
+FULL ROOFTOP POTENTIAL:
+- 4 pots = 64 total plants
+
+DESIGN NOTE:
+Starting with fewer active plots reduces early repetitive watering and preserves cozy pacing.
+
+==================================================
+19B. CROP TYPES
+==================================================
+
+CARROT:
+- Growth Time: 4 days
+- Yield:
+  - 1 carrot
+  - 1 seed
+- Purpose:
+  - Reliable starter crop
+  - Basic rodent food
+
+---
+
+POTATO:
+- Growth Time: 6 days
+- Yield:
+  - 2 potatoes
+  - Random chance for 2 seeds
+- Purpose:
+  - Bulk food
+  - More stable crop economy
+
+---
+
+CUCUMBER:
+- Growth Time: 10 days initial
+- Yield:
+  - 5 cucumbers
+  - Random chance for 1 seed
+- Special:
+  - Vine crop
+  - Only needs planting once
+- Purpose:
+  - Long-term investment crop
+  - High output
+
+---
+
+SUNFLOWER:
+- Growth Time: 8 days
+- Yield:
+  - 6 seeds
+  - 1 flower
+- Purpose:
+  - Seeds, Bird food	
+  - Flower, can be sold for high price
+  - Possible therapy / morale bonus
+
+==================================================
+19C. WATERING RULES
+==================================================
+
+PLAYER WATERING:
+- Water bottle required
+- One bottle waters 6 plants
+- Bottle filled from sink/tap
+- Plants must be watered before player sleeps
+
+IF WATERED:
+- Growth progresses by 1 day
+
+IF NOT WATERED:
+- Plant does not grow that day
+
+DESIGN PHILOSOPHY:
+No crop death from missing one day.
+Failure is delay, not punishment.
+
+==================================================
+19D. HAMSTER FARM SUPPORT
+==================================================
+
+HAMSTER WATERING:
+One hamster automatically waters plants during night.
+
+BASE OUTPUT:
+- Happy hamster: 3 plants
+- Sad hamster: 2 plants
+
+HAMSTER NEEDS:
+- Vegetables
+- Shelter
+
+PURPOSE:
+Reduce player burden while preserving farming involvement.
+
+==================================================
+19E. FISH TANK WATERING SYNERGY
+==================================================
+
+Fish improve hamster watering efficiency.
+
+FISH ROLE:
+- Maintain water systems
+- Improve irrigation support
+- Require hose expansion and tank maintenance
+
+FISH TANK MAINTENANCE:
+- Player collects additional hoses
+- maintain tank
+- Better tank = happier fish
+- Neglected tank = sad fish
+
+WATERING COMBINATIONS:
+
+Happy Fish + Happy Hamster:
+- 8 plants watered/night
+
+One Happy + One Sad:
+- 6 plants watered/night
+
+Sad Fish + Sad Hamster:
+- 4 plants watered/night
+
+DESIGN PURPOSE:
+Creates interconnected species systems:
+Fish health + Hamster happiness = Farming efficiency
+
+==================================================
+19F. SEED DISCOVERY & PROGRESSION
+==================================================
+
+EARLY GAME:
+- Carrot + potato seeds found in apartments
+- Limited quantity
+
+MID GAME:
+- More seed variety unlocked
+- Cucumber seeds
+- Sunflowers
+- some other crops and roses?
+
+LATE GAME:
+- Medicinal herbs
+- Advanced crops
+- Vegan route resources
+
+SEED SOURCES:
+- Apartment kitchens
+- Harvested crops
+- Exploration rewards
+- Trade/shop systems
+
+==================================================
+19G. FARMING PROGRESSION ARC
+==================================================
+
+STAGE 1:
+Manual survival
+- Player plants
+- Player waters
+
+STAGE 2:
+Hamster support
+- Partial night watering
+
+STAGE 3:
+Fish synergy
+- Better watering through infrastructure
+
+STAGE 4:
+Irrigation system
+- Rodent + fish automation
+
+==================================================
+19H. DESIGN NOTES
+==================================================
+
+KEY DESIGN GOALS:
+- Farming should feel cozy, not punishing
+- Watering should matter early
+- Automation should feel earned
+- Resource loops should encourage exploration
+- Rooftop should become an emotional “safe zone”
+
+SYMBOLISM:
+The rooftop garden represents hope, rebellion, and the first true act of building a new society.
+
+
+	==================================================
+	20. INVENTORY & ITEM MANAGEMENT SYSTEM
+	==================================================
+
+CORE PURPOSE:
+Inventory supports exploration, farming, construction, feeding, selling, and resource transport.
+
+The system should feel flexible and cozy, not punishing.
+
+==================================================
+20A. PLAYER INVENTORY
+==================================================
+
+STARTING INVENTORY:
+- Player starts with 5 inventory slots.
+- Items are stackable.
+- Default stack limit: 20.
+- Stack limits should be coded per item so values can be changed during playtesting.
+
+DESIGN NOTE:
+Exact stack sizes will be balanced later through testing.
+
+==================================================
+20B. ACTIVE ITEM SLOT
+==================================================
+
+Player has one special “active / in-use” item slot.
+
+The active item is used when the player interacts with the world.
+
+Possible active items:
+- Seeds -> plant
+- Water bottle -> water plants
+- Claws / attack symbol -> attack humans or destroy walls
+
+DESIGN PURPOSE:
+Keeps interaction simple and readable.
+Inspired by tool/item use in cozy farming games.
+
+==================================================
+20C. ITEM MOVEMENT
+==================================================
+
+Player can:
+- Move items inside inventory
+- Stack matching items
+- Split stacks if needed
+- Place items into storage
+- Take items from storage
+- Carry products to shop
+- Move food to feeding systems
+
+==================================================
+20D. STORAGE SYSTEM
+==================================================
+
+EARLY STORAGE:
+- Storage inside home apartment.
+
+MID GAME STORAGE:
+- Floor 4 can become a larger storage area.
+
+FUTURE STORAGE:
+- Species/floor-specific storage may be added later.
+
+DESIGN PURPOSE:
+Storage supports expansion without forcing the player to carry everything manually forever.
+
+==================================================
+20E. FEEDING SYSTEM
+==================================================
+
+ROOFTOP FEEDING BOX:
+- Player puts animal food into the rooftop feeding box.
+- Animals eat from it during the night.
+- Food inside is converted into leftovers.
+
+LEFTOVER TUBE:
+- Leftovers are placed into a feeding tube next to the box.
+- The tube sends leftovers to the human factory.
+
+SYSTEM LOOP:
+Crops -> Feeding Box -> Animals eat -> Leftovers -> Tube -> Humans
+
+DESIGN PURPOSE:
+Creates a clear resource chain between farming, animal care, and human farming.
+
+==================================================
+20F. BALANCING NOTES
+==================================================
+
+DEFAULT STACK LIMIT:
+- Start with 20 for most items.
+
+POSSIBLE FUTURE ITEM-SPECIFIC LIMITS:
+- Seeds: 20
+- Vegetables: 20
+- Scrap wood: 20
+- Plastic: 20
+- Tape: 10
+- Hot glue: 10
+- Hose: 1
+- Water bottle: 1
+- Pillows: 5
+
+These values are placeholders and should be adjusted after playtesting.
+
+==================================================
+20G. DESIGN RISKS
+==================================================
+
+RISK:
+Too much carrying becomes tedious.
+
+SOLUTION:
+- Add storage early.
+- Add larger storage later.
+- Let animals automate some transport in later chapters.
+- Keep stack sizes generous.
+
+	==================================================
+	21. PLAYER MOVEMENT & NAVIGATION SYSTEM
+	==================================================
+
+PLATFORM PRIORITY:
+Primary platform:
+- Desktop (keyboard-first)
+
+GAMEPLAY STYLE:
+- Top-down 2D exploration
+- Stardew Valley style movement
+- Grid-friendly design
+- No jumping
+
+DESIGN PURPOSE:
+Supports farming, room management, exploration, and interaction clarity.
+
+==================================================
+21A. CORE MOVEMENT
+==================================================
+
+Smooth, free movement (althou items placed in grid).
+
+PLAYER CAN:
+- Move up
+- Move down
+- Move left
+- Move right
+- Use elevator
+- Use staircase
+- Enter unlocked doors
+- Exit rooms
+- Explore freely
+- Carry items while moving
+
+CONTROLS:
+- W = Up
+- A = Left
+- S = Down
+- D = Right
+
+==================================================
+21B. ACTIVE ITEM / ATTACK BUTTON
+==================================================
+
+PRIMARY ACTION BUTTON:
+- Spacebar OR Left Mouse Click (when inventory is closed)
+
+FUNCTION:
+Uses currently equipped usable-item-slot item.
+
+ACTION TARGET:
+The tile directly in front of the player based on facing direction.
+
+EXAMPLES:
+- Seeds -> Plant
+- Water bottle -> Water
+- Claws -> Attack / destroy wall
+- Hose -> Connect
+- Food -> Feed
+
+DESIGN PURPOSE:
+One-button contextual interaction system
+
+==================================================
+21C. INTERACTION BUTTON
+==================================================
+
+INTERACT:
+- E key
+
+PURPOSE:
+- Talk to NPCs
+- Open doors
+- Access storage
+- Use elevator
+- Trigger events
+
+==================================================
+21D. ELEVATOR SYSTEM
+==================================================
+
+PURPOSE:
+Fast vertical movement between floors
+
+FUNCTION:
+- Enter elevator
+- Select unlocked floor
+- Travel
+
+==================================================
+21E. STAIRCASE SYSTEM
+==================================================
+
+PURPOSE:
+Slower optional route
+
+FEATURES:
+- Hidden NPCs
+- Secret resources
+- Humor
+- Exploration
+
+==================================================
+21F. MOVEMENT PHILOSOPHY
+==================================================
+
+GOALS:
+- Cozy
+- Precise
+- Responsive
+- Grid-compatible
+- Easy farming
+
+AVOID:
+- Platforming
+- Jump systems
+- Overly complex controls
+
+==================================================
+21. PLAYER MOVEMENT & NAVIGATION SYSTEM
+==================================================
+
+PLATFORM PRIORITY:
+Primary platform:
+- Desktop (keyboard-first)
+
+GAMEPLAY STYLE:
+- Top-down 2D exploration
+- Stardew Valley style movement
+- Grid-friendly design
+- No jumping
+
+DESIGN PURPOSE:
+Supports farming, room management, exploration, and interaction clarity.
+
+==================================================
+21A. CORE MOVEMENT
+==================================================
+
+PLAYER CAN:
+- Move up
+- Move down
+- Move left
+- Move right
+- Use elevator
+- Use staircase
+- Enter unlocked doors
+- Exit rooms
+- Explore freely
+- Carry items while moving
+
+CONTROLS:
+- W = Up
+- A = Left
+- S = Down
+- D = Right
+
+==================================================
+21B. ACTIVE ITEM / ATTACK BUTTON
+==================================================
+
+PRIMARY ACTION BUTTON:
+- Spacebar OR Left Mouse Click (when inventory is closed)
+
+FUNCTION:
+Uses currently equipped usable-item-slot item.
+
+ACTION TARGET:
+The tile directly in front of the player based on facing direction.
+
+EXAMPLES:
+- Seeds -> Plant
+- Water bottle -> Water
+- Claws -> Attack / destroy wall
+- Hose -> Connect
+- Food -> Feed
+
+DESIGN PURPOSE:
+One-button contextual interaction system
+
+==================================================
+21C. INTERACTION BUTTON
+==================================================
+
+INTERACT:
+- E key
+
+PURPOSE:
+- Talk to NPCs
+- Open doors
+- Access storage
+- Use elevator
+- Trigger events
+
+==================================================
+21D. ELEVATOR SYSTEM
+==================================================
+
+PURPOSE:
+Fast vertical movement between floors
+
+FUNCTION:
+- Enter elevator
+- Select unlocked floor
+- Travel
+
+==================================================
+21E. STAIRCASE SYSTEM
+==================================================
+
+PURPOSE:
+Slower optional route
+
+FEATURES:
+- Hidden NPCs
+- Secret resources
+- Humor
+- Exploration
+
+==================================================
+21F. MOVEMENT PHILOSOPHY
+==================================================
+
+GOALS:
+- Cozy
+- Precise
+- Responsive
+- Grid-compatible
+- Easy farming
+
+AVOID:
+- Platforming
+- Jump systems
+- Overly complex controls
+
+	==================================================
+	22. VISUAL & UI STRUCTURE
+	==================================================
+
+VISUAL STYLE:
+- Cute pixel art
+- Cozy but unsettling
+- Top-down 2D exploration (Stardew-style)
+- Warm but satirical
+- Clear interactable spaces
+- Distinct floor identities by color/theme
+
+STYLE GOAL:
+Adorable world, unsettling systems
+
+==================================================
+22A. SCREEN STRUCTURE
+==================================================
+
+CORE LAYOUT:
+- Main gameplay area focused on room/apartment exploration
+- Top-down movement
+- Apartments and hallways as modular spaces
+- Elevator and stairs as navigation anchors
+- Right sidebar UI
+
+DESIGN PURPOSE:
+Keep gameplay field readable while separating management information.
+
+==================================================
+22B. RIGHT SIDEBAR UI
+==================================================
+
+TOP:
+- Time / Day-Night Circle Clock
+
+UPPER:
+- Health bar
+- Stamina bar
+
+MIDDLE:
+- Active / Usable Item Slot (larger than standard slots)
+- Current equipped item:
+  Examples:
+  - Seeds
+  - Water bottle
+  - Claws
+
+LOWER:
+- 5 Inventory Slots
+
+BOTTOM:
+- Species Happiness Icons:
+  - Rodent
+  - Cat
+  - Fish
+  - (Expandable later)
+
+==================================================
+22C. ACTIVE ITEM SYSTEM
+==================================================
+
+PRIMARY ACTION BUTTON:
+- Spacebar OR Left Mouse Click (when inventory closed)
+
+FUNCTION:
+Uses current active item on tile directly in front of player.
+
+EXAMPLES:
+- Seeds -> Plant
+- Water bottle -> Water
+- Claws -> Attack / Destroy
+- Hose -> Connect
+- Food -> Feed
+
+DESIGN GOAL:
+One-button contextual interaction system
+
+==================================================
+22D. VISUAL LANGUAGE
+==================================================
+
+INTERACTABLE OBJECTS:
+Should be visually readable at a glance:
+- Doors
+- Locked doors
+- Destroyable walls
+- Furniture
+- Loot points
+- NPCs
+
+RECOMMENDATION:
+Use visual markers:
+- Cracks for breakable walls
+- Color differences
+- Symbolic furniture
+
+==================================================
+22E. FLOOR VISUAL THEMES
+==================================================
+
+ROOFTOP:
+- Greens
+- Natural tones
+- Hope
+
+DOG FLOOR:
+- Warm luxury
+- Gold / cream / red
+
+CAT FLOOR:
+- Industrial
+- greens / muted tones
+
+SPIDER FLOOR:
+- Dark
+- Purple / browns
+- Quiet
+
+BASEMENT:
+- Aquatic
+- blue / cool tones / huge aquarium
+
+Store:
+- super colourfull, american 50-s diner/gass station style
+
+==================================================
+22F. DESIGN GOALS
+==================================================
+
+- Readable
+- Cozy
+- Minimal clutter
+- Strong satire through environment
+- Easy solo-dev scalability
+- Functional first, polish later
+
+	==================================================
+	23. MODULAR APARTMENT SYSTEM
+	==================================================
+
+CORE PURPOSE:
+Create many apartments efficiently using reusable room templates.
+
+DESIGN PHILOSOPHY:
+Small set of room layouts + visual variation = scalable worldbuilding
+
+This allows:
+- Faster development
+- Easier balancing
+- More apartment variety
+- Stronger environmental storytelling
+
+==================================================
+23A. BASE ROOM TYPES
+==================================================
+
+Planned core templates:
+- toilet / closet
+- room with windows
+- room without windows (bathroom, storage)
+- simple room, big
+- simple room, Small
+
+DESIGN NOTE:
+Only 4–6 core room templates needed initially.
+
+==================================================
+23B. ROOM CUSTOMIZATION
+==================================================
+
+Rooms can vary through:
+- Wallpaper
+- Flooring
+- Furniture
+- Lighting
+- Clutter
+- Loot placement
+- NPC type
+- Room purpose
+
+==================================================
+23C. ROOM FUNCTION VARIANTS
+==================================================
+
+Examples:
+- Human apartment
+- Dog apartment
+- Rodent workshop
+- Cat floor room
+- Therapy room
+- Spider clinic
+- Visitor center
+- Storage
+
+==================================================
+23D. GAMEPLAY BENEFITS
+==================================================
+
+- Easier to build large buildings
+- Faster content creation
+- Reusable assets
+- Semi-random apartment creation
+- Consistent navigation
+- Easier resource balancing
+
+==================================================
+23E. ENVIRONMENTAL STORYTELLING
+==================================================
+
+Wallpaper + Furniture + Layout can imply:
+- Species
+- Social class
+- Wealth
+- Moral decay
+- Political role
+
+Examples:
+Floral wallpaper + tea set:
+- Granny apartment
+
+Luxury bed + gold decor:
+- Dog elite housing
+
+
+==================================================
+23F. LOOT LOGIC
+==================================================
+
+Furniture type can imply likely resources:
+
+KITCHEN:
+- Seeds
+- Food scraps
+
+BEDROOM:
+- Pillows
+
+BATHROOM:
+- Medicine
+
+UTILITY:
+- Tape
+- Plastic
+- Wood
+
+==================================================
+23G. DESIGN GOAL
+==================================================
+
+Build apartments like modular LEGO pieces:
+- Room shell
+- Decoration set
+- Purpose
+- Loot
+
+RESULT:
+Large, varied world without overwhelming asset creation.
+
+	=====================================
+	24 Coding ...
+	=====================================
+
+24.a Items
+
+### Object System Design (Prototype Architecture)
+
+To keep development modular, scalable, and manageable, interactable world elements are divided into functional object categories rather than creating unique scenes for every single item.
+
+#### 1. Pickup Items
+
+Pickup Items are objects the player can collect and store in inventory.
+
+Examples:
+
+* Seeds
+* Water bottles
+* Food
+* Keys
+* Crafting materials
+
+These use a shared base scene (`PickupItem`) with editable variables such as:
+
+* `item_id`
+* `amount`
+
+This allows one flexible system to represent many collectible objects without building separate scenes for each variation.
+
+---
+
+#### 2. Plant Spots
+
+Plant Spots are interactive farming spaces that change through multiple growth stages over time.
+
+Possible stages:
+
+* Empty soil
+* Dug soil
+* Seeded
+* Growing
+* Harvestable
+* Dead
+
+A Plant Spot tracks:
+
+* Current stage
+* Crop type
+* Water state
+* Growth progress
+
+This keeps farming logic centralized while allowing multiple crop types to use the same base system.
+
+---
+
+#### 3. Structures
+
+Structures are larger persistent world objects that provide functionality, progression, or environmental interaction.
+
+Examples:
+
+* Elevator
+* Beds
+* Shops
+* Therapy rooms
+* Factories
+
+These are designed as separate systems because they often involve unique mechanics, navigation, or story progression.
+
+---
+
+### Design Philosophy
+
+This system prioritizes:
+
+* Reusability
+* Easy expansion
+* Cleaner code structure
+* Faster prototyping
+* Simpler inventory and save systems
+
+By separating objects by purpose rather than appearance, the project avoids unnecessary scene duplication and supports future expansion more efficiently. This modular approach aligns with Godot’s scene-based workflow and supports long-term project scalability.
+
+

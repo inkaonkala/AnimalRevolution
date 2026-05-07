@@ -1,0 +1,9 @@
+Prototype 0.1 is successful if:
+- Player can move smoothly
+- Player can interact with objects
+- Inventory can hold stackable items
+- Active item works
+- Seeds can be planted
+- Plants can be watered
+- Crops grow after sleep
+- Hamster can be found and moved to rooftop
