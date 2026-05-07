@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=4 uid="uid://ckmu5j1jfg43k"]
 
-[ext_resource type="Texture2D" uid="uid://b4qa0jkjn0kan" path="res://Assets/floor_test.png" id="1_6n4f2"]
-[ext_resource type="Texture2D" uid="uid://cc13py1wb2ctl" path="res://Assets/wall_test.png" id="2_irvgt"]
-[ext_resource type="Texture2D" uid="uid://31bpdk30v3s2" path="res://Assets/growspot_test.png" id="3_wjrx3"]
+[ext_resource type="Texture2D" uid="uid://b4qa0jkjn0kan" path="res://Assets/RoomNDeco/floor_test.png" id="1_6n4f2"]
+[ext_resource type="Texture2D" uid="uid://cc13py1wb2ctl" path="res://Assets/RoomNDeco/wall_test.png" id="2_irvgt"]
+[ext_resource type="Texture2D" uid="uid://31bpdk30v3s2" path="res://Assets/RoomNDeco/growspot_test.png" id="3_wjrx3"]
 [ext_resource type="PackedScene" uid="uid://c104nexrkrtat" path="res://hamster.tscn" id="4_irvgt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bboc2"]

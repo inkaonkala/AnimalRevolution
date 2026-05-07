@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://ta717pvkxahs"]
+[gd_scene load_steps=10 format=4 uid="uid://ta717pvkxahs"]
 
-[ext_resource type="Texture2D" uid="uid://b4qa0jkjn0kan" path="res://Assets/floor_test.png" id="1_af3pe"]
-[ext_resource type="Texture2D" uid="uid://cc13py1wb2ctl" path="res://Assets/wall_test.png" id="2_lw74p"]
-[ext_resource type="Texture2D" uid="uid://dxyrf1dvgqreh" path="res://Assets/sleepMat.png" id="3_lw74p"]
+[ext_resource type="Texture2D" uid="uid://b4qa0jkjn0kan" path="res://Assets/RoomNDeco/floor_test.png" id="1_af3pe"]
+[ext_resource type="Texture2D" uid="uid://cc13py1wb2ctl" path="res://Assets/RoomNDeco/wall_test.png" id="2_lw74p"]
+[ext_resource type="Script" uid="uid://canxqe4xr7n63" path="res://sleepSpot.gd" id="3_hub8o"]
+[ext_resource type="Texture2D" uid="uid://dxyrf1dvgqreh" path="res://Assets/RoomNDeco/sleepMat.png" id="3_lw74p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_af3pe"]
 texture = ExtResource("1_af3pe")
@@ -23,6 +24,9 @@ sources/1 = SubResource("TileSetAtlasSource_lw74p")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_af3pe"]
 size = Vector2(57, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lw74p"]
+size = Vector2(48, 18)
 
 [node name="5thFloor" type="Node2D"]
 
@@ -48,6 +52,22 @@ position = Vector2(126, 416)
 position = Vector2(2.5, -14)
 shape = SubResource("RectangleShape2D_af3pe")
 
-[node name="SleepMat" type="Sprite2D" parent="."]
-position = Vector2(1201, 125)
+[node name="SleepSpot" type="Area2D" parent="."]
+position = Vector2(1198, 125)
+script = ExtResource("3_hub8o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SleepSpot"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_lw74p")
+
+[node name="SleepMat" type="Sprite2D" parent="SleepSpot"]
+position = Vector2(-3, 5)
 texture = ExtResource("3_lw74p")
+
+[node name="Label" type="Label" parent="SleepSpot"]
+offset_left = -75.0
+offset_top = -32.0
+offset_right = 37.0
+offset_bottom = -9.0
+theme_override_font_sizes/font_size = 10
+text = "Press e to sleep on mat"

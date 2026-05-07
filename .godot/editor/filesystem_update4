@@ -5,3 +5,6 @@ res://Scripts/hamster.gd
 res://Main.tscn
 res://Scripts/dayNNightCycle.gd
 res://SideBar.gd
+res://5_DogFloor.tscn
+res://4th_floor.tscn
+res://sleepSpot.gd

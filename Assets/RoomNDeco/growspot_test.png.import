@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://31bpdk30v3s2"
-path="res://.godot/imported/growspot_test.png-b4fd86811b7259b01a8a9c61fc75490e.ctex"
+path="res://.godot/imported/growspot_test.png-4b9dce5086dda9f2679b16d2189b1822.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/growspot_test.png"
-dest_files=["res://.godot/imported/growspot_test.png-b4fd86811b7259b01a8a9c61fc75490e.ctex"]
+source_file="res://Assets/RoomNDeco/growspot_test.png"
+dest_files=["res://.godot/imported/growspot_test.png-4b9dce5086dda9f2679b16d2189b1822.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc13py1wb2ctl"
-path="res://.godot/imported/wall_test.png-4e52e03be1f00e27a177e8d06fa7a593.ctex"
+uid="uid://dxyrf1dvgqreh"
+path="res://.godot/imported/sleepMat.png-52d8c0517024d0e4469c049b21461edd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/wall_test.png"
-dest_files=["res://.godot/imported/wall_test.png-4e52e03be1f00e27a177e8d06fa7a593.ctex"]
+source_file="res://Assets/RoomNDeco/sleepMat.png"
+dest_files=["res://.godot/imported/sleepMat.png-52d8c0517024d0e4469c049b21461edd.ctex"]
 
 [params]
 

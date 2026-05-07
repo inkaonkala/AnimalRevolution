@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqfto1lk2o265"
-path="res://.godot/imported/testroom.png-77f75be37a3ff12e0c0c095e8eee7a4d.ctex"
+uid="uid://mhs4cjlvhox7"
+path="res://.godot/imported/elevatorpopup.png-8007b99c3f0911e493ae905ce69b480b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/testroom.png"
-dest_files=["res://.godot/imported/testroom.png-77f75be37a3ff12e0c0c095e8eee7a4d.ctex"]
+source_file="res://Assets/RoomNDeco/elevatorpopup.png"
+dest_files=["res://.godot/imported/elevatorpopup.png-8007b99c3f0911e493ae905ce69b480b.ctex"]
 
 [params]
 

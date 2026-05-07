@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b8b2cyf36auww" path="res://Rooftop.tscn" id="3_cm0pq"]
 [ext_resource type="PackedScene" uid="uid://c104nexrkrtat" path="res://hamster.tscn" id="4_wkp8b"]
 [ext_resource type="PackedScene" uid="uid://hm3q3v5kw6kc" path="res://PickUpStuff.tscn" id="5_3dxm6"]
-[ext_resource type="Texture2D" uid="uid://mhs4cjlvhox7" path="res://Assets/elevatorpopup.png" id="5_fos0i"]
+[ext_resource type="Texture2D" uid="uid://mhs4cjlvhox7" path="res://Assets/RoomNDeco/elevatorpopup.png" id="5_fos0i"]
 [ext_resource type="Texture2D" uid="uid://cxbxfhvrof4ag" path="res://Assets/Collectables/ballB.png" id="6_trn2v"]
 [ext_resource type="Texture2D" uid="uid://bcashksx4nijc" path="res://Assets/Collectables/bottle.png" id="7_trn2v"]
 [ext_resource type="PackedScene" uid="uid://ckmu5j1jfg43k" path="res://4th_floor.tscn" id="8_03owx"]
