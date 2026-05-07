@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=4 uid="uid://ta717pvkxahs"]
+[gd_scene load_steps=11 format=4 uid="uid://ta717pvkxahs"]
 
 [ext_resource type="Texture2D" uid="uid://b4qa0jkjn0kan" path="res://Assets/RoomNDeco/floor_test.png" id="1_af3pe"]
 [ext_resource type="Texture2D" uid="uid://cc13py1wb2ctl" path="res://Assets/RoomNDeco/wall_test.png" id="2_lw74p"]
 [ext_resource type="Script" uid="uid://canxqe4xr7n63" path="res://sleepSpot.gd" id="3_hub8o"]
 [ext_resource type="Texture2D" uid="uid://dxyrf1dvgqreh" path="res://Assets/RoomNDeco/sleepMat.png" id="3_lw74p"]
+[ext_resource type="Texture2D" uid="uid://dpy4wyc1oojfq" path="res://Assets/RoomNDeco/elevator.png" id="5_jde7c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_af3pe"]
 texture = ExtResource("1_af3pe")
@@ -71,3 +72,16 @@ offset_right = 37.0
 offset_bottom = -9.0
 theme_override_font_sizes/font_size = 10
 text = "Press e to sleep on mat"
+
+[node name="ohjeet" type="Label" parent="."]
+offset_left = 1185.0
+offset_top = 167.0
+offset_right = 1332.0
+offset_bottom = 242.0
+text = "wasd to move
+e to interact
+space to attack/dig"
+
+[node name="Elevator" type="Sprite2D" parent="."]
+position = Vector2(128, 353)
+texture = ExtResource("5_jde7c")

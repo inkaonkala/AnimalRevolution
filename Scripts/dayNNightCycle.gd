@@ -11,7 +11,7 @@ enum ToD
 	NIGHT
 }
 
-@export var cycle_lenght := 5.0 #SECONDS!
+@export var cycle_lenght := 300.0 #SECONDS! 300 = 5min
 
 var current_time: ToD = ToD.MORNING
 var day_nmb := 1

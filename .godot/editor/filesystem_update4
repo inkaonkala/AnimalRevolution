@@ -1,10 +1,8 @@
+res://5_DogFloor.tscn
+res://Main.tscn
+res://player.tscn
+res://Scripts/dayNNightCycle.gd
+res://4th_floor.tscn
+res://Rooftop.tscn
 res://plantNharvest.tscn
 res://plant_n_harvest.gd
-res://Rooftop.tscn
-res://Scripts/hamster.gd
-res://Main.tscn
-res://Scripts/dayNNightCycle.gd
-res://SideBar.gd
-res://5_DogFloor.tscn
-res://4th_floor.tscn
-res://sleepSpot.gd

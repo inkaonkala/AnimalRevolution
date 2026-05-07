@@ -1,9 +1,18 @@
-[gd_scene load_steps=13 format=4 uid="uid://b8b2cyf36auww"]
+[gd_scene load_steps=22 format=4 uid="uid://b8b2cyf36auww"]
 
 [ext_resource type="Texture2D" uid="uid://b4qa0jkjn0kan" path="res://Assets/RoomNDeco/floor_test.png" id="1_d70lt"]
 [ext_resource type="Texture2D" uid="uid://cc13py1wb2ctl" path="res://Assets/RoomNDeco/wall_test.png" id="1_vhrc3"]
 [ext_resource type="Texture2D" uid="uid://31bpdk30v3s2" path="res://Assets/RoomNDeco/growspot_test.png" id="3_bboc2"]
 [ext_resource type="PackedScene" uid="uid://b5gsmobitd2b5" path="res://plantNharvest.tscn" id="4_wdo6w"]
+[ext_resource type="Texture2D" uid="uid://dpy4wyc1oojfq" path="res://Assets/RoomNDeco/elevator.png" id="5_7hyk6"]
+[ext_resource type="Texture2D" uid="uid://bo8ki4ir1vwhj" path="res://Assets/Plants/car1.png" id="5_tax82"]
+[ext_resource type="Texture2D" uid="uid://cvetf86b8b61" path="res://Assets/Plants/car2.png" id="6_bmsl8"]
+[ext_resource type="Texture2D" uid="uid://ccvd1hvy3i8r1" path="res://Assets/Plants/carrot.png" id="6_uoa1a"]
+[ext_resource type="Texture2D" uid="uid://d4mde1tenvmrs" path="res://Assets/Plants/car3.png" id="7_3in2h"]
+[ext_resource type="Texture2D" uid="uid://bydwgxna57gcr" path="res://Assets/Plants/watered.png" id="8_lblpy"]
+[ext_resource type="Texture2D" uid="uid://bro860t1l2tar" path="res://Assets/Plants/car1W.png" id="9_834rt"]
+[ext_resource type="Texture2D" uid="uid://cun2jqq85wfa3" path="res://Assets/Plants/ca2w.png" id="10_n11cc"]
+[ext_resource type="Texture2D" uid="uid://cwu6jntqjpwfi" path="res://Assets/Plants/car3w.png" id="11_t1jei"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bboc2"]
 texture = ExtResource("1_d70lt")
@@ -74,5 +83,28 @@ position = Vector2(511, 314)
 
 [node name="plantAreas" type="Node2D" parent="."]
 
-[node name="Area2D" parent="plantAreas" instance=ExtResource("4_wdo6w")]
-position = Vector2(608, 379)
+[node name="plant1" parent="plantAreas" instance=ExtResource("4_wdo6w")]
+position = Vector2(593, 366)
+watered_tex = ExtResource("8_lblpy")
+ready_tex = ExtResource("6_uoa1a")
+growth_texs = Array[Texture2D]([ExtResource("5_tax82"), ExtResource("6_bmsl8"), ExtResource("7_3in2h"), null])
+wet_growth_texs = Array[Texture2D]([ExtResource("9_834rt"), ExtResource("10_n11cc"), ExtResource("11_t1jei"), ExtResource("11_t1jei")])
+
+[node name="plant2" parent="plantAreas" instance=ExtResource("4_wdo6w")]
+position = Vector2(635, 366)
+
+[node name="plant3" parent="plantAreas" instance=ExtResource("4_wdo6w")]
+position = Vector2(679, 366)
+
+[node name="plant4" parent="plantAreas" instance=ExtResource("4_wdo6w")]
+position = Vector2(593, 402)
+
+[node name="plant5" parent="plantAreas" instance=ExtResource("4_wdo6w")]
+position = Vector2(635, 402)
+
+[node name="plant6" parent="plantAreas" instance=ExtResource("4_wdo6w")]
+position = Vector2(679, 402)
+
+[node name="Elevator" type="Sprite2D" parent="."]
+position = Vector2(129, 352)
+texture = ExtResource("5_7hyk6")

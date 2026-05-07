@@ -43,9 +43,9 @@ grow_horizontal = 0
 [node name="InveZero" type="Label" parent="CanvasSideBar/SideBarUI"]
 layout_mode = 0
 offset_left = -50.0
-offset_top = 410.0
+offset_top = 411.0
 offset_right = -10.0
-offset_bottom = 433.0
+offset_bottom = 434.0
 
 [node name="Inve1" type="Label" parent="CanvasSideBar/SideBarUI"]
 layout_mode = 0
