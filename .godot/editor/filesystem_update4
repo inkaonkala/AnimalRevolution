@@ -2,3 +2,6 @@ res://plantNharvest.tscn
 res://plant_n_harvest.gd
 res://Rooftop.tscn
 res://Scripts/hamster.gd
+res://Main.tscn
+res://Scripts/dayNNightCycle.gd
+res://SideBar.gd

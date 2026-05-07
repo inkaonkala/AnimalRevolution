@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://b68r2scjeqgfc"]
+[gd_scene load_steps=12 format=3 uid="uid://b68r2scjeqgfc"]
 
 [ext_resource type="PackedScene" uid="uid://b1phauu4lt1e8" path="res://player.tscn" id="1_glv2v"]
 [ext_resource type="Script" uid="uid://uux8owbv5jwo" path="res://Scripts/main.gd" id="1_r0du0"]
 [ext_resource type="PackedScene" uid="uid://ta717pvkxahs" path="res://5_DogFloor.tscn" id="2_uu6xs"]
+[ext_resource type="Script" uid="uid://ch4vkydycpmht" path="res://SideBar.gd" id="3_20pc6"]
 [ext_resource type="PackedScene" uid="uid://b8b2cyf36auww" path="res://Rooftop.tscn" id="3_cm0pq"]
 [ext_resource type="PackedScene" uid="uid://c104nexrkrtat" path="res://hamster.tscn" id="4_wkp8b"]
 [ext_resource type="PackedScene" uid="uid://hm3q3v5kw6kc" path="res://PickUpStuff.tscn" id="5_3dxm6"]
@@ -18,6 +19,17 @@ script = ExtResource("1_r0du0")
 z_index = 10
 
 [node name="CanvasSideBar" type="CanvasLayer" parent="."]
+script = ExtResource("3_20pc6")
+
+[node name="TimeIcon" type="TextureRect" parent="CanvasSideBar"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -52.0
+offset_top = 60.0
+offset_right = -12.0
+offset_bottom = 100.0
+grow_horizontal = 0
 
 [node name="SideBarUI" type="Control" parent="CanvasSideBar"]
 layout_mode = 3
@@ -31,37 +43,37 @@ grow_horizontal = 0
 [node name="InveZero" type="Label" parent="CanvasSideBar/SideBarUI"]
 layout_mode = 0
 offset_left = -50.0
-offset_top = 10.0
+offset_top = 410.0
 offset_right = -10.0
-offset_bottom = 33.0
+offset_bottom = 433.0
 
 [node name="Inve1" type="Label" parent="CanvasSideBar/SideBarUI"]
 layout_mode = 0
 offset_left = -50.0
-offset_top = 40.0
+offset_top = 440.0
 offset_right = -10.0
-offset_bottom = 63.0
+offset_bottom = 463.0
 
 [node name="Inve2" type="Label" parent="CanvasSideBar/SideBarUI"]
 layout_mode = 0
 offset_left = -50.0
-offset_top = 70.0
+offset_top = 470.0
 offset_right = -10.0
-offset_bottom = 93.0
+offset_bottom = 493.0
 
 [node name="Inve3" type="Label" parent="CanvasSideBar/SideBarUI"]
 layout_mode = 0
 offset_left = -50.0
-offset_top = 100.0
+offset_top = 500.0
 offset_right = -10.0
-offset_bottom = 123.0
+offset_bottom = 523.0
 
 [node name="Inve4" type="Label" parent="CanvasSideBar/SideBarUI"]
 layout_mode = 0
 offset_left = -50.0
-offset_top = 130.0
+offset_top = 530.0
 offset_right = -10.0
-offset_bottom = 153.0
+offset_bottom = 553.0
 
 [node name="FloorContainer" type="Node" parent="."]
 
