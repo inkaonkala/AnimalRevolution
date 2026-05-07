@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://c104nexrkrtat"]
+
+[ext_resource type="Script" uid="uid://c3u34a06chl7u" path="res://Scripts/hamster.gd" id="1_s70uv"]
+[ext_resource type="Texture2D" uid="uid://bhk3r8wh3kv44" path="res://Assets/characters/hamster.png" id="1_ts32c"]
+[ext_resource type="PackedScene" uid="uid://hm3q3v5kw6kc" path="res://PickUpStuff.tscn" id="2_n55pr"]
+[ext_resource type="Texture2D" uid="uid://cqp404krs6bxq" path="res://Assets/Collectables/hamsterbaby.png" id="4_uto4n"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ts32c"]
+
+[node name="Hamster" type="Area2D"]
+script = ExtResource("1_s70uv")
+baby_picup_Scene = ExtResource("2_n55pr")
+baby_texture = ExtResource("4_uto4n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ts32c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -2)
+shape = SubResource("CapsuleShape2D_ts32c")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+z_index = 11
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="babySpawnPoint" type="Marker2D" parent="."]
+position = Vector2(18, 1)

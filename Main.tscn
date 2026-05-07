@@ -1,0 +1,144 @@
+[gd_scene load_steps=11 format=3 uid="uid://b68r2scjeqgfc"]
+
+[ext_resource type="PackedScene" uid="uid://b1phauu4lt1e8" path="res://player.tscn" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://uux8owbv5jwo" path="res://Scripts/main.gd" id="1_r0du0"]
+[ext_resource type="PackedScene" uid="uid://ta717pvkxahs" path="res://5_DogFloor.tscn" id="2_uu6xs"]
+[ext_resource type="PackedScene" uid="uid://b8b2cyf36auww" path="res://Rooftop.tscn" id="3_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://c104nexrkrtat" path="res://hamster.tscn" id="4_wkp8b"]
+[ext_resource type="PackedScene" uid="uid://hm3q3v5kw6kc" path="res://PickUpStuff.tscn" id="5_3dxm6"]
+[ext_resource type="Texture2D" uid="uid://mhs4cjlvhox7" path="res://Assets/elevatorpopup.png" id="5_fos0i"]
+[ext_resource type="Texture2D" uid="uid://cxbxfhvrof4ag" path="res://Assets/Collectables/ballB.png" id="6_trn2v"]
+[ext_resource type="Texture2D" uid="uid://bcashksx4nijc" path="res://Assets/Collectables/bottle.png" id="7_trn2v"]
+[ext_resource type="PackedScene" uid="uid://ckmu5j1jfg43k" path="res://4th_floor.tscn" id="8_03owx"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_r0du0")
+
+[node name="Player" parent="." instance=ExtResource("1_glv2v")]
+z_index = 10
+
+[node name="CanvasSideBar" type="CanvasLayer" parent="."]
+
+[node name="SideBarUI" type="Control" parent="CanvasSideBar"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="InveZero" type="Label" parent="CanvasSideBar/SideBarUI"]
+layout_mode = 0
+offset_left = -50.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 33.0
+
+[node name="Inve1" type="Label" parent="CanvasSideBar/SideBarUI"]
+layout_mode = 0
+offset_left = -50.0
+offset_top = 40.0
+offset_right = -10.0
+offset_bottom = 63.0
+
+[node name="Inve2" type="Label" parent="CanvasSideBar/SideBarUI"]
+layout_mode = 0
+offset_left = -50.0
+offset_top = 70.0
+offset_right = -10.0
+offset_bottom = 93.0
+
+[node name="Inve3" type="Label" parent="CanvasSideBar/SideBarUI"]
+layout_mode = 0
+offset_left = -50.0
+offset_top = 100.0
+offset_right = -10.0
+offset_bottom = 123.0
+
+[node name="Inve4" type="Label" parent="CanvasSideBar/SideBarUI"]
+layout_mode = 0
+offset_left = -50.0
+offset_top = 130.0
+offset_right = -10.0
+offset_bottom = 153.0
+
+[node name="FloorContainer" type="Node" parent="."]
+
+[node name="Rooftop" parent="FloorContainer" instance=ExtResource("3_cm0pq")]
+visible = false
+
+[node name="FifthFloor" parent="FloorContainer" instance=ExtResource("2_uu6xs")]
+
+[node name="Seed1" parent="FloorContainer/FifthFloor" instance=ExtResource("5_3dxm6")]
+z_index = 9
+position = Vector2(430, 492)
+item_tex = ExtResource("6_trn2v")
+
+[node name="Seed2" parent="FloorContainer/FifthFloor" instance=ExtResource("5_3dxm6")]
+z_index = 9
+position = Vector2(354, 132)
+item_tex = ExtResource("6_trn2v")
+
+[node name="Seed3" parent="FloorContainer/FifthFloor" instance=ExtResource("5_3dxm6")]
+z_index = 9
+position = Vector2(653, 511)
+item_tex = ExtResource("6_trn2v")
+
+[node name="Bottle1" parent="FloorContainer/FifthFloor" instance=ExtResource("5_3dxm6")]
+z_index = 9
+position = Vector2(921, 278)
+item_id = "bottle"
+item_tex = ExtResource("7_trn2v")
+
+[node name="FourthFloor" parent="FloorContainer" instance=ExtResource("8_03owx")]
+visible = false
+
+[node name="Hamster2" parent="FloorContainer/FourthFloor" instance=ExtResource("4_wkp8b")]
+
+[node name="CanvasHints" type="CanvasLayer" parent="."]
+
+[node name="HintE" type="Label" parent="CanvasHints"]
+z_index = 11
+offset_left = 590.0
+offset_top = 246.0
+offset_right = 630.0
+offset_bottom = 269.0
+scale = Vector2(3, 3)
+text = "e"
+
+[node name="ElevatorPop" type="Panel" parent="CanvasHints"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasHints/ElevatorPop"]
+position = Vector2(71, 460)
+scale = Vector2(2, 2)
+texture = ExtResource("5_fos0i")
+
+[node name="RoofTop" type="Button" parent="CanvasHints/ElevatorPop/Sprite2D"]
+offset_left = -9.0
+offset_top = -53.5
+offset_right = 4.5
+offset_bottom = -40.5
+
+[node name="floorFive" type="Button" parent="CanvasHints/ElevatorPop/Sprite2D"]
+offset_left = -9.0
+offset_top = -36.5
+offset_right = 4.5
+offset_bottom = -22.5
+
+[node name="floorFour" type="Button" parent="CanvasHints/ElevatorPop/Sprite2D"]
+anchors_preset = -1
+anchor_top = -0.025
+anchor_bottom = -0.025
+offset_left = -8.0
+offset_top = -13.3
+offset_right = 5.0
+offset_bottom = -0.79999995
+
+[node name="GameManager" type="Node" parent="."]
+
+[connection signal="pressed" from="CanvasHints/ElevatorPop/Sprite2D/RoofTop" to="." method="_on_roof_top_pressed"]
+[connection signal="pressed" from="CanvasHints/ElevatorPop/Sprite2D/floorFive" to="." method="_on_floor_five_pressed"]
+[connection signal="pressed" from="CanvasHints/ElevatorPop/Sprite2D/floorFour" to="." method="_on_floor_four_pressed"]

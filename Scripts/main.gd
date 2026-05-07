@@ -1,0 +1,155 @@
+extends Node2D
+
+@onready var player = $Player
+@onready var floor_container = $FloorContainer
+@onready var current_floor = $FloorContainer/FifthFloor
+
+@onready var side_bar = $CanvasSideBar/SideBarUI
+@onready var elevator_popup = $CanvasHints/ElevatorPop
+@onready var hint_e = $CanvasHints/HintE
+
+#inventory
+@onready var inv_zero = $CanvasSideBar/SideBarUI/InveZero
+@onready var inv_1 = $CanvasSideBar/SideBarUI/Inve1
+@onready var inv_2 = $CanvasSideBar/SideBarUI/Inve2
+@onready var inv_3 = $CanvasSideBar/SideBarUI/Inve3
+@onready var inv_4 = $CanvasSideBar/SideBarUI/Inve4
+
+var spawn_from := "first"
+var near_elevator := false
+
+#inventory
+var seeds := 0
+var bottle := 0
+var hamsterbaby := 0
+
+func _ready() -> void:
+	spawn_player()
+	update_inventory_ui()
+	setup_elevator(current_floor)
+	hint_e.visible = false
+	elevator_popup.visible = false
+	set_floor_active($FloorContainer/Rooftop, false)
+	set_floor_active($FloorContainer/FourthFloor, false)
+	set_floor_active($FloorContainer/FifthFloor, true)
+
+func spawn_player() -> void:
+	var spawn_point: Marker2D
+
+	if spawn_from == "elevator":
+		spawn_point = current_floor.get_node("ElevatorSpawn")
+	else:
+		spawn_point = current_floor.get_node("FirstSpawn")
+
+	player.global_position = spawn_point.global_position
+
+#inventory
+
+func update_inventory_ui() -> void:
+		inv_zero.text = "Seeds: " + str(seeds)
+		inv_1.text = "Bottle: " + str(bottle)
+		inv_2.text = "Baby: " + str(hamsterbaby)
+		inv_3.text = "empty"
+		inv_4.text = "empty"
+		
+func add_item(item_id: String, amount: int) -> void:
+	if item_id == "seed":
+		seeds += amount
+	elif item_id == "bottle":
+		bottle += amount
+	elif item_id == "hamsterbaby":
+		hamsterbaby += amount
+	
+	update_inventory_ui()	
+
+#invi end
+
+#Elevator setup
+func setup_elevator(floor_node: Node) -> void:
+	var elevator_area = floor_node.get_node("AreaElevator")
+	
+	if not elevator_area.body_entered.is_connected(enter_elevator):
+		elevator_area.body_entered.connect(enter_elevator)
+	if not elevator_area.body_exited.is_connected(exit_elevator):
+		elevator_area.body_exited.connect(exit_elevator)
+
+func enter_elevator(body: Node) -> void:
+	if body == player:
+		near_elevator = true
+		hint_e.visible = true
+	
+func exit_elevator(body: Node) -> void:
+	if body == player:
+		near_elevator = false
+		hint_e.visible = false
+		
+func _process(delta: float) -> void:
+	if near_elevator and Input.is_action_just_pressed("interact"):
+			open_elevator_popup()
+			
+func open_elevator_popup() -> void:
+	hint_e.visible = false
+	elevator_popup.visible = true
+	player.can_move = false
+
+
+func _on_roof_top_pressed() -> void:
+	change_floor("Rooftop")
+
+func _on_floor_five_pressed() -> void:
+	change_floor("FifthFloor")
+	
+func _on_floor_four_pressed() -> void:
+	change_floor("FourthFloor")
+
+
+#these are to make the collision work only on the floor the player is
+	
+func change_floor(floor_name: String) -> void:
+	elevator_popup.visible = false
+	
+	current_floor.visible = false
+	current_floor.process_mode = Node.PROCESS_MODE_DISABLED
+	set_floor_active(current_floor, false)
+	
+	current_floor = floor_container.get_node(floor_name)
+	
+	current_floor.visible = true
+	current_floor.process_mode = Node.PROCESS_MODE_INHERIT
+	set_floor_active(current_floor, true)
+	
+	spawn_from = "elevator"
+	spawn_player()
+	
+	near_elevator = false
+	setup_elevator(current_floor)
+	
+	player.can_move = true
+	
+#func set_floor_collision(node: Node, enabled: bool) -> void:
+#	for child in node.get_children():
+#		if child is CollisionShape2D:
+#			child.disabled = not enabled
+#		elif child is CollisionPolygon2D:
+#			child.disabled = not enabled
+#		elif child is StaticBody2D or child is Area2D:
+#			set_floor_collision(child, enabled)
+#		else:
+#			set_floor_collision(child, enabled)
+
+func set_floor_active(node: Node, enabled: bool) -> void:
+	if node is CollisionShape2D:
+		node.disabled = not enabled
+	elif node is CollisionPolygon2D:
+		node.disabled = not enabled
+	elif node is TileMapLayer:
+		node.collision_enabled = enabled
+	elif node is TileMap:
+		node.collision_enabled = enabled
+	elif node is Area2D:
+		node.monitoring = enabled
+		node.monitorable= enabled
+
+	for child in node.get_children():
+		set_floor_active(child, enabled)
+			
