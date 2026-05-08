@@ -10,3 +10,4 @@ res://Scripts/main.gd
 res://PickUpStuff.tscn
 res://Human.tscn
 res://human.gd
+res://Scripts/Player.gd

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://ta717pvkxahs"]
+[gd_scene load_steps=16 format=4 uid="uid://ta717pvkxahs"]
 
 [ext_resource type="Texture2D" uid="uid://b4qa0jkjn0kan" path="res://Assets/RoomNDeco/floor_test.png" id="1_af3pe"]
 [ext_resource type="Texture2D" uid="uid://cc13py1wb2ctl" path="res://Assets/RoomNDeco/wall_test.png" id="2_lw74p"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://brmx71cocugql" path="res://Assets/characters/human.png" id="6_66ty1"]
 [ext_resource type="Texture2D" uid="uid://d1jsgvyolfx1a" path="res://Assets/characters/human_sleep.png" id="7_2g8k7"]
 [ext_resource type="Texture2D" uid="uid://c84f6ly8b2ygl" path="res://Assets/characters/human_captured.png" id="8_2rgad"]
+[ext_resource type="Texture2D" uid="uid://b145sp8tradn4" path="res://Assets/characters/human_tagged.png" id="9_66ty1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_af3pe"]
 texture = ExtResource("1_af3pe")
@@ -82,6 +83,7 @@ position = Vector2(264, 105)
 normal_tex = ExtResource("6_66ty1")
 sleeping_tex = ExtResource("7_2g8k7")
 captured_tex = ExtResource("8_2rgad")
+tagged_tex = ExtResource("9_66ty1")
 
 [node name="Elevator" type="Sprite2D" parent="."]
 position = Vector2(128, 353)
