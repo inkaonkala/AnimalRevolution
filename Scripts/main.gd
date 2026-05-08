@@ -22,6 +22,7 @@ var near_elevator := false
 var seeds := 0
 var bottle := 0
 var hamsterbaby := 0
+var crop := 0
 
 func _ready() -> void:
 	spawn_player()
@@ -49,7 +50,7 @@ func update_inventory_ui() -> void:
 		inv_zero.text = "Seeds: " + str(seeds)
 		inv_1.text = "Bottle: " + str(bottle)
 		inv_2.text = "Baby: " + str(hamsterbaby)
-		inv_3.text = "empty"
+		inv_3.text = "Crops: " +str(crop)
 		inv_4.text = "empty"
 		
 func add_item(item_id: String, amount: int) -> void:
@@ -59,6 +60,8 @@ func add_item(item_id: String, amount: int) -> void:
 		bottle += amount
 	elif item_id == "hamsterbaby":
 		hamsterbaby += amount
+	elif item_id == "crop":
+		crop += amount
 	
 	update_inventory_ui()	
 

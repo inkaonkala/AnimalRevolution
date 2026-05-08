@@ -128,7 +128,7 @@ func on_new_day(day_numb: int) -> void:
 func try_harvest() -> void:
 	var main = get_tree().current_scene
 	
-	main.carrot += 1
+	main.crop += 1
 	main.seeds += 1
 	main.update_inventory_ui()
 	
