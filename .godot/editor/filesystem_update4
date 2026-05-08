@@ -8,3 +8,5 @@ res://plantNharvest.tscn
 res://plant_n_harvest.gd
 res://Scripts/main.gd
 res://PickUpStuff.tscn
+res://Human.tscn
+res://human.gd
