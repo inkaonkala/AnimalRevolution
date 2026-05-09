@@ -85,6 +85,13 @@ sleeping_tex = ExtResource("7_2g8k7")
 captured_tex = ExtResource("8_2rgad")
 tagged_tex = ExtResource("9_66ty1")
 
+[node name="Human2" parent="." instance=ExtResource("5_6riwa")]
+position = Vector2(1544, 126)
+normal_tex = ExtResource("6_66ty1")
+sleeping_tex = ExtResource("7_2g8k7")
+captured_tex = ExtResource("8_2rgad")
+tagged_tex = ExtResource("9_66ty1")
+
 [node name="Elevator" type="Sprite2D" parent="."]
 position = Vector2(128, 353)
 texture = ExtResource("5_jde7c")

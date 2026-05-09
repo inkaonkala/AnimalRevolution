@@ -11,3 +11,4 @@ res://PickUpStuff.tscn
 res://Human.tscn
 res://human.gd
 res://Scripts/Player.gd
+res://sleepSpot.gd
