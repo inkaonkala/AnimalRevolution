@@ -30,9 +30,11 @@ func _ready() -> void:
 	setup_elevator(current_floor)
 	hint_e.visible = false
 	elevator_popup.visible = false
+	#ACTIVATE FLOORS!
 	set_floor_active($FloorContainer/Rooftop, false)
 	set_floor_active($FloorContainer/FourthFloor, false)
 	set_floor_active($FloorContainer/FifthFloor, true)
+	set_floor_active($FloorContainer/ThirdFloor, false)
 
 func spawn_player() -> void:
 	var spawn_point: Marker2D
@@ -104,6 +106,10 @@ func _on_floor_five_pressed() -> void:
 	
 func _on_floor_four_pressed() -> void:
 	change_floor("FourthFloor")
+	
+func _on_floor_three_pressed() -> void:
+	change_floor("ThirdFloor") # Replace with function body.
+
 
 
 #these are to make the collision work only on the floor the player is

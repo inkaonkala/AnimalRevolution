@@ -1,9 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://b68r2scjeqgfc"]
+[gd_scene load_steps=13 format=3 uid="uid://b68r2scjeqgfc"]
 
 [ext_resource type="PackedScene" uid="uid://b1phauu4lt1e8" path="res://player.tscn" id="1_glv2v"]
 [ext_resource type="Script" uid="uid://uux8owbv5jwo" path="res://Scripts/main.gd" id="1_r0du0"]
 [ext_resource type="PackedScene" uid="uid://ta717pvkxahs" path="res://5_DogFloor.tscn" id="2_uu6xs"]
-[ext_resource type="Script" uid="uid://ch4vkydycpmht" path="res://SideBar.gd" id="3_20pc6"]
+[ext_resource type="Script" uid="uid://ch4vkydycpmht" path="res://Scripts/SideBar.gd" id="3_20pc6"]
 [ext_resource type="PackedScene" uid="uid://b8b2cyf36auww" path="res://Rooftop.tscn" id="3_cm0pq"]
 [ext_resource type="PackedScene" uid="uid://c104nexrkrtat" path="res://hamster.tscn" id="4_wkp8b"]
 [ext_resource type="PackedScene" uid="uid://hm3q3v5kw6kc" path="res://PickUpStuff.tscn" id="5_3dxm6"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cxbxfhvrof4ag" path="res://Assets/Collectables/ballB.png" id="6_trn2v"]
 [ext_resource type="Texture2D" uid="uid://bcashksx4nijc" path="res://Assets/Collectables/bottle.png" id="7_trn2v"]
 [ext_resource type="PackedScene" uid="uid://ckmu5j1jfg43k" path="res://4th_floor.tscn" id="8_03owx"]
+[ext_resource type="PackedScene" uid="uid://bc6ou37n0x6el" path="res://3_CatFloor.tscn" id="11_5vvyt"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_r0du0")
@@ -108,6 +109,9 @@ visible = false
 
 [node name="Hamster2" parent="FloorContainer/FourthFloor" instance=ExtResource("4_wkp8b")]
 
+[node name="ThirdFloor" parent="FloorContainer" instance=ExtResource("11_5vvyt")]
+visible = false
+
 [node name="CanvasHints" type="CanvasLayer" parent="."]
 
 [node name="HintE" type="Label" parent="CanvasHints"]
@@ -149,8 +153,15 @@ offset_top = -13.3
 offset_right = 5.0
 offset_bottom = -0.79999995
 
+[node name="floorThree" type="Button" parent="CanvasHints/ElevatorPop/Sprite2D"]
+offset_left = -8.5
+offset_top = 1.5
+offset_right = 4.0
+offset_bottom = 14.5
+
 [node name="GameManager" type="Node" parent="."]
 
 [connection signal="pressed" from="CanvasHints/ElevatorPop/Sprite2D/RoofTop" to="." method="_on_roof_top_pressed"]
 [connection signal="pressed" from="CanvasHints/ElevatorPop/Sprite2D/floorFive" to="." method="_on_floor_five_pressed"]
 [connection signal="pressed" from="CanvasHints/ElevatorPop/Sprite2D/floorFour" to="." method="_on_floor_four_pressed"]
+[connection signal="pressed" from="CanvasHints/ElevatorPop/Sprite2D/floorThree" to="." method="_on_floor_three_pressed"]

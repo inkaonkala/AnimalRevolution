@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddrfvoown8pfp"
-path="res://.godot/imported/wall_edge.png-058b9e6edbe8873da1aab9245228a8fa.ctex"
+uid="uid://dfv41gi1depm5"
+path="res://.godot/imported/wall_rim.png-57517e05514c04283f349da1c408bf38.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/RoomNDeco/wall_edge.png"
-dest_files=["res://.godot/imported/wall_edge.png-058b9e6edbe8873da1aab9245228a8fa.ctex"]
+source_file="res://Assets/RoomNDeco/wall_rim.png"
+dest_files=["res://.godot/imported/wall_rim.png-57517e05514c04283f349da1c408bf38.ctex"]
 
 [params]
 

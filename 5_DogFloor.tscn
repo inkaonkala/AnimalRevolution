@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b4qa0jkjn0kan" path="res://Assets/RoomNDeco/floor_test.png" id="1_af3pe"]
 [ext_resource type="Texture2D" uid="uid://cc13py1wb2ctl" path="res://Assets/RoomNDeco/wall_test.png" id="2_lw74p"]
-[ext_resource type="Script" uid="uid://canxqe4xr7n63" path="res://sleepSpot.gd" id="3_hub8o"]
+[ext_resource type="Script" uid="uid://canxqe4xr7n63" path="res://Scripts/sleepSpot.gd" id="3_hub8o"]
 [ext_resource type="Texture2D" uid="uid://dxyrf1dvgqreh" path="res://Assets/RoomNDeco/sleepMat.png" id="3_lw74p"]
 [ext_resource type="PackedScene" uid="uid://bdjorjamabfwb" path="res://Human.tscn" id="5_6riwa"]
 [ext_resource type="Texture2D" uid="uid://dpy4wyc1oojfq" path="res://Assets/RoomNDeco/elevator.png" id="5_jde7c"]

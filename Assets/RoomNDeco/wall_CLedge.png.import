@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8r1tt5hrdvy2"
-path="res://.godot/imported/wall_rimleft.png-2ca67f1c8d08d7c9adf8f79028f00186.ctex"
+uid="uid://cclmcs3opod0w"
+path="res://.godot/imported/wall_CLedge.png-5cec2bcb7e38ba7fbe064632c00fcc2e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/RoomNDeco/wall_rimleft.png"
-dest_files=["res://.godot/imported/wall_rimleft.png-2ca67f1c8d08d7c9adf8f79028f00186.ctex"]
+source_file="res://Assets/RoomNDeco/wall_CLedge.png"
+dest_files=["res://.godot/imported/wall_CLedge.png-5cec2bcb7e38ba7fbe064632c00fcc2e.ctex"]
 
 [params]
 

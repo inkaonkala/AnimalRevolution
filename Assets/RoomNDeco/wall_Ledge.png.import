@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ceij6tsjrj2p5"
-path="res://.godot/imported/wall_rimedgeright.png-55d428222d6ee4916e09ef31eda5d404.ctex"
+uid="uid://ccfwsl64tq8ed"
+path="res://.godot/imported/wall_Ledge.png-805077585f8fbeede2fbe3b69e4d064d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/RoomNDeco/wall_rimedgeright.png"
-dest_files=["res://.godot/imported/wall_rimedgeright.png-55d428222d6ee4916e09ef31eda5d404.ctex"]
+source_file="res://Assets/RoomNDeco/wall_Ledge.png"
+dest_files=["res://.godot/imported/wall_Ledge.png-805077585f8fbeede2fbe3b69e4d064d.ctex"]
 
 [params]
 

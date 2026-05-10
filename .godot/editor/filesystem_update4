@@ -1,15 +1,6 @@
-res://5_DogFloor.tscn
-res://Main.tscn
-res://player.tscn
-res://Scripts/dayNNightCycle.gd
-res://4th_floor.tscn
 res://Rooftop.tscn
-res://plantNharvest.tscn
-res://plant_n_harvest.gd
 res://Scripts/main.gd
-res://PickUpStuff.tscn
+res://Main.tscn
 res://Human.tscn
-res://human.gd
-res://Scripts/Player.gd
-res://sleepSpot.gd
+res://5_DogFloor.tscn
 res://3_CatFloor.tscn
