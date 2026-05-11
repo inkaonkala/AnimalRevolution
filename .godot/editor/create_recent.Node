@@ -1,3 +1,4 @@
+TileMapLayer
 Button
 CollisionShape2D
 Area2D
@@ -7,7 +8,6 @@ Label
 TextureRect
 Node2D
 Marker2D
-TileMapLayer
 Panel
 CanvasLayer
 Camera2D

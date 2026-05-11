@@ -4,20 +4,21 @@
 [ext_resource type="Texture2D" uid="uid://v7rtcfrel8xk" path="res://Assets/characters/dog2.png" id="2_onrkg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
-size = Vector2(32, 32)
+size = Vector2(35, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
-size = Vector2(26, 32)
+size = Vector2(23, 32)
 
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_4flbx")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.2, 1.2)
 texture = ExtResource("2_onrkg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 0)
+position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_i3pqv")
 debug_color = Color(0.012692624, 0.0030203839, 0.018063545, 0.41960785)
 
@@ -28,5 +29,5 @@ position_smoothing_enabled = true
 [node name="AttackArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
-position = Vector2(-19, 0)
+position = Vector2(-14.5, 0)
 shape = SubResource("RectangleShape2D_onrkg")

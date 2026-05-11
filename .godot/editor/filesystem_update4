@@ -4,3 +4,6 @@ res://Main.tscn
 res://Human.tscn
 res://5_DogFloor.tscn
 res://3_CatFloor.tscn
+res://4th_floor.tscn
+res://player.tscn
+res://Scripts/dayNNightCycle.gd
