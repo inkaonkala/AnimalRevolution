@@ -14,3 +14,4 @@ res://Scenes/Human.tscn
 res://Scripts/human.gd
 res://Scenes/Cat.tscn
 res://Scenes/3_CatFloor.tscn
+res://Scripts/cat.gd
