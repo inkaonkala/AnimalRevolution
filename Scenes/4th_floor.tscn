@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cc13py1wb2ctl" path="res://Assets/RoomNDeco/wall_collider.png" id="2_irvgt"]
 [ext_resource type="Texture2D" uid="uid://cclmcs3opod0w" path="res://Assets/RoomNDeco/wall_CLedge.png" id="3_y6hdu"]
 [ext_resource type="Texture2D" uid="uid://cudauh0wtmfp8" path="res://Assets/RoomNDeco/wall_CRedge.png" id="4_637cy"]
-[ext_resource type="PackedScene" uid="uid://c104nexrkrtat" path="res://hamster.tscn" id="4_irvgt"]
+[ext_resource type="PackedScene" uid="uid://c104nexrkrtat" path="res://Scenes/hamster.tscn" id="4_irvgt"]
 [ext_resource type="Texture2D" uid="uid://ccfwsl64tq8ed" path="res://Assets/RoomNDeco/wall_Ledge.png" id="5_wd0vr"]
 [ext_resource type="Texture2D" uid="uid://dpy4wyc1oojfq" path="res://Assets/RoomNDeco/elevator.png" id="5_wjrx3"]
 [ext_resource type="Texture2D" uid="uid://con07bm5diquw" path="res://Assets/RoomNDeco/wall_Redge.png" id="6_toxbh"]

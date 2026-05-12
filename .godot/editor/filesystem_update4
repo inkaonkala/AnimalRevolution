@@ -7,3 +7,10 @@ res://3_CatFloor.tscn
 res://4th_floor.tscn
 res://player.tscn
 res://Scripts/dayNNightCycle.gd
+res://Scenes/4th_floor.tscn
+res://Scenes/5_DogFloor.tscn
+res://Scenes/Main.tscn
+res://Scenes/Human.tscn
+res://Scripts/human.gd
+res://Scenes/Cat.tscn
+res://Scenes/3_CatFloor.tscn

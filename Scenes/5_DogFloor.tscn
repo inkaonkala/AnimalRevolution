@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cclmcs3opod0w" path="res://Assets/RoomNDeco/wall_CLedge.png" id="3_y7d6q"]
 [ext_resource type="Texture2D" uid="uid://b33kqoqtgv187" path="res://Assets/RoomNDeco/floor2.png" id="4_8kq4b"]
 [ext_resource type="Texture2D" uid="uid://cudauh0wtmfp8" path="res://Assets/RoomNDeco/wall_CRedge.png" id="4_myijp"]
-[ext_resource type="PackedScene" uid="uid://bdjorjamabfwb" path="res://Human.tscn" id="5_6riwa"]
+[ext_resource type="PackedScene" uid="uid://bdjorjamabfwb" path="res://Scenes/Human.tscn" id="5_6riwa"]
 [ext_resource type="Texture2D" uid="uid://ccfwsl64tq8ed" path="res://Assets/RoomNDeco/wall_Ledge.png" id="5_i1tuq"]
 [ext_resource type="Texture2D" uid="uid://dpy4wyc1oojfq" path="res://Assets/RoomNDeco/elevator.png" id="5_jde7c"]
 [ext_resource type="Texture2D" uid="uid://con07bm5diquw" path="res://Assets/RoomNDeco/wall_Redge.png" id="6_8kq4b"]

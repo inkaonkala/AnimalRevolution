@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b4qa0jkjn0kan" path="res://Assets/RoomNDeco/floor_test.png" id="1_d70lt"]
 [ext_resource type="Texture2D" uid="uid://cc13py1wb2ctl" path="res://Assets/RoomNDeco/wall_collider.png" id="1_vhrc3"]
 [ext_resource type="Texture2D" uid="uid://31bpdk30v3s2" path="res://Assets/RoomNDeco/growspot_test.png" id="3_bboc2"]
-[ext_resource type="PackedScene" uid="uid://b5gsmobitd2b5" path="res://plantNharvest.tscn" id="4_wdo6w"]
+[ext_resource type="PackedScene" uid="uid://b5gsmobitd2b5" path="res://Scenes/plantNharvest.tscn" id="4_wdo6w"]
 [ext_resource type="Texture2D" uid="uid://dpy4wyc1oojfq" path="res://Assets/RoomNDeco/elevator.png" id="5_7hyk6"]
 [ext_resource type="Texture2D" uid="uid://bo8ki4ir1vwhj" path="res://Assets/Plants/car1.png" id="5_tax82"]
 [ext_resource type="Texture2D" uid="uid://cvetf86b8b61" path="res://Assets/Plants/car2.png" id="6_bmsl8"]

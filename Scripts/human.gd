@@ -21,6 +21,7 @@ enum State
 @onready var sprite = $Sprite2D
 @onready var attack_area = $AttackArea
 @onready var interact_area = $InteractArea
+@onready var collision_shape = $CollisionShape2D
 
 var captured := false
 var attacked := false
@@ -138,6 +139,7 @@ func become_captured() -> void:
 	state = State.CAPTURED
 	velocity = Vector2.ZERO
 	update_image()
+	collision_shape.disabled = true
 	print("Human captured!")
 	
 func interact_entered(body: Node) -> void:
@@ -155,6 +157,7 @@ func tag_for_factory() -> void:
 	tagged = true
 	state = State.TAGGED
 	update_image()
+	collision_shape.disabled = true
 	
 	print("Human tagged for factory!")
 		

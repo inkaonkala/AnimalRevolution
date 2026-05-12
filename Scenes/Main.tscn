@@ -1,26 +1,26 @@
 [gd_scene load_steps=13 format=3 uid="uid://b68r2scjeqgfc"]
 
-[ext_resource type="PackedScene" uid="uid://b1phauu4lt1e8" path="res://player.tscn" id="1_glv2v"]
-[ext_resource type="Script" uid="uid://uux8owbv5jwo" path="res://Scripts/main.gd" id="1_r0du0"]
-[ext_resource type="PackedScene" uid="uid://ta717pvkxahs" path="res://5_DogFloor.tscn" id="2_uu6xs"]
-[ext_resource type="Script" uid="uid://ch4vkydycpmht" path="res://Scripts/SideBar.gd" id="3_20pc6"]
-[ext_resource type="PackedScene" uid="uid://b8b2cyf36auww" path="res://Rooftop.tscn" id="3_cm0pq"]
-[ext_resource type="PackedScene" uid="uid://c104nexrkrtat" path="res://hamster.tscn" id="4_wkp8b"]
-[ext_resource type="PackedScene" uid="uid://hm3q3v5kw6kc" path="res://PickUpStuff.tscn" id="5_3dxm6"]
-[ext_resource type="Texture2D" uid="uid://mhs4cjlvhox7" path="res://Assets/RoomNDeco/elevatorpopup.png" id="5_fos0i"]
-[ext_resource type="Texture2D" uid="uid://cxbxfhvrof4ag" path="res://Assets/Collectables/ballB.png" id="6_trn2v"]
-[ext_resource type="Texture2D" uid="uid://bcashksx4nijc" path="res://Assets/Collectables/bottle.png" id="7_trn2v"]
-[ext_resource type="PackedScene" uid="uid://ckmu5j1jfg43k" path="res://4th_floor.tscn" id="8_03owx"]
-[ext_resource type="PackedScene" uid="uid://bc6ou37n0x6el" path="res://3_CatFloor.tscn" id="11_5vvyt"]
+[ext_resource type="Script" uid="uid://uux8owbv5jwo" path="res://Scripts/main.gd" id="1_grg3l"]
+[ext_resource type="PackedScene" uid="uid://b1phauu4lt1e8" path="res://Scenes/player.tscn" id="2_frkhe"]
+[ext_resource type="Script" uid="uid://ch4vkydycpmht" path="res://Scripts/SideBar.gd" id="3_1p5hy"]
+[ext_resource type="PackedScene" uid="uid://b8b2cyf36auww" path="res://Scenes/Rooftop.tscn" id="4_h1m7h"]
+[ext_resource type="PackedScene" uid="uid://ta717pvkxahs" path="res://Scenes/5_DogFloor.tscn" id="5_erwvk"]
+[ext_resource type="PackedScene" uid="uid://hm3q3v5kw6kc" path="res://Scenes/PickUpStuff.tscn" id="6_2w5on"]
+[ext_resource type="Texture2D" uid="uid://cxbxfhvrof4ag" path="res://Assets/Collectables/ballB.png" id="7_346fj"]
+[ext_resource type="Texture2D" uid="uid://bcashksx4nijc" path="res://Assets/Collectables/bottle.png" id="8_0sclb"]
+[ext_resource type="PackedScene" uid="uid://ckmu5j1jfg43k" path="res://Scenes/4th_floor.tscn" id="9_sxkr1"]
+[ext_resource type="PackedScene" uid="uid://c104nexrkrtat" path="res://Scenes/hamster.tscn" id="10_fq0cl"]
+[ext_resource type="PackedScene" uid="uid://bc6ou37n0x6el" path="res://Scenes/3_CatFloor.tscn" id="11_hwpts"]
+[ext_resource type="Texture2D" uid="uid://mhs4cjlvhox7" path="res://Assets/RoomNDeco/elevatorpopup.png" id="12_jyqft"]
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_r0du0")
+script = ExtResource("1_grg3l")
 
-[node name="Player" parent="." instance=ExtResource("1_glv2v")]
+[node name="Player" parent="." instance=ExtResource("2_frkhe")]
 z_index = 10
 
 [node name="CanvasSideBar" type="CanvasLayer" parent="."]
-script = ExtResource("3_20pc6")
+script = ExtResource("3_1p5hy")
 
 [node name="TimeIcon" type="TextureRect" parent="CanvasSideBar"]
 anchors_preset = 1
@@ -78,38 +78,38 @@ offset_bottom = 553.0
 
 [node name="FloorContainer" type="Node" parent="."]
 
-[node name="Rooftop" parent="FloorContainer" instance=ExtResource("3_cm0pq")]
+[node name="Rooftop" parent="FloorContainer" instance=ExtResource("4_h1m7h")]
 visible = false
 
-[node name="FifthFloor" parent="FloorContainer" instance=ExtResource("2_uu6xs")]
+[node name="FifthFloor" parent="FloorContainer" instance=ExtResource("5_erwvk")]
 
-[node name="Seed1" parent="FloorContainer/FifthFloor" instance=ExtResource("5_3dxm6")]
+[node name="Seed1" parent="FloorContainer/FifthFloor" instance=ExtResource("6_2w5on")]
 z_index = 9
 position = Vector2(430, 492)
-item_tex = ExtResource("6_trn2v")
+item_tex = ExtResource("7_346fj")
 
-[node name="Seed2" parent="FloorContainer/FifthFloor" instance=ExtResource("5_3dxm6")]
+[node name="Seed2" parent="FloorContainer/FifthFloor" instance=ExtResource("6_2w5on")]
 z_index = 9
 position = Vector2(354, 132)
-item_tex = ExtResource("6_trn2v")
+item_tex = ExtResource("7_346fj")
 
-[node name="Seed3" parent="FloorContainer/FifthFloor" instance=ExtResource("5_3dxm6")]
+[node name="Seed3" parent="FloorContainer/FifthFloor" instance=ExtResource("6_2w5on")]
 z_index = 9
 position = Vector2(653, 511)
-item_tex = ExtResource("6_trn2v")
+item_tex = ExtResource("7_346fj")
 
-[node name="Bottle1" parent="FloorContainer/FifthFloor" instance=ExtResource("5_3dxm6")]
+[node name="Bottle1" parent="FloorContainer/FifthFloor" instance=ExtResource("6_2w5on")]
 z_index = 9
 position = Vector2(921, 278)
 item_id = "bottle"
-item_tex = ExtResource("7_trn2v")
+item_tex = ExtResource("8_0sclb")
 
-[node name="FourthFloor" parent="FloorContainer" instance=ExtResource("8_03owx")]
+[node name="FourthFloor" parent="FloorContainer" instance=ExtResource("9_sxkr1")]
 visible = false
 
-[node name="Hamster2" parent="FloorContainer/FourthFloor" instance=ExtResource("4_wkp8b")]
+[node name="Hamster2" parent="FloorContainer/FourthFloor" instance=ExtResource("10_fq0cl")]
 
-[node name="ThirdFloor" parent="FloorContainer" instance=ExtResource("11_5vvyt")]
+[node name="ThirdFloor" parent="FloorContainer" instance=ExtResource("11_hwpts")]
 visible = false
 
 [node name="CanvasHints" type="CanvasLayer" parent="."]
@@ -130,7 +130,7 @@ offset_bottom = 40.0
 [node name="Sprite2D" type="Sprite2D" parent="CanvasHints/ElevatorPop"]
 position = Vector2(71, 460)
 scale = Vector2(2, 2)
-texture = ExtResource("5_fos0i")
+texture = ExtResource("12_jyqft")
 
 [node name="RoofTop" type="Button" parent="CanvasHints/ElevatorPop/Sprite2D"]
 offset_left = -9.0

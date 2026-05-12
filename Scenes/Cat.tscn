@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cubpskpjbnhkq"]
+
+[ext_resource type="Texture2D" uid="uid://c7ckg5gn4750x" path="res://Assets/characters/cat1.png" id="1_syt6j"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r5u08"]
+radius = 11.0
+height = 34.0
+
+[node name="Cat" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_syt6j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_r5u08")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
