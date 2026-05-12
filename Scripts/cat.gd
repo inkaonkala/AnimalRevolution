@@ -33,6 +33,7 @@ func on_new_day() -> void:
 			need_therapy()
 
 func become_hungry() ->void:
+	state = State.HUNGRY
 	print("Cat's hungry!")
 	
 func butcher() -> void:
