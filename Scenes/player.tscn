@@ -10,6 +10,7 @@ size = Vector2(35, 33)
 size = Vector2(23, 32)
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 10
 motion_mode = 1
 script = ExtResource("1_4flbx")
 

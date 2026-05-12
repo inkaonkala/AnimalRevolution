@@ -37,7 +37,9 @@ func become_hungry() ->void:
 	print("Cat's hungry!")
 	
 func butcher() -> void:
+	state = State.WORKING
 	print("Cat's butshering the human")
 
 func need_therapy() -> void:
+	state = State.NEEDS_THERAPY
 	print("Cat's in need of threrapy")
