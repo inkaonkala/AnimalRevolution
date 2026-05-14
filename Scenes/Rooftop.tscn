@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://b8b2cyf36auww"]
+[gd_scene load_steps=41 format=4 uid="uid://b8b2cyf36auww"]
 
 [ext_resource type="Texture2D" uid="uid://b4qa0jkjn0kan" path="res://Assets/RoomNDeco/floor_test.png" id="1_d70lt"]
 [ext_resource type="Texture2D" uid="uid://cc13py1wb2ctl" path="res://Assets/RoomNDeco/wall_collider.png" id="1_vhrc3"]
@@ -13,6 +13,15 @@
 [ext_resource type="Texture2D" uid="uid://bro860t1l2tar" path="res://Assets/Plants/car1W.png" id="9_834rt"]
 [ext_resource type="Texture2D" uid="uid://cun2jqq85wfa3" path="res://Assets/Plants/ca2w.png" id="10_n11cc"]
 [ext_resource type="Texture2D" uid="uid://cwu6jntqjpwfi" path="res://Assets/Plants/car3w.png" id="11_t1jei"]
+[ext_resource type="Texture2D" uid="uid://rht7ow3sbrro" path="res://Assets/RoomNDeco/Deco/furniture/armchair1.png" id="14_ea3hb"]
+[ext_resource type="Texture2D" uid="uid://csbj0lde35tum" path="res://Assets/RoomNDeco/Deco/furniture/bookcase.png" id="15_sl4cr"]
+[ext_resource type="Texture2D" uid="uid://dpbgiwjcpca62" path="res://Assets/RoomNDeco/Deco/deco/taulu2.png" id="16_0s4ra"]
+[ext_resource type="Texture2D" uid="uid://oeq8agp0hcar" path="res://Assets/RoomNDeco/Deco/plants&animals/kasvi4.png" id="17_mwpas"]
+[ext_resource type="Texture2D" uid="uid://y70bwmh8p3uo" path="res://Assets/RoomNDeco/Deco/furniture/pöytä3.png" id="18_qj1ha"]
+[ext_resource type="Texture2D" uid="uid://bn66ladvuamie" path="res://Assets/RoomNDeco/Deco/furniture/kaappi3.png" id="19_bpi0r"]
+[ext_resource type="Texture2D" uid="uid://b7rhk3g1d8spl" path="res://Assets/RoomNDeco/Deco/furniture/sohva3.png" id="20_0a0ac"]
+[ext_resource type="Texture2D" uid="uid://njnnb2jhbjcx" path="res://Assets/RoomNDeco/Deco/plants&animals/akvaario.png" id="20_0s4ra"]
+[ext_resource type="Texture2D" uid="uid://0vh6a5evwf3o" path="res://Assets/RoomNDeco/Deco/misc/kasettis.png" id="22_mwpas"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bboc2"]
 texture = ExtResource("1_d70lt")
@@ -57,6 +66,124 @@ sources/1 = SubResource("TileSetAtlasSource_gcvgs")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bboc2"]
 size = Vector2(57, 28)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5qh51"]
+texture = ExtResource("14_ea3hb")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hlbgm"]
+texture = ExtResource("15_sl4cr")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_61aek"]
+texture = ExtResource("16_0s4ra")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v2x8t"]
+texture = ExtResource("17_mwpas")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oovvy"]
+texture = ExtResource("18_qj1ha")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3234m"]
+texture = ExtResource("19_bpi0r")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qj1ha"]
+texture = ExtResource("20_0s4ra")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_op8k8"]
+texture = ExtResource("20_0a0ac")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bpi0r"]
+texture = ExtResource("22_mwpas")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_b4kfl"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_5qh51")
+sources/1 = SubResource("TileSetAtlasSource_hlbgm")
+sources/2 = SubResource("TileSetAtlasSource_3234m")
+sources/5 = SubResource("TileSetAtlasSource_op8k8")
+sources/10 = SubResource("TileSetAtlasSource_61aek")
+sources/11 = SubResource("TileSetAtlasSource_v2x8t")
+sources/13 = SubResource("TileSetAtlasSource_oovvy")
+sources/4 = SubResource("TileSetAtlasSource_qj1ha")
+sources/9 = SubResource("TileSetAtlasSource_bpi0r")
+
 [node name="Rooftop" type="Node2D"]
 
 [node name="WallTiles" type="TileMapLayer" parent="."]
@@ -79,7 +206,7 @@ position = Vector2(2.5, -14)
 shape = SubResource("RectangleShape2D_bboc2")
 
 [node name="HamsterSpawnPoint2" type="Marker2D" parent="."]
-position = Vector2(511, 314)
+position = Vector2(507, 321)
 
 [node name="plantAreas" type="Node2D" parent="."]
 
@@ -128,3 +255,8 @@ wet_growth_texs = Array[Texture2D]([ExtResource("9_834rt"), ExtResource("10_n11c
 [node name="Elevator" type="Sprite2D" parent="."]
 position = Vector2(129, 352)
 texture = ExtResource("5_7hyk6")
+
+[node name="TESTfurniture" type="TileMapLayer" parent="."]
+z_index = 20
+tile_map_data = PackedByteArray("AAAPAAoACQAAAAAAAAAQAAoACQABAAAAAAAPAAsACQAAAAEAAAAQAAsACQABAAEAAAA=")
+tile_set = SubResource("TileSet_b4kfl")

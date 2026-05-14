@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b68r2scjeqgfc"]
+[gd_scene load_steps=12 format=3 uid="uid://b68r2scjeqgfc"]
 
 [ext_resource type="Script" uid="uid://uux8owbv5jwo" path="res://Scripts/main.gd" id="1_grg3l"]
 [ext_resource type="PackedScene" uid="uid://b1phauu4lt1e8" path="res://Scenes/player.tscn" id="2_frkhe"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://cxbxfhvrof4ag" path="res://Assets/Collectables/ballB.png" id="7_346fj"]
 [ext_resource type="Texture2D" uid="uid://bcashksx4nijc" path="res://Assets/Collectables/bottle.png" id="8_0sclb"]
 [ext_resource type="PackedScene" uid="uid://ckmu5j1jfg43k" path="res://Scenes/4th_floor.tscn" id="9_sxkr1"]
-[ext_resource type="PackedScene" uid="uid://c104nexrkrtat" path="res://Scenes/hamster.tscn" id="10_fq0cl"]
 [ext_resource type="PackedScene" uid="uid://bc6ou37n0x6el" path="res://Scenes/3_CatFloor.tscn" id="11_hwpts"]
 [ext_resource type="Texture2D" uid="uid://mhs4cjlvhox7" path="res://Assets/RoomNDeco/elevatorpopup.png" id="12_jyqft"]
 
@@ -17,7 +16,6 @@
 script = ExtResource("1_grg3l")
 
 [node name="Player" parent="." instance=ExtResource("2_frkhe")]
-z_index = 10
 
 [node name="CanvasSideBar" type="CanvasLayer" parent="."]
 script = ExtResource("3_1p5hy")
@@ -106,8 +104,6 @@ item_tex = ExtResource("8_0sclb")
 
 [node name="FourthFloor" parent="FloorContainer" instance=ExtResource("9_sxkr1")]
 visible = false
-
-[node name="Hamster2" parent="FloorContainer/FourthFloor" instance=ExtResource("10_fq0cl")]
 
 [node name="ThirdFloor" parent="FloorContainer" instance=ExtResource("11_hwpts")]
 visible = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://bc6ou37n0x6el"]
+[gd_scene load_steps=43 format=4 uid="uid://bc6ou37n0x6el"]
 
 [ext_resource type="Texture2D" uid="uid://cc13py1wb2ctl" path="res://Assets/RoomNDeco/wall_collider.png" id="4_dgaro"]
 [ext_resource type="Texture2D" uid="uid://con07bm5diquw" path="res://Assets/RoomNDeco/wall_Redge.png" id="4_mqxsb"]
@@ -12,6 +12,13 @@
 [ext_resource type="Texture2D" uid="uid://hqdaj1enqw44" path="res://Assets/RoomNDeco/door.png" id="8_424ii"]
 [ext_resource type="Texture2D" uid="uid://dfv41gi1depm5" path="res://Assets/RoomNDeco/wall_rim.png" id="8_mu5rv"]
 [ext_resource type="PackedScene" uid="uid://cubpskpjbnhkq" path="res://Scenes/Cat.tscn" id="12_5u5dx"]
+[ext_resource type="Texture2D" uid="uid://rht7ow3sbrro" path="res://Assets/RoomNDeco/Deco/furniture/armchair1.png" id="13_aqdr3"]
+[ext_resource type="Texture2D" uid="uid://csbj0lde35tum" path="res://Assets/RoomNDeco/Deco/furniture/bookcase.png" id="14_ikaap"]
+[ext_resource type="Texture2D" uid="uid://dpbgiwjcpca62" path="res://Assets/RoomNDeco/Deco/deco/taulu2.png" id="15_qgwce"]
+[ext_resource type="Texture2D" uid="uid://oeq8agp0hcar" path="res://Assets/RoomNDeco/Deco/plants&animals/kasvi4.png" id="16_wby3x"]
+[ext_resource type="Texture2D" uid="uid://y70bwmh8p3uo" path="res://Assets/RoomNDeco/Deco/furniture/pöytä3.png" id="17_6dj3b"]
+[ext_resource type="Texture2D" uid="uid://bn66ladvuamie" path="res://Assets/RoomNDeco/Deco/furniture/kaappi3.png" id="18_14daf"]
+[ext_resource type="Texture2D" uid="uid://b7rhk3g1d8spl" path="res://Assets/RoomNDeco/Deco/furniture/sohva3.png" id="19_vgphd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dgaro"]
 resource_name = "Collider"
@@ -135,6 +142,106 @@ sources/10 = SubResource("TileSetAtlasSource_5u5dx")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bboc2"]
 size = Vector2(57, 28)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q01yc"]
+texture = ExtResource("13_aqdr3")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6vgxw"]
+texture = ExtResource("14_ikaap")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7kly5"]
+texture = ExtResource("15_qgwce")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_shiae"]
+texture = ExtResource("16_wby3x")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_10r08"]
+texture = ExtResource("17_6dj3b")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yy6n6"]
+texture = ExtResource("18_14daf")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3kg20"]
+texture = ExtResource("19_vgphd")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_mkewh"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_q01yc")
+sources/1 = SubResource("TileSetAtlasSource_6vgxw")
+sources/2 = SubResource("TileSetAtlasSource_yy6n6")
+sources/5 = SubResource("TileSetAtlasSource_3kg20")
+sources/10 = SubResource("TileSetAtlasSource_7kly5")
+sources/11 = SubResource("TileSetAtlasSource_shiae")
+sources/13 = SubResource("TileSetAtlasSource_10r08")
+
 [node name="3th_CatFloor" type="Node2D"]
 
 [node name="ColliderTiles" type="TileMapLayer" parent="."]
@@ -167,3 +274,7 @@ texture = ExtResource("5_424ii")
 
 [node name="Cat" parent="." instance=ExtResource("12_5u5dx")]
 position = Vector2(651, 339)
+
+[node name="TESTfurniture" type="TileMapLayer" parent="."]
+z_index = 20
+tile_set = SubResource("TileSet_mkewh")

@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 DayCycle="*res://Scripts/dayNNightCycle.gd"
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+
 [input]
 
 move_up={
