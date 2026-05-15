@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://blfqexx45p25p"]
+[gd_scene load_steps=2 format=3 uid="uid://blfqexx45p25p"]
+
+[ext_resource type="Script" uid="uid://we6di73g6jur" path="res://Scripts/night.gd" id="1_e8dqt"]
 
 [node name="Night" type="Node2D"]
+script = ExtResource("1_e8dqt")
+
+[node name="ReportLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

@@ -31,4 +31,5 @@ func sleep_until_morning() -> void:
 	DayCycle.new_day.emit(DayCycle.day_nmb)
 	DayCycle.time_changed.emit(DayCycle.get_time())
 
+#UNCOMMENT FOR NIGHT!
 #	get_tree().change_scene_to_file("res://Scenes/Night.tscn")

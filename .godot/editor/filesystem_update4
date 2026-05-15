@@ -3,3 +3,5 @@ res://Scripts/GameState.gd
 res://Scripts/human.gd
 res://Scripts/cat.gd
 res://Scripts/sleepSpot.gd
+res://Scenes/Night.tscn
+res://Scripts/night.gd
