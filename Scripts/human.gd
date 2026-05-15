@@ -153,13 +153,19 @@ func interact_exited(body: Node) -> void:
 func tag_for_factory() -> void:
 	if tagged:
 		return
+		
+	if not GameState.tagging_unlocked:
+			print("Talk to the cat to unlock the TAG")
+			return
 
 	tagged = true
 	state = State.TAGGED
 	update_image()
 	collision_shape.disabled = true
 	
-	print("Human tagged for factory!")
+	GameState.register_tagged_humans(self)
+	print("Human to factory TAGGED")
+	
 		
 func update_image() -> void:
 	if state == State.CAPTURED and captured_tex:

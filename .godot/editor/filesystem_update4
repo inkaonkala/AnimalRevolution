@@ -1,5 +1,5 @@
-res://Scenes/4th_floor.tscn
-res://Scenes/5_DogFloor.tscn
-res://Scenes/Rooftop.tscn
-res://Scenes/3_CatFloor.tscn
 res://Scenes/Main.tscn
+res://Scripts/GameState.gd
+res://Scripts/human.gd
+res://Scripts/cat.gd
+res://Scripts/sleepSpot.gd

@@ -19,10 +19,16 @@ func body_exit(body: Node) -> void:
 		player_inside = false
 
 func sleep_until_morning() -> void:
+	GameState.process_nigt()
+	
 	DayCycle.current_time = DayCycle.ToD.MORNING
 	DayCycle.day_nmb += 1
-	print("It's a Morning! Day number: ")
 	DayCycle.timer = 0.0
+	print("It's a Morning! Day number: ", DayCycle.day_nmb)
+	print("Meat produced last night: ", GameState.butschered_lastnight)
+	
 
 	DayCycle.new_day.emit(DayCycle.day_nmb)
 	DayCycle.time_changed.emit(DayCycle.get_time())
+
+#	get_tree().change_scene_to_file("res://Scenes/Night.tscn")
