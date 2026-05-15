@@ -6,27 +6,45 @@ var tagging_unlocked := false
 
 var meat := 0
 var butschered_lastnight := 0
-
 var money := 0
 
 var tagged_humans: Array = []
 
-func reset_night() -> void:
-	butschered_lastnight = 0
-	
+
 func register_tagged_humans(human: Node) -> void:
-	if human not in tagged_humans:
-		tagged_humans.append(human)
-		print("Registered tagged human. Count: ", tagged_humans.size())
+	for human_data in tagged_humans:
+		if human_data["human"] == human:
+			return
+
+	tagged_humans.append({
+		"human": human,
+		"nights_left": 5
+	})
+
+	print("Registered tagged human. Count: ", tagged_humans.size())
+
 	
 func process_nigt() -> void:
-	reset_night()	
+	butschered_lastnight = 0
+	var finished_humans := []
 	
-	for human in tagged_humans:
-		if is_instance_valid(human):
-			human.queue_free()
-			meat += 1
-			butschered_lastnight += 1
+	for human_data in tagged_humans:
+		var human = human_data["human"]
+		
+		if not is_instance_valid(human):
+			finished_humans.append(human_data)
+			continue
 			
+		meat += 1
+		butschered_lastnight += 1
+		human_data["nights_left"] -= 1
+		
+		if human_data["nights_left"] <= 0:
+			human.queue_free()
+			finished_humans.append(human_data)
+	
+	for human_data in finished_humans:
+		tagged_humans.erase(human_data)
+
 	print("Night processed. Meat total: ", meat)
-	tagged_humans.clear()	 	
+	print("Butchered last night: ", butschered_lastnight)
