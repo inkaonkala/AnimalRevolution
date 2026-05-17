@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b68r2scjeqgfc"]
+[gd_scene load_steps=13 format=3 uid="uid://b68r2scjeqgfc"]
 
 [ext_resource type="Script" uid="uid://uux8owbv5jwo" path="res://Scripts/main.gd" id="1_grg3l"]
 [ext_resource type="PackedScene" uid="uid://b1phauu4lt1e8" path="res://Scenes/player.tscn" id="2_frkhe"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bcashksx4nijc" path="res://Assets/Collectables/bottle.png" id="8_0sclb"]
 [ext_resource type="PackedScene" uid="uid://ckmu5j1jfg43k" path="res://Scenes/4th_floor.tscn" id="9_sxkr1"]
 [ext_resource type="PackedScene" uid="uid://bc6ou37n0x6el" path="res://Scenes/3_CatFloor.tscn" id="11_hwpts"]
+[ext_resource type="PackedScene" uid="uid://blfqexx45p25p" path="res://Scenes/Night.tscn" id="12_grg3l"]
 [ext_resource type="Texture2D" uid="uid://mhs4cjlvhox7" path="res://Assets/RoomNDeco/elevatorpopup.png" id="12_jyqft"]
 
 [node name="Main" type="Node2D"]
@@ -155,7 +156,9 @@ offset_top = 1.5
 offset_right = 4.0
 offset_bottom = 14.5
 
-[node name="GameManager" type="Node" parent="."]
+[node name="NightManager" type="CanvasLayer" parent="."]
+
+[node name="Night" parent="NightManager" instance=ExtResource("12_grg3l")]
 
 [connection signal="pressed" from="CanvasHints/ElevatorPop/Sprite2D/RoofTop" to="." method="_on_roof_top_pressed"]
 [connection signal="pressed" from="CanvasHints/ElevatorPop/Sprite2D/floorFive" to="." method="_on_floor_five_pressed"]

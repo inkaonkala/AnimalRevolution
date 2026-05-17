@@ -2,9 +2,30 @@
 
 [ext_resource type="Script" uid="uid://we6di73g6jur" path="res://Scripts/night.gd" id="1_e8dqt"]
 
-[node name="Night" type="Node2D"]
+[node name="Night" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_e8dqt")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1184.0
+offset_bottom = 721.0
+color = Color(0.025945844, 0.025964037, 0.7007594, 1)
+
 [node name="ReportLabel" type="Label" parent="."]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+vertical_alignment = 1
+
+[node name="ContinueButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "CONTINUE"
+icon_alignment = 1

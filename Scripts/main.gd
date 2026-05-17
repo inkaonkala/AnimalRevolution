@@ -3,6 +3,8 @@ extends Node2D
 @onready var player = $Player
 @onready var floor_container = $FloorContainer
 @onready var current_floor = $FloorContainer/FifthFloor
+#NIGHT
+@onready var night = $NightManager/Night
 
 @onready var side_bar = $CanvasSideBar/SideBarUI
 @onready var elevator_popup = $CanvasHints/ElevatorPop
@@ -18,6 +20,9 @@ extends Node2D
 var spawn_from := "first"
 var near_elevator := false
 
+#NIGHT
+var  night_open := false
+
 #inventory
 var seeds := 0
 var bottle := 0
@@ -30,11 +35,23 @@ func _ready() -> void:
 	setup_elevator(current_floor)
 	hint_e.visible = false
 	elevator_popup.visible = false
+	#set NIGHT off
+	night.visible = false
+	night.continue_pressed.connect(close_night_report)
 	#ACTIVATE FLOORS!
 	set_floor_active($FloorContainer/Rooftop, false)
 	set_floor_active($FloorContainer/FourthFloor, false)
 	set_floor_active($FloorContainer/FifthFloor, true)
 	set_floor_active($FloorContainer/ThirdFloor, false)
+
+func _process(delta: float) -> void:
+	if night_open:
+		if Input.is_action_just_pressed("interact"):
+			close_night_report()
+		return
+		
+	if near_elevator and Input.is_action_just_pressed("interact"):
+		open_elevator_popup()
 
 func spawn_player() -> void:
 	var spawn_point: Marker2D
@@ -45,6 +62,20 @@ func spawn_player() -> void:
 		spawn_point = current_floor.get_node("FirstSpawn")
 
 	player.global_position = spawn_point.global_position
+
+#NIGHT maaging
+func show_night_report() -> void:
+	night.visible = true
+	night_open = true
+	player.can_move = false
+	
+	if night.has_method("update_report"):
+		night.update_report()
+
+func close_night_report() -> void:
+	night.visible = false
+	night_open = false
+	player.can_move = true
 
 #inventory
 
@@ -88,10 +119,7 @@ func exit_elevator(body: Node) -> void:
 		near_elevator = false
 		hint_e.visible = false
 		
-func _process(delta: float) -> void:
-	if near_elevator and Input.is_action_just_pressed("interact"):
-			open_elevator_popup()
-			
+
 func open_elevator_popup() -> void:
 	hint_e.visible = false
 	elevator_popup.visible = true
@@ -109,7 +137,6 @@ func _on_floor_four_pressed() -> void:
 	
 func _on_floor_three_pressed() -> void:
 	change_floor("ThirdFloor") # Replace with function body.
-
 
 
 #these are to make the collision work only on the floor the player is
