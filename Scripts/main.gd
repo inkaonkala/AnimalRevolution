@@ -24,10 +24,23 @@ var near_elevator := false
 var  night_open := false
 
 #inventory
-var seeds := 0
-var bottle := 0
-var hamsterbaby := 0
-var crop := 0
+var inventory := {}
+var invi_order := []
+
+@onready var inv_slots := [
+	$CanvasSideBar/SideBarUI/TextureRect0,
+	$CanvasSideBar/SideBarUI/TextureRect1,
+	$CanvasSideBar/SideBarUI/TextureRect2,
+	$CanvasSideBar/SideBarUI/TextureRect3,
+	$CanvasSideBar/SideBarUI/TextureRect4
+]
+
+var item_icons := {
+	"seed": preload("res://Assets/Collectables/ballB.png"),
+	"bottle": preload("res://Assets/Collectables/bottle.png"),
+	"hamsterbaby": preload("res://Assets/Collectables/hamsterbaby.png"),
+	"crop": preload("res://Assets/Plants/carrot.png")
+}
 
 func _ready() -> void:
 	spawn_player()
@@ -80,23 +93,44 @@ func close_night_report() -> void:
 #inventory
 
 func update_inventory_ui() -> void:
-		inv_zero.text = "Seeds: " + str(seeds)
-		inv_1.text = "Bottle: " + str(bottle)
-		inv_2.text = "Baby: " + str(hamsterbaby)
-		inv_3.text = "Crops: " +str(crop)
-		inv_4.text = "empty"
+	for slot in inv_slots:
+		slot.texture = null
+		slot.visible = false
+		
+	for i in range(min(invi_order.size(), inv_slots.size())):
+		var item_id = invi_order[i]
+		inv_slots[i].visible = true
+		inv_slots[i].texture = item_icons.get(item_id, null)
+#		inv_zero.text = "Seeds: " + str(inventory.get("seed", 0))
+#		inv_1.text = "Bottle: " + str(inventory.get("bottle", 0))
+#		inv_2.text = "Baby: " + str(inventory.get("hamsterbaby", 0))
+#		inv_3.text = "Crops: " + str(inventory.get("crop", 0))
+#		inv_4.text = "empty"
 		
 func add_item(item_id: String, amount: int) -> void:
-	if item_id == "seed":
-		seeds += amount
-	elif item_id == "bottle":
-		bottle += amount
-	elif item_id == "hamsterbaby":
-		hamsterbaby += amount
-	elif item_id == "crop":
-		crop += amount
+	if not inventory.has(item_id):
+		inventory[item_id] = 0
+	if inventory[item_id] <= 0 and item_id not in invi_order:
+			invi_order.append(item_id)
+	inventory[item_id] += amount
+	update_inventory_ui()
 	
-	update_inventory_ui()	
+func remove_item(item_id: String, amount: int = 1) -> bool:
+	if inventory.get(item_id, 0) < amount:
+		return false
+
+	inventory[item_id] -= amount
+
+	if inventory[item_id] <= 0:
+		inventory.erase(item_id)
+		invi_order.erase(item_id)
+
+	update_inventory_ui()
+	return true
+
+func has_item(item_id: String, amount: int = 1) -> bool:
+	return inventory.get(item_id, 0) >= amount
+
 
 #invi end
 

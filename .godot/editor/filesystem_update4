@@ -3,3 +3,5 @@ res://Scripts/main.gd
 res://Scripts/sleepSpot.gd
 res://Scripts/night.gd
 res://Scenes/Night.tscn
+res://Scenes/4th_floor.tscn
+res://Scripts/plant_n_harvest.gd
