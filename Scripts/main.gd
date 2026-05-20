@@ -28,11 +28,26 @@ var inventory := {}
 var invi_order := []
 
 @onready var inv_slots := [
-	$CanvasSideBar/SideBarUI/TextureRect0,
-	$CanvasSideBar/SideBarUI/TextureRect1,
-	$CanvasSideBar/SideBarUI/TextureRect2,
-	$CanvasSideBar/SideBarUI/TextureRect3,
-	$CanvasSideBar/SideBarUI/TextureRect4
+	{
+		"icon": $CanvasSideBar/SideBarUI/TextureRect0,
+		"label": $CanvasSideBar/SideBarUI/TextureRect0/InveZero
+	},
+	{
+		"icon": $CanvasSideBar/SideBarUI/TextureRect1,
+		"label": $CanvasSideBar/SideBarUI/TextureRect1/Inve1
+	},
+	{
+		"icon": $CanvasSideBar/SideBarUI/TextureRect2,
+		"label": $CanvasSideBar/SideBarUI/TextureRect2/Inve2
+	},
+	{
+		"icon": $CanvasSideBar/SideBarUI/TextureRect3,
+		"label": $CanvasSideBar/SideBarUI/TextureRect3/Inve3
+	},
+	{
+		"icon": $CanvasSideBar/SideBarUI/TextureRect4,
+		"label": $CanvasSideBar/SideBarUI/TextureRect4/Inve4
+	}
 ]
 
 var item_icons := {
@@ -94,18 +109,20 @@ func close_night_report() -> void:
 
 func update_inventory_ui() -> void:
 	for slot in inv_slots:
-		slot.texture = null
-		slot.visible = false
-		
+		slot["icon"].texture = null
+		slot["icon"].visible = false
+		slot["label"].text = ""
+		slot["label"].visible = false
+
 	for i in range(min(invi_order.size(), inv_slots.size())):
 		var item_id = invi_order[i]
-		inv_slots[i].visible = true
-		inv_slots[i].texture = item_icons.get(item_id, null)
-#		inv_zero.text = "Seeds: " + str(inventory.get("seed", 0))
-#		inv_1.text = "Bottle: " + str(inventory.get("bottle", 0))
-#		inv_2.text = "Baby: " + str(inventory.get("hamsterbaby", 0))
-#		inv_3.text = "Crops: " + str(inventory.get("crop", 0))
-#		inv_4.text = "empty"
+		var amount = inventory.get(item_id, 0)
+
+		inv_slots[i]["icon"].visible = true
+		inv_slots[i]["icon"].texture = item_icons.get(item_id, null)
+
+		inv_slots[i]["label"].visible = true
+		inv_slots[i]["label"].text = str(amount)
 		
 func add_item(item_id: String, amount: int) -> void:
 	if not inventory.has(item_id):
