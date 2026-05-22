@@ -49,10 +49,8 @@ offset_bottom = 464.0
 
 [node name="InveZero" type="Label" parent="CanvasSideBar/SideBarUI/TextureRect0"]
 layout_mode = 0
-offset_left = -50.0
-offset_top = 411.0
-offset_right = -10.0
-offset_bottom = 434.0
+offset_right = 40.0
+offset_bottom = 23.0
 
 [node name="TextureRect1" type="TextureRect" parent="CanvasSideBar/SideBarUI"]
 layout_mode = 0
@@ -63,10 +61,8 @@ offset_bottom = 514.0
 
 [node name="Inve1" type="Label" parent="CanvasSideBar/SideBarUI/TextureRect1"]
 layout_mode = 0
-offset_left = -50.0
-offset_top = 440.0
-offset_right = -10.0
-offset_bottom = 463.0
+offset_right = 40.0
+offset_bottom = 23.0
 
 [node name="TextureRect2" type="TextureRect" parent="CanvasSideBar/SideBarUI"]
 layout_mode = 0
@@ -77,10 +73,8 @@ offset_bottom = 562.0
 
 [node name="Inve2" type="Label" parent="CanvasSideBar/SideBarUI/TextureRect2"]
 layout_mode = 0
-offset_left = -50.0
-offset_top = 470.0
-offset_right = -10.0
-offset_bottom = 493.0
+offset_right = 40.0
+offset_bottom = 23.0
 
 [node name="TextureRect3" type="TextureRect" parent="CanvasSideBar/SideBarUI"]
 layout_mode = 0
@@ -91,10 +85,8 @@ offset_bottom = 614.0
 
 [node name="Inve3" type="Label" parent="CanvasSideBar/SideBarUI/TextureRect3"]
 layout_mode = 0
-offset_left = -50.0
-offset_top = 500.0
-offset_right = -10.0
-offset_bottom = 523.0
+offset_right = 40.0
+offset_bottom = 23.0
 
 [node name="TextureRect4" type="TextureRect" parent="CanvasSideBar/SideBarUI"]
 layout_mode = 0
@@ -105,10 +97,8 @@ offset_bottom = 664.0
 
 [node name="Inve4" type="Label" parent="CanvasSideBar/SideBarUI/TextureRect4"]
 layout_mode = 0
-offset_left = -50.0
-offset_top = 530.0
-offset_right = -10.0
-offset_bottom = 553.0
+offset_right = 40.0
+offset_bottom = 23.0
 
 [node name="FloorContainer" type="Node" parent="."]
 
