@@ -1,8 +1,5 @@
 extends Area2D
 
-#@export var dialogue_txt := "Hello! Nice to meet ya. Come and help me at the rooftop"
-#@export var rooftop_path: NodePath #$Main/FloorContainer/Rooftop
-#@export var rooftop_spawn: NodePath #$Rooftop/HasterSpawnPoint
 @export var baby_picup_Scene: PackedScene
 @export var baby_texture: Texture2D
 
