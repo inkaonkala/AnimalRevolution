@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://fbmnlrdte340"]
+
+[ext_resource type="Script" uid="uid://n8ltvw556afd" path="res://Scripts/item_box.gd" id="1_mftn0"]
+[ext_resource type="Texture2D" uid="uid://bj1cbq82wqns0" path="res://Assets/RoomNDeco/box.png" id="2_iqdp2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_53p28"]
+size = Vector2(64, 64)
+
+[node name="ItemBox" type="Area2D"]
+script = ExtResource("1_mftn0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_iqdp2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_53p28")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BoxMenu" type="Control" parent="CanvasLayer"]
+layout_direction = 4
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/BoxMenu"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="ItemList" type="ItemList" parent="CanvasLayer/BoxMenu"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/BoxMenu"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "CLOSE"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b68r2scjeqgfc"]
+[gd_scene load_steps=14 format=3 uid="uid://b68r2scjeqgfc"]
 
 [ext_resource type="Script" uid="uid://uux8owbv5jwo" path="res://Scripts/main.gd" id="1_grg3l"]
 [ext_resource type="PackedScene" uid="uid://b1phauu4lt1e8" path="res://Scenes/player.tscn" id="2_frkhe"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bc6ou37n0x6el" path="res://Scenes/3_CatFloor.tscn" id="11_hwpts"]
 [ext_resource type="PackedScene" uid="uid://blfqexx45p25p" path="res://Scenes/Night.tscn" id="12_grg3l"]
 [ext_resource type="Texture2D" uid="uid://mhs4cjlvhox7" path="res://Assets/RoomNDeco/elevatorpopup.png" id="12_jyqft"]
+[ext_resource type="PackedScene" uid="uid://fbmnlrdte340" path="res://Scenes/ItemBox.tscn" id="13_frkhe"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_grg3l")
@@ -185,6 +186,10 @@ offset_bottom = 14.5
 visible = false
 
 [node name="Night" parent="NightManager" instance=ExtResource("12_grg3l")]
+
+[node name="ItemBox" parent="." instance=ExtResource("13_frkhe")]
+position = Vector2(1111, 88)
+scale = Vector2(0.5, 0.5)
 
 [connection signal="pressed" from="CanvasHints/ElevatorPop/Sprite2D/RoofTop" to="." method="_on_roof_top_pressed"]
 [connection signal="pressed" from="CanvasHints/ElevatorPop/Sprite2D/floorFive" to="." method="_on_floor_five_pressed"]
