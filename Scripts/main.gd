@@ -6,16 +6,10 @@ extends Node2D
 #NIGHT
 @onready var night = $NightManager/Night
 
-@onready var side_bar = $CanvasSideBar/SideBarUI
+@onready var side_bar = $CanvasSideBar
 @onready var elevator_popup = $CanvasHints/ElevatorPop
 @onready var hint_e = $CanvasHints/HintE
 
-#inventory
-@onready var inv_zero = $CanvasSideBar/SideBarUI/InveZero
-@onready var inv_1 = $CanvasSideBar/SideBarUI/Inve1
-@onready var inv_2 = $CanvasSideBar/SideBarUI/Inve2
-@onready var inv_3 = $CanvasSideBar/SideBarUI/Inve3
-@onready var inv_4 = $CanvasSideBar/SideBarUI/Inve4
 
 var spawn_from := "first"
 var near_elevator := false
@@ -26,36 +20,6 @@ var  night_open := false
 #inventory
 var inventory := {}
 var invi_order := []
-
-@onready var inv_slots := [
-	{
-		"icon": $CanvasSideBar/SideBarUI/TextureRect0,
-		"label": $CanvasSideBar/SideBarUI/TextureRect0/InveZero
-	},
-	{
-		"icon": $CanvasSideBar/SideBarUI/TextureRect1,
-		"label": $CanvasSideBar/SideBarUI/TextureRect1/Inve1
-	},
-	{
-		"icon": $CanvasSideBar/SideBarUI/TextureRect2,
-		"label": $CanvasSideBar/SideBarUI/TextureRect2/Inve2
-	},
-	{
-		"icon": $CanvasSideBar/SideBarUI/TextureRect3,
-		"label": $CanvasSideBar/SideBarUI/TextureRect3/Inve3
-	},
-	{
-		"icon": $CanvasSideBar/SideBarUI/TextureRect4,
-		"label": $CanvasSideBar/SideBarUI/TextureRect4/Inve4
-	}
-]
-
-var item_icons := {
-	"seed": preload("res://Assets/Collectables/ballB.png"),
-	"bottle": preload("res://Assets/Collectables/bottle.png"),
-	"hamsterbaby": preload("res://Assets/Collectables/hamsterbaby.png"),
-	"crop": preload("res://Assets/Plants/carrot.png")
-}
 
 func _ready() -> void:
 	spawn_player()
@@ -108,21 +72,8 @@ func close_night_report() -> void:
 #inventory
 
 func update_inventory_ui() -> void:
-	for slot in inv_slots:
-		slot["icon"].texture = null
-		slot["icon"].visible = false
-		slot["label"].text = ""
-		slot["label"].visible = false
+	side_bar.update_inventory_ui(inventory, invi_order)
 
-	for i in range(min(invi_order.size(), inv_slots.size())):
-		var item_id = invi_order[i]
-		var amount = inventory.get(item_id, 0)
-
-		inv_slots[i]["icon"].visible = true
-		inv_slots[i]["icon"].texture = item_icons.get(item_id, null)
-
-		inv_slots[i]["label"].visible = true
-		inv_slots[i]["label"].text = str(amount)
 		
 func add_item(item_id: String, amount: int) -> void:
 	if not inventory.has(item_id):
