@@ -30,7 +30,7 @@ var item_icons := {
 	"seed": preload("res://Assets/Collectables/ballB.png"),
 	"bottle": preload("res://Assets/Collectables/bottle.png"),
 	"hamsterbaby": preload("res://Assets/Collectables/hamsterbaby.png"),
-	"crop": preload("res://Assets/Plants/carrot.png")
+	"carrot": preload("res://Assets/Plants/carrot.png")
 }
 
 func update_inventory_ui(inventory: Dictionary, item_order: Array) -> void:

@@ -1,2 +1,6 @@
 res://Scenes/Main.tscn
 res://Scenes/Night.tscn
+res://Scripts/item_box.gd
+res://Scenes/Rooftop.tscn
+res://Scripts/plant_n_harvest.gd
+res://Scripts/SideBar.gd

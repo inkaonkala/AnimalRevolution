@@ -56,12 +56,12 @@ func try_dig() -> void:
 	
 	if stage != Stage.EMPTY:
 		return
-	if main.inventory["hamsterbaby"] <= 0:
-		print("Need hasterbaby to dig!")
+	if not main.has_item("hamsterbaby"):
+		print("Need hamsterbaby to dig!")
 		return
-	
-	main.inventory["hamsterbaby"] -= 1
-	main.update_inventory_ui()
+
+	main.remove_item("hamsterbaby")
+#	main.update_inventory_ui()
 	
 	stage = Stage.DUG
 	update_image()
@@ -76,12 +76,12 @@ func try_interact() -> void:
 
 func try_plant_seed() -> void:
 	var main = get_tree().current_scene
-	if main.inventory["seed"] <= 0:
+	if not main.has_item("seed"):
 		print("No seed!")
 		return
-		
-	main.inventory["seed"] -= 1
-	main.update_inventory_ui()
+
+	main.remove_item("seed")
+#	main.update_inventory_ui()
 	
 	seed_planted = "carrot"
 	stage = Stage.SEEDED
@@ -92,7 +92,7 @@ func try_plant_seed() -> void:
 func try_water() ->void:
 	var main = get_tree().current_scene
 	
-	if main.inventory["bottle"] <= 0:
+	if not main.has_item("bottle"):
 		print("No water!")
 		return
 		
@@ -128,9 +128,8 @@ func on_new_day(day_numb: int) -> void:
 func try_harvest() -> void:
 	var main = get_tree().current_scene
 	
-	main.inventory["crop"] += 1
-	main.inventory["seed"] += 1
-	main.update_inventory_ui()
+	main.add_item("carrot", 1)
+	main.add_item("seed", 1)
 	
 	seed_planted = ""
 	stage = Stage.EMPTY

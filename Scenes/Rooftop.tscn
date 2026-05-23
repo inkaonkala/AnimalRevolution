@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=4 uid="uid://b8b2cyf36auww"]
+[gd_scene load_steps=42 format=4 uid="uid://b8b2cyf36auww"]
 
 [ext_resource type="Texture2D" uid="uid://b4qa0jkjn0kan" path="res://Assets/RoomNDeco/floor_test.png" id="1_d70lt"]
 [ext_resource type="Texture2D" uid="uid://cc13py1wb2ctl" path="res://Assets/RoomNDeco/wall_collider.png" id="1_vhrc3"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://b7rhk3g1d8spl" path="res://Assets/RoomNDeco/Deco/furniture/sohva3.png" id="20_0a0ac"]
 [ext_resource type="Texture2D" uid="uid://njnnb2jhbjcx" path="res://Assets/RoomNDeco/Deco/plants&animals/akvaario.png" id="20_0s4ra"]
 [ext_resource type="Texture2D" uid="uid://0vh6a5evwf3o" path="res://Assets/RoomNDeco/Deco/misc/kasettis.png" id="22_mwpas"]
+[ext_resource type="PackedScene" uid="uid://fbmnlrdte340" path="res://Scenes/ItemBox.tscn" id="23_mwpas"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bboc2"]
 texture = ExtResource("1_d70lt")
@@ -260,3 +261,8 @@ texture = ExtResource("5_7hyk6")
 z_index = 20
 tile_map_data = PackedByteArray("AAAPAAoACQAAAAAAAAAQAAoACQABAAAAAAAPAAsACQAAAAEAAAAQAAsACQABAAEAAAA=")
 tile_set = SubResource("TileSet_b4kfl")
+
+[node name="ItemBox" parent="." instance=ExtResource("23_mwpas")]
+position = Vector2(317, 345)
+box_name = "Hamster Food"
+allowed_items = Array[String](["carrot"])

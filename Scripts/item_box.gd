@@ -43,7 +43,13 @@ func close_box() -> void:
 func refresh_menu() -> void:
 	for child in item_list.get_children():
 		child.queue_free()
+		
 	var main = get_tree().current_scene
+	
+	#create the LABEL for invenotry
+	var inv_title := Label.new()
+	inv_title.text = "Inventory"
+	item_list.add_child(inv_title)
 	
 	for item_id in main.invi_order:
 		var amount = main.inventory.get(item_id, 0)
@@ -52,15 +58,30 @@ func refresh_menu() -> void:
 		if not can_accept(item_id):
 			continue
 		
+		#buttons to take items
 		var button := Button.new()
-		#new line
 		var id_for_button = item_id
-		
-		
 		button.text = item_id + ": " + str(amount) + " → put 1"
 #		button.pressed.connect(func(): put_one_item(item_id))
 		button.pressed.connect(func(): put_one_item(id_for_button))
 		item_list.add_child(button)
+		
+	#ITEM BOX
+	var box_title := Label.new()
+	box_title.text = "Box"
+	item_list.add_child(box_title)
+	
+	for item_id in stored_items.keys():
+		var amount = stored_items.get(item_id, 0)
+		if amount <= 0:
+			continue
+			
+		var button := Button.new()
+		var id_for_button = item_id 
+		button.text = item_id + ": " + str(amount) + "-> take 1"
+		button.pressed.connect(func(): take_one_item(id_for_button))
+		item_list.add_child(button)
+			
 
 func open_box() -> void:
 	if box_open:
@@ -79,7 +100,6 @@ func can_accept(item_id: String) -> bool:
 		return item_id in allowed_items
 		
 func put_one_item(item_id: String) -> void:
-		print("HERE HREHRHE EHRHERH EHRHERHEHR EHR HRH")
 		var main = get_tree().current_scene
 		if not main.remove_item(item_id, 1):
 			return
@@ -88,4 +108,15 @@ func put_one_item(item_id: String) -> void:
 		stored_items[item_id] += 1
 		print(box_name, " contains: ", stored_items)
 		refresh_menu()
+		
+func take_one_item(item_id: String) -> void:
+	if stored_items.get(item_id, 0) <= 0:
+		return
+	stored_items[item_id] -= 1
+	if stored_items[item_id] <= 0:
+		stored_items.erase(item_id)
+	
+	var main = get_tree().current_scene
+	main.add_item(item_id, 1)
+	refresh_menu()
 	
