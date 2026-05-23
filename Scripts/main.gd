@@ -10,6 +10,7 @@ extends Node2D
 @onready var elevator_popup = $CanvasHints/ElevatorPop
 @onready var hint_e = $CanvasHints/HintE
 
+#var current_open_box = null
 
 var spawn_from := "first"
 var near_elevator := false

@@ -182,14 +182,13 @@ offset_top = 1.5
 offset_right = 4.0
 offset_bottom = 14.5
 
+[node name="ItemBox" parent="." instance=ExtResource("13_frkhe")]
+position = Vector2(956, 86)
+scale = Vector2(0.5, 0.5)
+
 [node name="NightManager" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Night" parent="NightManager" instance=ExtResource("12_grg3l")]
-
-[node name="ItemBox" parent="." instance=ExtResource("13_frkhe")]
-position = Vector2(1111, 88)
-scale = Vector2(0.5, 0.5)
 
 [connection signal="pressed" from="CanvasHints/ElevatorPop/Sprite2D/RoofTop" to="." method="_on_roof_top_pressed"]
 [connection signal="pressed" from="CanvasHints/ElevatorPop/Sprite2D/floorFive" to="." method="_on_floor_five_pressed"]

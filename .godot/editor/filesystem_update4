@@ -1,12 +1,2 @@
 res://Scenes/Main.tscn
-res://Scripts/main.gd
-res://Scripts/sleepSpot.gd
-res://Scripts/night.gd
 res://Scenes/Night.tscn
-res://Scenes/4th_floor.tscn
-res://Scripts/plant_n_harvest.gd
-res://Scenes/Rooftop.tscn
-res://Scripts/hamster.gd
-res://Scripts/SideBar.gd
-res://Scenes/ItemBox.tscn
-res://Scripts/item_box.gd

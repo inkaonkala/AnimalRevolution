@@ -10,6 +10,7 @@ extends Area2D
 
 var player_near := false
 var stored_items := {}
+var box_open := false
 
 func _ready() -> void:
 	body_entered.connect(on_body_enter)
@@ -18,6 +19,8 @@ func _ready() -> void:
 	box_menu.visible = false
 	
 func _process(_delta: float) -> void:
+	if box_open:
+		return
 	if player_near and Input.is_action_just_pressed("interact"):
 		open_box()
 		
@@ -33,6 +36,7 @@ func	 on_body_exit(body: Node) -> void:
 func close_box() -> void:
 	var main = get_tree().current_scene
 	
+	box_open = false
 	box_menu.visible = false
 	main.player.can_move = true
 	
@@ -49,13 +53,21 @@ func refresh_menu() -> void:
 			continue
 		
 		var button := Button.new()
+		#new line
+		var id_for_button = item_id
+		
+		
 		button.text = item_id + ": " + str(amount) + " → put 1"
-		button.pressed.connect(func(): put_one_item(item_id))
+#		button.pressed.connect(func(): put_one_item(item_id))
+		button.pressed.connect(func(): put_one_item(id_for_button))
 		item_list.add_child(button)
 
 func open_box() -> void:
+	if box_open:
+		return
 	var main = get_tree().current_scene
 	
+	box_open = true 
 	box_label.text = box_name
 	box_menu.visible = true
 	main.player.can_move = false
@@ -67,6 +79,7 @@ func can_accept(item_id: String) -> bool:
 		return item_id in allowed_items
 		
 func put_one_item(item_id: String) -> void:
+		print("HERE HREHRHE EHRHERH EHRHERHEHR EHR HRH")
 		var main = get_tree().current_scene
 		if not main.remove_item(item_id, 1):
 			return
