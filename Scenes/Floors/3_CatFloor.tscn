@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cclmcs3opod0w" path="res://Assets/RoomNDeco/wall_CLedge.png" id="7_ycr8e"]
 [ext_resource type="Texture2D" uid="uid://hqdaj1enqw44" path="res://Assets/RoomNDeco/door.png" id="8_424ii"]
 [ext_resource type="Texture2D" uid="uid://dfv41gi1depm5" path="res://Assets/RoomNDeco/wall_rim.png" id="8_mu5rv"]
-[ext_resource type="PackedScene" uid="uid://cubpskpjbnhkq" path="res://Scenes/Cat.tscn" id="12_5u5dx"]
+[ext_resource type="PackedScene" uid="uid://cubpskpjbnhkq" path="res://Scenes/NPC/Cat.tscn" id="12_5u5dx"]
 [ext_resource type="Texture2D" uid="uid://rht7ow3sbrro" path="res://Assets/RoomNDeco/Deco/furniture/armchair1.png" id="13_aqdr3"]
 [ext_resource type="Texture2D" uid="uid://csbj0lde35tum" path="res://Assets/RoomNDeco/Deco/furniture/bookcase.png" id="14_ikaap"]
 [ext_resource type="Texture2D" uid="uid://dpbgiwjcpca62" path="res://Assets/RoomNDeco/Deco/deco/taulu2.png" id="15_qgwce"]

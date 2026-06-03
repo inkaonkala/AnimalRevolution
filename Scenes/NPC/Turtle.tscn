@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4vmme7x17pi8"]
+
+[ext_resource type="Texture2D" uid="uid://dmg6lue4odvev" path="res://Assets/characters/turtle1.png" id="1_45buw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r5u08"]
+radius = 27.0
+height = 58.0
+
+[node name="Turtle" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_45buw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -2)
+shape = SubResource("CapsuleShape2D_r5u08")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

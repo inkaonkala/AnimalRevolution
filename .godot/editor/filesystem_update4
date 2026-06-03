@@ -4,3 +4,8 @@ res://Scripts/item_box.gd
 res://Scenes/Rooftop.tscn
 res://Scripts/plant_n_harvest.gd
 res://Scripts/SideBar.gd
+res://Scenes/3_CatFloor.tscn
+res://Scenes/4th_floor.tscn
+res://Scenes/5_DogFloor.tscn
+res://Scenes/NPC/Cat.tscn
+res://Scenes/NPC/Turtle.tscn
