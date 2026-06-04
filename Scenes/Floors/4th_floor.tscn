@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=4 uid="uid://ckmu5j1jfg43k"]
+[gd_scene load_steps=43 format=4 uid="uid://ckmu5j1jfg43k"]
 
 [ext_resource type="Texture2D" uid="uid://b4qa0jkjn0kan" path="res://Assets/RoomNDeco/floor_test.png" id="1_6n4f2"]
 [ext_resource type="Texture2D" uid="uid://cc13py1wb2ctl" path="res://Assets/RoomNDeco/wall_collider.png" id="2_irvgt"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://oeq8agp0hcar" path="res://Assets/RoomNDeco/Deco/plants&animals/kasvi4.png" id="16_2mqil"]
 [ext_resource type="Texture2D" uid="uid://b7rhk3g1d8spl" path="res://Assets/RoomNDeco/Deco/furniture/sohva3.png" id="16_r0guy"]
 [ext_resource type="Texture2D" uid="uid://y70bwmh8p3uo" path="res://Assets/RoomNDeco/Deco/furniture/pöytä3.png" id="17_i6s3l"]
+[ext_resource type="PackedScene" uid="uid://duo6smjq7kw2j" path="res://Scenes/NPC/rodent.tscn" id="20_pqfgh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wdo6w"]
 texture = ExtResource("2_irvgt")
@@ -353,6 +354,7 @@ sources/11 = SubResource("TileSetAtlasSource_ix67c")
 sources/13 = SubResource("TileSetAtlasSource_myd80")
 
 [node name="4th_floor" type="Node2D"]
+position = Vector2(-398, -65)
 
 [node name="ColliderTiles" type="TileMapLayer" parent="."]
 z_index = -2
@@ -398,3 +400,14 @@ texture = ExtResource("5_wjrx3")
 z_index = 20
 tile_map_data = PackedByteArray("AAAyAAUAAgAAAAAAAAAzAAUAAgABAAAAAAAyAAYAAgAAAAEAAAAzAAYAAgABAAEAAAA4AAcABQAAAAEAAAA5AAcABQABAAEAAAA4AAYABQAAAAAAAAA5AAYABQABAAAAAAAkABUACwAAAAAAAAAlABUACwABAAAAAAAkABYACwAAAAEAAAAlABYACwABAAEAAAAmABgACwAAAAAAAAAnABgACwABAAAAAAAmABkACwAAAAEAAAAnABkACwABAAEAAAATAAEADQAAAAAAAAAUAAEADQABAAAAAAATAAIADQAAAAEAAAAUAAIADQABAAEAAAA=")
 tile_set = SubResource("TileSet_bx8hc")
+
+[node name="Rodent" parent="." instance=ExtResource("20_pqfgh")]
+position = Vector2(1001, 223)
+rodent_name = "BunBun"
+intro_line = Array[String](["Hello!", "I can help you on the rooftop!"])
+
+[node name="Rodent2" parent="." instance=ExtResource("20_pqfgh")]
+position = Vector2(1022, 223)
+rodent_name = "BunBun"
+intro_line = Array[String](["Hello!", "I can help you on the rooftop!"])
+spawn_index = 1

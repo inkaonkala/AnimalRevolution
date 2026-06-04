@@ -11,3 +11,8 @@ res://Scenes/NPC/Cat.tscn
 res://Scenes/NPC/Turtle.tscn
 res://Scenes/door.tscn
 res://Scripts/door.gd
+res://Scenes/NPC/rodent.tscn
+res://Scripts/rodent.gd
+res://Scenes/Floors/Rooftop.tscn
+res://Scripts/hamster.gd
+res://Scenes/Floors/4th_floor.tscn

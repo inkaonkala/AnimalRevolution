@@ -253,6 +253,29 @@ ready_tex = ExtResource("6_uoa1a")
 growth_texs = Array[Texture2D]([ExtResource("5_tax82"), ExtResource("6_bmsl8"), ExtResource("7_3in2h"), null])
 wet_growth_texs = Array[Texture2D]([ExtResource("9_834rt"), ExtResource("10_n11cc"), ExtResource("11_t1jei"), ExtResource("11_t1jei")])
 
+[node name="SpawnPoints" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 507.0
+offset_top = 321.0
+offset_right = 547.0
+offset_bottom = 361.0
+
+[node name="RodentSpawn1" type="Marker2D" parent="SpawnPoints"]
+position = Vector2(-92, -58)
+
+[node name="RodentSpawn2" type="Marker2D" parent="SpawnPoints"]
+position = Vector2(-12, -56)
+
+[node name="RodentSpawn3" type="Marker2D" parent="SpawnPoints"]
+position = Vector2(73, -55)
+
+[node name="RodentSpawn4" type="Marker2D" parent="SpawnPoints"]
+position = Vector2(151, -55)
+
+[node name="RodentSpawn5" type="Marker2D" parent="SpawnPoints"]
+position = Vector2(228, -51)
+
 [node name="Elevator" type="Sprite2D" parent="."]
 position = Vector2(129, 352)
 texture = ExtResource("5_7hyk6")
