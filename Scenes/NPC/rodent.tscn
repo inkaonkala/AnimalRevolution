@@ -4,17 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://cfc8uuyhdmont" path="res://Assets/characters/bunny2.png" id="2_gb78n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xlsn"]
-size = Vector2(18.5, 29)
+size = Vector2(14, 21)
 
 [node name="Rodent" type="Area2D"]
 script = ExtResource("1_ni7lr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 2
+scale = Vector2(0.75, 0.75)
 texture = ExtResource("2_gb78n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-5.25, 1.5)
+position = Vector2(-4, 1)
 shape = SubResource("RectangleShape2D_5xlsn")
 
 [node name="Label" type="Label" parent="."]
