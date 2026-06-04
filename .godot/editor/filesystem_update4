@@ -9,3 +9,5 @@ res://Scenes/4th_floor.tscn
 res://Scenes/5_DogFloor.tscn
 res://Scenes/NPC/Cat.tscn
 res://Scenes/NPC/Turtle.tscn
+res://Scenes/door.tscn
+res://Scripts/door.gd
