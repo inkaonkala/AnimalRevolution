@@ -1,3 +1,5 @@
+Node2D
+TileMapLayer
 Marker2D
 Control
 Label
@@ -11,5 +13,3 @@ ItemList
 Container
 HBoxContainer
 CanvasLayer
-TextureRect
-ColorRect
