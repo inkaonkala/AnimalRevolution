@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://ckmu5j1jfg43k"]
+[gd_scene load_steps=44 format=4 uid="uid://ckmu5j1jfg43k"]
 
 [ext_resource type="Texture2D" uid="uid://b4qa0jkjn0kan" path="res://Assets/RoomNDeco/floor_test.png" id="1_6n4f2"]
 [ext_resource type="Texture2D" uid="uid://cc13py1wb2ctl" path="res://Assets/RoomNDeco/wall_collider.png" id="2_irvgt"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://b7rhk3g1d8spl" path="res://Assets/RoomNDeco/Deco/furniture/sohva3.png" id="16_r0guy"]
 [ext_resource type="Texture2D" uid="uid://y70bwmh8p3uo" path="res://Assets/RoomNDeco/Deco/furniture/pöytä3.png" id="17_i6s3l"]
 [ext_resource type="PackedScene" uid="uid://duo6smjq7kw2j" path="res://Scenes/NPC/rodent.tscn" id="20_pqfgh"]
+[ext_resource type="PackedScene" uid="uid://b4vmme7x17pi8" path="res://Scenes/NPC/Turtle.tscn" id="21_d782p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wdo6w"]
 texture = ExtResource("2_irvgt")
@@ -403,11 +404,11 @@ tile_set = SubResource("TileSet_bx8hc")
 
 [node name="Rodent" parent="." instance=ExtResource("20_pqfgh")]
 position = Vector2(1001, 223)
-rodent_name = "BunBun"
-intro_line = Array[String](["Hello!", "I can help you on the rooftop!"])
 
 [node name="Rodent2" parent="." instance=ExtResource("20_pqfgh")]
 position = Vector2(1022, 223)
-rodent_name = "BunBun"
-intro_line = Array[String](["Hello!", "I can help you on the rooftop!"])
 spawn_index = 1
+
+[node name="Turtle" parent="." instance=ExtResource("21_d782p")]
+z_index = 6
+position = Vector2(77, 548)

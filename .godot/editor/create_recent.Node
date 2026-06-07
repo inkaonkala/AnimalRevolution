@@ -1,6 +1,6 @@
+Marker2D
 Node2D
 TileMapLayer
-Marker2D
 Control
 Label
 CollisionShape2D
@@ -12,4 +12,3 @@ Button
 ItemList
 Container
 HBoxContainer
-CanvasLayer

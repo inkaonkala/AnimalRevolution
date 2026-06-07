@@ -278,3 +278,8 @@ position = Vector2(651, 339)
 [node name="TESTfurniture" type="TileMapLayer" parent="."]
 z_index = 20
 tile_set = SubResource("TileSet_mkewh")
+
+[node name="SpawnPoints" type="Node2D" parent="."]
+
+[node name="TurtleSpawn" type="Marker2D" parent="SpawnPoints"]
+position = Vector2(80, 598)
