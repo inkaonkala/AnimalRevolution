@@ -20,7 +20,7 @@ func hamster_touched1(body: Node) -> void:
 	if not has_talked1:	
 		has_talked1 = true
 		await make_hamster_talk("Hello! Nice to meet ya!")
-		await make_hamster_talk("My name is Joanna!")
+		await make_hamster_talk("My name is Yolanda!")
 		await make_hamster_talk("Come, and help me at the rooftop!")
 		move_to_rooftop()
 		return
