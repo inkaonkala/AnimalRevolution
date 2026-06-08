@@ -165,3 +165,20 @@ func update_growing_image() -> void:
 		if index < growth_texs.size():
 			sprite.texture = growth_texs[index]
 	
+#RODENT WATERIG
+func water_by_rodent() -> bool:
+	if is_watered:
+		return false
+
+	if stage == Stage.SEEDED:
+		is_watered = true
+		stage = Stage.WATERED
+		update_image()
+		return true
+
+	if stage == Stage.GROWING:
+		is_watered = true
+		update_image()
+		return true
+
+	return false

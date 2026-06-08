@@ -3,9 +3,9 @@ extends Area2D
 enum State
 {
 	LOST,
-	ON_ROOF,
 	WORKING,
 	SAD,
+	NEUTRAL,
 	HAPPY
 }
 
@@ -84,18 +84,35 @@ func move_to_rooftop() -> void:
 	rooftop.add_child(self)
 		
 	global_position = spawn.global_position
-	state = State.ON_ROOF
+	state = State.NEUTRAL
 		
 			
 func on_new_day(day_nmb: int) -> void:
-	if state == State.ON_ROOF or state == State.HAPPY:
+	if state == State.NEUTRAL or state == State.HAPPY:
 		work_at_night()
 
 
 func work_at_night() -> void:
 	plants_watered = get_water_amount()
-	print(rodent_name, " watered ", plants_watered, " plant(s).")
-
+	var watered_count := water(plants_watered)
+	
+	print(rodent_name, " watered ", watered_count, " plant(s).")
+	
+func water(amount: int) -> int:
+	var main = get_tree().current_scene
+	var rooftop = main.get_node("FloorContainer/Rooftop/plantAreas")
+	
+	var watered := 0
+	
+	for plant in rooftop.get_children():
+		if watered >= amount:
+			break
+		if plant.has_method("water_by_rodent"):
+			if plant.water_by_rodent():
+				watered += 1
+	
+	return watered
+		
 
 func get_water_amount() -> int:
 	match state:
@@ -103,5 +120,7 @@ func get_water_amount() -> int:
 			return 2
 		State.SAD:
 			return 0
-		_:
+		State.NEUTRAL:
 			return 1
+		_:
+			return 0

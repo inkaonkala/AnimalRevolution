@@ -403,7 +403,9 @@ tile_set = SubResource("TileSet_bx8hc")
 
 [node name="Rodent" parent="." instance=ExtResource("20_pqfgh")]
 position = Vector2(1001, 223)
+rodent_name = "BunBun(0)"
 
 [node name="Rodent2" parent="." instance=ExtResource("20_pqfgh")]
 position = Vector2(1022, 223)
+rodent_name = "Nip(1)"
 spawn_index = 1

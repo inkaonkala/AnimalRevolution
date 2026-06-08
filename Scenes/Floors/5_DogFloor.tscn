@@ -440,4 +440,6 @@ tile_set = SubResource("TileSet_hg5h4")
 
 [node name="Cat" parent="." instance=ExtResource("26_r7dl1")]
 position = Vector2(157, 535)
-cat_name = "Percival"
+cat_name = "Percival(1)"
+floorspawn_index = 1
+therapyspaw_i = 1

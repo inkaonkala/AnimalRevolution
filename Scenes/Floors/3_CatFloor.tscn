@@ -274,6 +274,7 @@ texture = ExtResource("5_424ii")
 
 [node name="Cat" parent="." instance=ExtResource("12_5u5dx")]
 position = Vector2(651, 339)
+cat_name = "John(0)"
 
 [node name="TESTfurniture" type="TileMapLayer" parent="."]
 z_index = 20
