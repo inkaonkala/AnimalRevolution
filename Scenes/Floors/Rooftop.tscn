@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=4 uid="uid://b8b2cyf36auww"]
+[gd_scene load_steps=57 format=4 uid="uid://b8b2cyf36auww"]
 
 [ext_resource type="Texture2D" uid="uid://bt40m08cq5fsx" path="res://Assets/Plants/growbox.png" id="1_js5ft"]
 [ext_resource type="Texture2D" uid="uid://cc13py1wb2ctl" path="res://Assets/RoomNDeco/wall_collider.png" id="1_vhrc3"]
@@ -9,12 +9,19 @@
 [ext_resource type="Texture2D" uid="uid://bo8ki4ir1vwhj" path="res://Assets/Plants/car1.png" id="5_tax82"]
 [ext_resource type="Texture2D" uid="uid://b5uiw8k5jvwo2" path="res://Assets/RoomNDeco/wooden_tile1.png" id="5_yx65s"]
 [ext_resource type="Texture2D" uid="uid://cvetf86b8b61" path="res://Assets/Plants/car2.png" id="6_bmsl8"]
+[ext_resource type="Texture2D" uid="uid://buup8qtkrk84p" path="res://Assets/RoomNDeco/Deco/fountain1.png" id="6_es6gx"]
 [ext_resource type="Texture2D" uid="uid://ccvd1hvy3i8r1" path="res://Assets/Plants/carrot.png" id="6_uoa1a"]
 [ext_resource type="Texture2D" uid="uid://d4mde1tenvmrs" path="res://Assets/Plants/car3.png" id="7_3in2h"]
+[ext_resource type="Texture2D" uid="uid://cihv7hw1nu14j" path="res://Assets/RoomNDeco/Deco/fountain2.png" id="7_au3mp"]
 [ext_resource type="Texture2D" uid="uid://bydwgxna57gcr" path="res://Assets/Plants/watered.png" id="8_lblpy"]
+[ext_resource type="Texture2D" uid="uid://c2kvdm6r0jsyg" path="res://Assets/RoomNDeco/Deco/fountain3.png" id="8_lhqdd"]
+[ext_resource type="Texture2D" uid="uid://pkihcqb7olaa" path="res://Assets/RoomNDeco/Deco/fountain4.png" id="9_4k0c1"]
 [ext_resource type="Texture2D" uid="uid://bro860t1l2tar" path="res://Assets/Plants/car1W.png" id="9_834rt"]
+[ext_resource type="Texture2D" uid="uid://bsiogujknf126" path="res://Assets/RoomNDeco/Deco/fountain5.png" id="10_1rl0f"]
 [ext_resource type="Texture2D" uid="uid://cun2jqq85wfa3" path="res://Assets/Plants/ca2w.png" id="10_n11cc"]
+[ext_resource type="Texture2D" uid="uid://b6tu54atsaksu" path="res://Assets/RoomNDeco/Deco/fountain6.png" id="11_brnl3"]
 [ext_resource type="Texture2D" uid="uid://cwu6jntqjpwfi" path="res://Assets/Plants/car3w.png" id="11_t1jei"]
+[ext_resource type="Texture2D" uid="uid://57rnfeidtm6e" path="res://Assets/RoomNDeco/Deco/fountain7.png" id="12_cemt2"]
 [ext_resource type="Texture2D" uid="uid://rht7ow3sbrro" path="res://Assets/RoomNDeco/Deco/furniture/armchair1.png" id="14_ea3hb"]
 [ext_resource type="Texture2D" uid="uid://csbj0lde35tum" path="res://Assets/RoomNDeco/Deco/furniture/bookcase.png" id="15_sl4cr"]
 [ext_resource type="Texture2D" uid="uid://dpbgiwjcpca62" path="res://Assets/RoomNDeco/Deco/deco/taulu2.png" id="16_0s4ra"]
@@ -238,6 +245,38 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_js5ft")
 sources/2 = SubResource("TileSetAtlasSource_i3pd6")
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_1mb7n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_es6gx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_au3mp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_lhqdd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4k0c1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1rl0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_brnl3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_cemt2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_es6gx"]
+size = Vector2(122, 30)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bboc2"]
 size = Vector2(57, 28)
 
@@ -391,6 +430,18 @@ offset_top = -276.0
 offset_right = 2057.0
 offset_bottom = 846.0
 color = Color(0.52385104, 0.8626787, 1, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="tilemaps"]
+z_index = 9
+position = Vector2(307, 512)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_1mb7n")
+
+[node name="Area2D" type="Area2D" parent="tilemaps/AnimatedSprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tilemaps/AnimatedSprite2D/Area2D"]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_es6gx")
 
 [node name="ElevatorSpawn" type="Marker2D" parent="."]
 position = Vector2(129, 417)

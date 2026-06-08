@@ -188,6 +188,12 @@ func set_floor_active(node: Node, enabled: bool) -> void:
 	elif node is Area2D:
 		node.monitoring = enabled
 		node.monitorable= enabled
+	#animations!
+	elif node is AnimatedSprite2D:
+		if enabled:
+			node.play()
+		else:
+			node.stop()
 
 	for child in node.get_children():
 		set_floor_active(child, enabled)

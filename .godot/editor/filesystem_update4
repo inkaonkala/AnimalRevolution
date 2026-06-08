@@ -9,3 +9,4 @@ res://Scripts/cat.gd
 res://Scenes/Floors/5_DogFloor.tscn
 res://Scripts/plant_n_harvest.gd
 res://Scripts/rodent.gd
+res://Scripts/main.gd
