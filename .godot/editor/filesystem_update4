@@ -5,3 +5,5 @@ res://Scripts/turtle.gd
 res://Scenes/Floors/3_CatFloor.tscn
 res://Scenes/Floors/4th_floor.tscn
 res://Scenes/Main.tscn
+res://Scripts/cat.gd
+res://Scenes/Floors/5_DogFloor.tscn

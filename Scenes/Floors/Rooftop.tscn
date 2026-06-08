@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://b8b2cyf36auww"]
+[gd_scene load_steps=47 format=4 uid="uid://b8b2cyf36auww"]
 
 [ext_resource type="Texture2D" uid="uid://b4qa0jkjn0kan" path="res://Assets/RoomNDeco/floor_test.png" id="1_d70lt"]
 [ext_resource type="Texture2D" uid="uid://bt40m08cq5fsx" path="res://Assets/Plants/growbox.png" id="1_js5ft"]
@@ -25,6 +25,8 @@
 [ext_resource type="Texture2D" uid="uid://njnnb2jhbjcx" path="res://Assets/RoomNDeco/Deco/plants&animals/akvaario.png" id="20_0s4ra"]
 [ext_resource type="Texture2D" uid="uid://0vh6a5evwf3o" path="res://Assets/RoomNDeco/Deco/misc/kasettis.png" id="22_mwpas"]
 [ext_resource type="PackedScene" uid="uid://fbmnlrdte340" path="res://Scenes/ItemBox.tscn" id="23_mwpas"]
+[ext_resource type="PackedScene" uid="uid://cubpskpjbnhkq" path="res://Scenes/NPC/Cat.tscn" id="26_nvcb1"]
+[ext_resource type="PackedScene" uid="uid://b4vmme7x17pi8" path="res://Scenes/NPC/Turtle.tscn" id="27_i3pd6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yx65s"]
 texture = ExtResource("1_js5ft")
@@ -400,3 +402,11 @@ tile_set = SubResource("TileSet_b4kfl")
 position = Vector2(317, 345)
 box_name = "Hamster Food"
 allowed_items = Array[String](["carrot"])
+
+[node name="Cat" parent="." instance=ExtResource("26_nvcb1")]
+position = Vector2(58, 566)
+cat_name = "Mimi"
+
+[node name="Turtle" parent="." instance=ExtResource("27_i3pd6")]
+z_index = 6
+position = Vector2(200, 103)

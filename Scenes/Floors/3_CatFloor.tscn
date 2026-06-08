@@ -283,3 +283,37 @@ tile_set = SubResource("TileSet_mkewh")
 
 [node name="TurtleSpawn" type="Marker2D" parent="SpawnPoints"]
 position = Vector2(80, 598)
+
+[node name="CatSpawns" type="Node2D" parent="SpawnPoints"]
+
+[node name="Spawn1" type="Marker2D" parent="SpawnPoints/CatSpawns"]
+position = Vector2(244, 401)
+
+[node name="Spawn2" type="Marker2D" parent="SpawnPoints/CatSpawns"]
+position = Vector2(142, 242)
+
+[node name="Spawn3" type="Marker2D" parent="SpawnPoints/CatSpawns"]
+position = Vector2(505, 287)
+
+[node name="Spawn4" type="Marker2D" parent="SpawnPoints/CatSpawns"]
+position = Vector2(620, 420)
+
+[node name="Spawn5" type="Marker2D" parent="SpawnPoints/CatSpawns"]
+position = Vector2(909, 300)
+
+[node name="Spawn6" type="Marker2D" parent="SpawnPoints/CatSpawns"]
+position = Vector2(812, 343)
+
+[node name="TherapySpawns" type="Node2D" parent="SpawnPoints"]
+
+[node name="Thera1" type="Marker2D" parent="SpawnPoints/TherapySpawns"]
+position = Vector2(123, 572)
+
+[node name="Thera2" type="Marker2D" parent="SpawnPoints/TherapySpawns"]
+position = Vector2(170, 618)
+
+[node name="Thera3" type="Marker2D" parent="SpawnPoints/TherapySpawns"]
+position = Vector2(63, 543)
+
+[node name="Thera4" type="Marker2D" parent="SpawnPoints/TherapySpawns"]
+position = Vector2(170, 556)

@@ -1,6 +1,6 @@
-ColorRect
 Marker2D
 Node2D
+ColorRect
 TileMapLayer
 Control
 Label
@@ -12,4 +12,3 @@ VBoxContainer
 Button
 ItemList
 Container
-HBoxContainer
