@@ -1,3 +1,5 @@
+TextureRect
+Sprite2D
 Area2D
 Label
 CollisionShape2D
@@ -7,7 +9,6 @@ Marker2D
 Node2D
 ColorRect
 Control
-Sprite2D
 StaticBody2D
 VBoxContainer
 Button

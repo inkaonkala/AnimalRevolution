@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://b68r2scjeqgfc"]
+[gd_scene load_steps=15 format=3 uid="uid://b68r2scjeqgfc"]
 
 [ext_resource type="Script" uid="uid://uux8owbv5jwo" path="res://Scripts/main.gd" id="1_grg3l"]
 [ext_resource type="PackedScene" uid="uid://b1phauu4lt1e8" path="res://Scenes/player.tscn" id="2_frkhe"]
 [ext_resource type="Script" uid="uid://ch4vkydycpmht" path="res://Scripts/SideBar.gd" id="3_1p5hy"]
+[ext_resource type="Texture2D" uid="uid://cgybcl21xswfv" path="res://Assets/SideBar/sidebar_base.png" id="4_1p5hy"]
 [ext_resource type="PackedScene" uid="uid://b8b2cyf36auww" path="res://Scenes/Floors/Rooftop.tscn" id="4_h1m7h"]
 [ext_resource type="PackedScene" uid="uid://ta717pvkxahs" path="res://Scenes/Floors/5_DogFloor.tscn" id="5_erwvk"]
 [ext_resource type="PackedScene" uid="uid://hm3q3v5kw6kc" path="res://Scenes/PickUpStuff.tscn" id="6_2w5on"]
@@ -22,17 +23,33 @@ script = ExtResource("1_grg3l")
 [node name="CanvasSideBar" type="CanvasLayer" parent="."]
 script = ExtResource("3_1p5hy")
 
-[node name="TimeIcon" type="TextureRect" parent="CanvasSideBar"]
+[node name="TextureRect" type="TextureRect" parent="CanvasSideBar"]
+z_index = 21
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -360.0
+offset_bottom = 360.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("4_1p5hy")
+
+[node name="TimeIcon" type="TextureRect" parent="CanvasSideBar/TextureRect"]
+layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -52.0
-offset_top = 60.0
-offset_right = -12.0
-offset_bottom = 100.0
+offset_left = -183.0
+offset_top = 44.0
+offset_right = -143.0
+offset_bottom = 84.0
 grow_horizontal = 0
 
 [node name="SideBarUI" type="Control" parent="CanvasSideBar"]
+z_index = 22
 layout_mode = 3
 anchors_preset = 1
 anchor_left = 1.0
@@ -43,10 +60,10 @@ grow_horizontal = 0
 
 [node name="TextureRect0" type="TextureRect" parent="CanvasSideBar/SideBarUI"]
 layout_mode = 0
-offset_left = -40.0
-offset_top = 400.0
-offset_right = 24.0
-offset_bottom = 464.0
+offset_left = -153.0
+offset_top = 379.0
+offset_right = -89.0
+offset_bottom = 443.0
 
 [node name="InveZero" type="Label" parent="CanvasSideBar/SideBarUI/TextureRect0"]
 layout_mode = 0
@@ -55,10 +72,10 @@ offset_bottom = 23.0
 
 [node name="TextureRect1" type="TextureRect" parent="CanvasSideBar/SideBarUI"]
 layout_mode = 0
-offset_left = -40.0
-offset_top = 450.0
-offset_right = 24.0
-offset_bottom = 514.0
+offset_left = -70.0
+offset_top = 378.0
+offset_right = -6.0
+offset_bottom = 442.0
 
 [node name="Inve1" type="Label" parent="CanvasSideBar/SideBarUI/TextureRect1"]
 layout_mode = 0
@@ -67,10 +84,10 @@ offset_bottom = 23.0
 
 [node name="TextureRect2" type="TextureRect" parent="CanvasSideBar/SideBarUI"]
 layout_mode = 0
-offset_left = -40.0
-offset_top = 500.0
-offset_right = 22.0
-offset_bottom = 562.0
+offset_left = -151.0
+offset_top = 458.0
+offset_right = -89.0
+offset_bottom = 520.0
 
 [node name="Inve2" type="Label" parent="CanvasSideBar/SideBarUI/TextureRect2"]
 layout_mode = 0
@@ -79,10 +96,10 @@ offset_bottom = 23.0
 
 [node name="TextureRect3" type="TextureRect" parent="CanvasSideBar/SideBarUI"]
 layout_mode = 0
-offset_left = -40.0
-offset_top = 550.0
-offset_right = 24.0
-offset_bottom = 614.0
+offset_left = -73.0
+offset_top = 457.0
+offset_right = -9.0
+offset_bottom = 521.0
 
 [node name="Inve3" type="Label" parent="CanvasSideBar/SideBarUI/TextureRect3"]
 layout_mode = 0
@@ -91,10 +108,10 @@ offset_bottom = 23.0
 
 [node name="TextureRect4" type="TextureRect" parent="CanvasSideBar/SideBarUI"]
 layout_mode = 0
-offset_left = -40.0
-offset_top = 600.0
-offset_right = 24.0
-offset_bottom = 664.0
+offset_left = -152.0
+offset_top = 539.0
+offset_right = -88.0
+offset_bottom = 603.0
 
 [node name="Inve4" type="Label" parent="CanvasSideBar/SideBarUI/TextureRect4"]
 layout_mode = 0

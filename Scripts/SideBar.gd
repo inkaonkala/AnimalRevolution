@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var time_icon: TextureRect = $TimeIcon
+@onready var time_icon: TextureRect = $TextureRect/TimeIcon
 
 #IVENTORY
 @onready var inv_slots := [
