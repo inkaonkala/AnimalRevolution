@@ -89,15 +89,25 @@ func try_plant_seed() -> void:
 	is_watered = false
 	update_image()
 	
-func try_water() ->void:
+func try_water() -> void:
 	var main = get_tree().current_scene
 	
 	if not main.has_item("bottle"):
-		print("No water!")
+		print("No bottle!")
 		return
-		
+
 	if is_watered:
 		print("Already watered")
+		return
+
+	var fountains = get_tree().get_nodes_in_group("fountain")
+	if fountains.is_empty():
+		print("No fountain found!")
+		return
+
+	var fountain = fountains[0]
+
+	if not fountain.use_water():
 		return
 		
 	is_watered = true
@@ -106,6 +116,7 @@ func try_water() ->void:
 		stage = Stage.WATERED
 	elif stage == Stage.GROWING:
 		stage = Stage.GROWING
+
 	update_image()
 
 func on_new_day(day_numb: int) -> void:

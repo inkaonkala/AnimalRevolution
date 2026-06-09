@@ -1,12 +1,5 @@
 res://Scenes/Floors/Rooftop.tscn
-res://Scripts/hamster.gd
-res://Scenes/NPC/Turtle.tscn
-res://Scripts/turtle.gd
-res://Scenes/Floors/3_CatFloor.tscn
-res://Scenes/Floors/4th_floor.tscn
-res://Scenes/Main.tscn
-res://Scripts/cat.gd
-res://Scenes/Floors/5_DogFloor.tscn
+res://Scripts/fountain.gd
+res://Scripts/GameState.gd
 res://Scripts/plant_n_harvest.gd
-res://Scripts/rodent.gd
 res://Scripts/main.gd

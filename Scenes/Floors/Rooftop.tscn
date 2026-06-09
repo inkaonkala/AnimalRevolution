@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=4 uid="uid://b8b2cyf36auww"]
+[gd_scene load_steps=58 format=4 uid="uid://b8b2cyf36auww"]
 
 [ext_resource type="Texture2D" uid="uid://bt40m08cq5fsx" path="res://Assets/Plants/growbox.png" id="1_js5ft"]
 [ext_resource type="Texture2D" uid="uid://cc13py1wb2ctl" path="res://Assets/RoomNDeco/wall_collider.png" id="1_vhrc3"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://b6tu54atsaksu" path="res://Assets/RoomNDeco/Deco/fountain6.png" id="11_brnl3"]
 [ext_resource type="Texture2D" uid="uid://cwu6jntqjpwfi" path="res://Assets/Plants/car3w.png" id="11_t1jei"]
 [ext_resource type="Texture2D" uid="uid://57rnfeidtm6e" path="res://Assets/RoomNDeco/Deco/fountain7.png" id="12_cemt2"]
+[ext_resource type="Script" uid="uid://boy1l4vdrijlv" path="res://Scripts/fountain.gd" id="13_au3mp"]
 [ext_resource type="Texture2D" uid="uid://rht7ow3sbrro" path="res://Assets/RoomNDeco/Deco/furniture/armchair1.png" id="14_ea3hb"]
 [ext_resource type="Texture2D" uid="uid://csbj0lde35tum" path="res://Assets/RoomNDeco/Deco/furniture/bookcase.png" id="15_sl4cr"]
 [ext_resource type="Texture2D" uid="uid://dpbgiwjcpca62" path="res://Assets/RoomNDeco/Deco/deco/taulu2.png" id="16_0s4ra"]
@@ -245,6 +246,9 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_js5ft")
 sources/2 = SubResource("TileSetAtlasSource_i3pd6")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_es6gx"]
+size = Vector2(122, 30)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_1mb7n"]
 animations = [{
 "frames": [{
@@ -273,9 +277,6 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_es6gx"]
-size = Vector2(122, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bboc2"]
 size = Vector2(57, 28)
@@ -431,17 +432,24 @@ offset_right = 2057.0
 offset_bottom = 846.0
 color = Color(0.52385104, 0.8626787, 1, 1)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="tilemaps"]
+[node name="Fountain" type="Area2D" parent="tilemaps"]
+script = ExtResource("13_au3mp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tilemaps/Fountain"]
+position = Vector2(933, 196)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_es6gx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="tilemaps/Fountain"]
 z_index = 9
-position = Vector2(307, 512)
+position = Vector2(933, 174)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_1mb7n")
 
-[node name="Area2D" type="Area2D" parent="tilemaps/AnimatedSprite2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="tilemaps/AnimatedSprite2D/Area2D"]
-position = Vector2(0, 11)
-shape = SubResource("RectangleShape2D_es6gx")
+[node name="Label" type="Label" parent="tilemaps/Fountain"]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
 
 [node name="ElevatorSpawn" type="Marker2D" parent="."]
 position = Vector2(129, 417)

@@ -1,12 +1,12 @@
-CollisionShape2D
 Area2D
+Label
+CollisionShape2D
 AnimatedSprite2D
 TileMapLayer
 Marker2D
 Node2D
 ColorRect
 Control
-Label
 Sprite2D
 StaticBody2D
 VBoxContainer

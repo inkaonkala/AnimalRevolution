@@ -56,7 +56,7 @@ func spawn_player() -> void:
 
 	player.global_position = spawn_point.global_position
 
-#NIGHT maaging
+#NIGHT 
 func show_night_report() -> void:
 	night.visible = true
 	night_open = true

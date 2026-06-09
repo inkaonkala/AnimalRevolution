@@ -3,6 +3,7 @@ extends Node
 var cat_found := false
 var hamster_found := false
 var tagging_unlocked := false
+var bottle_full := false
 
 var meat := 0
 var butschered_lastnight := 0
