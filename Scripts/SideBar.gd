@@ -5,24 +5,24 @@ extends CanvasLayer
 #IVENTORY
 @onready var inv_slots := [
 	{
-		"icon": $SideBarUI/TextureRect0,
-		"label": $SideBarUI/TextureRect0/InveZero
+		"icon": $TextureRect/SideBarUI/TextureRect0,
+		"label": $TextureRect/SideBarUI/TextureRect0/InveZero
 	},
 	{
-		"icon": $SideBarUI/TextureRect1,
-		"label": $SideBarUI/TextureRect1/Inve1
+		"icon": $TextureRect/SideBarUI/TextureRect1,
+		"label": $TextureRect/SideBarUI/TextureRect1/Inve1
 	},
 	{
-		"icon": $SideBarUI/TextureRect2,
-		"label": $SideBarUI/TextureRect2/Inve2
+		"icon": $TextureRect/SideBarUI/TextureRect2,
+		"label": $TextureRect/SideBarUI/TextureRect2/Inve2
 	},
 	{
-		"icon": $SideBarUI/TextureRect3,
-		"label": $SideBarUI/TextureRect3/Inve3
+		"icon": $TextureRect/SideBarUI/TextureRect3,
+		"label": $TextureRect/SideBarUI/TextureRect3/Inve3
 	},
 	{
-		"icon": $SideBarUI/TextureRect4,
-		"label": $SideBarUI/TextureRect4/Inve4
+		"icon": $TextureRect/SideBarUI/TextureRect4,
+		"label": $TextureRect/SideBarUI/TextureRect4/Inve4
 	}
 ]
 
