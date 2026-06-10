@@ -1,4 +1,1 @@
-res://Scenes/Main.tscn
-res://Scripts/SideBar.gd
-res://Scripts/cat.gd
-res://Scripts/rodent.gd
+res://Scenes/Floors/3_CatFloor.tscn
