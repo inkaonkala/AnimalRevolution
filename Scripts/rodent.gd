@@ -6,9 +6,13 @@ enum State
 	WORKING,
 	SAD,
 	NEUTRAL,
-	HAPPY
+	HAPPY,
+	HUNGRY
 }
 
+signal emotion_hadler
+
+@export var species := "rodent"
 @export var rodent_name := "BunBun"
 @export var intro_line: Array[String] = [
 	"Hello!",
@@ -26,6 +30,7 @@ var has_talked := false
 var plants_watered := 0
 
 func _ready() -> void:
+	add_to_group("animals")
 	body_entered.connect(on_body_entered)
 	DayCycle.new_day.connect(on_new_day)
 	talk_bubble.visible = false
@@ -78,13 +83,13 @@ func move_to_rooftop() -> void:
 		return
 		
 	var spawn = spawn_points[spawn_index]
-		
-		
+				
 	get_parent().remove_child(self)
 	rooftop.add_child(self)
 		
 	global_position = spawn.global_position
 	state = State.NEUTRAL
+	emotion_hadler.emit()
 		
 			
 func on_new_day(day_nmb: int) -> void:
@@ -122,5 +127,16 @@ func get_water_amount() -> int:
 			return 0
 		State.NEUTRAL:
 			return 1
+		_:
+			return 0
+			
+func get_emotion_value() -> int:
+	match state:
+		State.HAPPY:
+			return 1
+		State.SAD, State.HUNGRY:
+			return -1
+		State.NEUTRAL, State.WORKING:
+			return 0
 		_:
 			return 0

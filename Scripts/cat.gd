@@ -12,9 +12,12 @@ enum State
 	IN_THERAPY
 }
 
+signal emotion_hadler
+
 @export var cat_name := "John"
 @export var floorspawn_index := 0
 @export var therapyspaw_i := 0
+@export var species := "cat"
 
 @onready var speak_bubble = $Label
 
@@ -31,6 +34,7 @@ var meat_per_happy_cat := 2
 var max_work_nights := 6
 
 func _ready() -> void:
+	add_to_group("animals")
 	DayCycle.new_day.connect(cat_new_day)
 	body_entered.connect(cat_activated)
 	speak_bubble.visible = false
@@ -46,6 +50,7 @@ func on_new_day() -> void:
 		therapy_days_left -= 1
 		if therapy_days_left <= 0:
 			state = State.NEUTRAL
+			emotion_hadler.emit()
 			move_to_catfloor()
 		return
 
@@ -61,6 +66,7 @@ func on_new_day() -> void:
 
 		if happy_nights_left <= 0:
 			state = State.NEUTRAL
+			emotion_hadler.emit()
 
 	elif state == State.NEUTRAL:
 		butcher(meat_per_neutral_cat)
@@ -69,6 +75,7 @@ func on_new_day() -> void:
 
 	if work_nights >= max_work_nights:
 		state = State.SAD
+		emotion_hadler.emit()
 		move_to_threapy()
 
 func cat_talk(text: String) -> void:
@@ -94,6 +101,7 @@ func cat_activated(body: Node) -> void:
 	if state == State.HUNGRY and not GameState.tagging_unlocked:
 		GameState.tagging_unlocked = true
 		state = State.HAPPY
+		emotion_hadler.emit()
 		hunger_timer = 0
 		await cat_talk("Use this TAG to mark humans good wnought to eat")
 		return
@@ -114,6 +122,7 @@ func first_meeting() -> void:
 	has_joined = true
 	GameState.cat_found = true
 	state = State.NEUTRAL
+	emotion_hadler.emit()
 	
 	await cat_talk("Why not? I'll join the revolution")
 	
@@ -129,6 +138,7 @@ func is_on_3thfloor() -> bool:
 	
 func activate_spotly() -> void:
 	state = State.NEUTRAL
+	emotion_hadler.emit()
 	print(cat_name, " on CAT floor found")
 			
 func move_to_catfloor() -> void:
@@ -159,12 +169,14 @@ func move_to_threapy() -> void:
 	global_position = spawn.global_position
 
 	state = State.IN_THERAPY
+	emotion_hadler.emit()
 	therapy_days_left = 2
 	work_nights = 0
 
 
 func become_hungry() ->void:
 	state = State.HUNGRY
+	emotion_hadler.emit()
 	#GameState.tagging_unlocked = true
 	print("Cat's hungry!")
 	
@@ -176,6 +188,7 @@ func butcher(amount: int) -> void:
 	
 func need_therapy() -> void:
 	state = State.NEEDS_THERAPY
+	emotion_hadler.emit()
 	print("Cat's in need of threrapy")
 	
 func try_eating() -> void:
@@ -190,5 +203,17 @@ func try_eating() -> void:
 
 	GameState.meat -= 1
 	state = State.HAPPY
+	emotion_hadler.emit()
 	happy_nights_left = 2
 	print(cat_name, " ate meat and became happy.")
+
+func get_emotion_value() -> int:
+	match state:
+		State.HAPPY:
+			return 1
+		State.SAD, State.NEEDS_THERAPY, State.IN_THERAPY, State.HUNGRY:
+			return -1
+		State.NEUTRAL, State.WORKING:
+			return 0
+		_:
+			return 0

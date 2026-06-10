@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b68r2scjeqgfc"]
+[gd_scene load_steps=16 format=3 uid="uid://b68r2scjeqgfc"]
 
 [ext_resource type="Script" uid="uid://uux8owbv5jwo" path="res://Scripts/main.gd" id="1_grg3l"]
 [ext_resource type="PackedScene" uid="uid://b1phauu4lt1e8" path="res://Scenes/player.tscn" id="2_frkhe"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cgybcl21xswfv" path="res://Assets/SideBar/sidebar_base.png" id="4_1p5hy"]
 [ext_resource type="PackedScene" uid="uid://b8b2cyf36auww" path="res://Scenes/Floors/Rooftop.tscn" id="4_h1m7h"]
 [ext_resource type="PackedScene" uid="uid://ta717pvkxahs" path="res://Scenes/Floors/5_DogFloor.tscn" id="5_erwvk"]
+[ext_resource type="Texture2D" uid="uid://bg53djf7ywm7b" path="res://Assets/SideBar/animalbase.png" id="5_h1m7h"]
 [ext_resource type="PackedScene" uid="uid://hm3q3v5kw6kc" path="res://Scenes/PickUpStuff.tscn" id="6_2w5on"]
 [ext_resource type="Texture2D" uid="uid://cxbxfhvrof4ag" path="res://Assets/Collectables/ballB.png" id="7_346fj"]
 [ext_resource type="Texture2D" uid="uid://bcashksx4nijc" path="res://Assets/Collectables/bottle.png" id="8_0sclb"]
@@ -44,9 +45,43 @@ anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -183.0
 offset_top = 44.0
-offset_right = -143.0
-offset_bottom = 84.0
+offset_right = -85.0
+offset_bottom = 135.0
 grow_horizontal = 0
+
+[node name="AnimalFaces" type="TextureRect" parent="CanvasSideBar/TextureRect"]
+z_index = 23
+layout_mode = 0
+offset_left = 58.0
+offset_top = 545.0
+offset_right = 294.0
+offset_bottom = 590.0
+texture = ExtResource("5_h1m7h")
+expand_mode = 1
+
+[node name="RodentFace" type="TextureRect" parent="CanvasSideBar/TextureRect/AnimalFaces"]
+z_index = 24
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 42.0
+offset_bottom = 42.0
+
+[node name="CatFace" type="TextureRect" parent="CanvasSideBar/TextureRect/AnimalFaces"]
+z_index = 24
+layout_mode = 0
+offset_left = 66.0
+offset_top = 3.0
+offset_right = 106.0
+offset_bottom = 43.0
+
+[node name="DogFace" type="TextureRect" parent="CanvasSideBar/TextureRect/AnimalFaces"]
+z_index = 24
+layout_mode = 0
+offset_left = 129.0
+offset_top = 3.0
+offset_right = 169.0
+offset_bottom = 43.0
 
 [node name="SideBarUI" type="Control" parent="CanvasSideBar/TextureRect"]
 z_index = 22

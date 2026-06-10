@@ -33,6 +33,25 @@ var item_icons := {
 	"carrot": preload("res://Assets/Plants/carrot.png")
 }
 
+#FACES
+
+@onready var cat_face: TextureRect = $TextureRect/AnimalFaces/CatFace
+@onready var rodent_face: TextureRect = $TextureRect/AnimalFaces/RodentFace
+@onready var dog_face: TextureRect = $TextureRect/AnimalFaces/DogFace
+
+@onready var animal_faces := {
+	"cat": cat_face,
+	"dog": dog_face,
+	"rodent": rodent_face
+}
+
+var face_icons := {
+	"happy": preload("res://Assets/characters/happy.png"),
+	"sad": preload("res://Assets/characters/sad.png"),
+	"neutral": preload("res://Assets/characters/neutral.png")
+}
+
+
 func update_inventory_ui(inventory: Dictionary, item_order: Array) -> void:
 	for slot in inv_slots:
 		slot["icon"].texture = null
@@ -66,5 +85,37 @@ func _ready() -> void:
 	DayCycle.time_changed.connect(_on_time_changed)
 	_on_time_changed(DayCycle.get_time())
 
+	DayCycle.new_day.connect(func(_day): update_animal_emotions())
+	update_animal_emotions()
+	
 func _on_time_changed(time_name: String) -> void:
 	time_icon.texture = icons[time_name]
+
+#ANIMAL EMOTIONS
+
+func update_animal_emotions() -> void:
+	for species in animal_faces.keys():
+		update_emotion(species)
+
+func update_emotion(species_name: String) -> void:
+	var total := 0
+	var count := 0
+
+	for animal in get_tree().get_nodes_in_group("animals"):
+		if animal.species == species_name and animal.has_method("get_emotion_value"):
+			total += animal.get_emotion_value()
+			count += 1
+
+	if count == 0:
+		animal_faces[species_name].visible = false
+		return
+
+	var average := float(total) / float(count)
+	
+	animal_faces[species_name].visible = true
+	if average > 0.33:
+		animal_faces[species_name].texture = face_icons["happy"]
+	elif average < -0.33:
+		animal_faces[species_name].texture = face_icons["sad"]
+	else:
+		animal_faces[species_name].texture = face_icons["neutral"]

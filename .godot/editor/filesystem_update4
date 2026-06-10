@@ -1,7 +1,4 @@
-res://Scenes/Floors/Rooftop.tscn
-res://Scripts/fountain.gd
-res://Scripts/GameState.gd
-res://Scripts/plant_n_harvest.gd
-res://Scripts/main.gd
 res://Scenes/Main.tscn
 res://Scripts/SideBar.gd
+res://Scripts/cat.gd
+res://Scripts/rodent.gd
