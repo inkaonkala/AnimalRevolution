@@ -1,3 +1,5 @@
+TileMapLayer
+Node2D
 Button
 AnimatedSprite2D
 TextureRect
@@ -5,9 +7,7 @@ Sprite2D
 Area2D
 Label
 CollisionShape2D
-TileMapLayer
 Marker2D
-Node2D
 ColorRect
 Control
 StaticBody2D
