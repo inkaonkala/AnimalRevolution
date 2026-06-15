@@ -1,3 +1,4 @@
+Button
 AnimatedSprite2D
 TextureRect
 Sprite2D
@@ -11,4 +12,3 @@ ColorRect
 Control
 StaticBody2D
 VBoxContainer
-Button

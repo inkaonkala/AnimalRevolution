@@ -36,6 +36,7 @@ func _ready() -> void:
 	set_floor_active($FloorContainer/FourthFloor, false)
 	set_floor_active($FloorContainer/FifthFloor, true)
 	set_floor_active($FloorContainer/ThirdFloor, false)
+	set_floor_active($FloorContainer/SecondFloor, false)
 
 func _process(delta: float) -> void:
 	if night_open:
@@ -139,7 +140,10 @@ func _on_floor_four_pressed() -> void:
 	change_floor("FourthFloor")
 	
 func _on_floor_three_pressed() -> void:
-	change_floor("ThirdFloor") # Replace with function body.
+	change_floor("ThirdFloor")
+
+func _on_floor_two_pressed() -> void:
+	change_floor("SecondFloor")
 
 
 #these are to make the collision work only on the floor the player is

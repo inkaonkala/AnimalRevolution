@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b68r2scjeqgfc"]
+[gd_scene load_steps=17 format=3 uid="uid://b68r2scjeqgfc"]
 
 [ext_resource type="Script" uid="uid://uux8owbv5jwo" path="res://Scripts/main.gd" id="1_grg3l"]
 [ext_resource type="PackedScene" uid="uid://b1phauu4lt1e8" path="res://Scenes/player.tscn" id="2_frkhe"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bc6ou37n0x6el" path="res://Scenes/Floors/3_CatFloor.tscn" id="11_hwpts"]
 [ext_resource type="PackedScene" uid="uid://blfqexx45p25p" path="res://Scenes/Night.tscn" id="12_grg3l"]
 [ext_resource type="Texture2D" uid="uid://mhs4cjlvhox7" path="res://Assets/RoomNDeco/elevatorpopup.png" id="12_jyqft"]
+[ext_resource type="PackedScene" uid="uid://ciaqu6buaqm1t" path="res://Scenes/Floors/2th_floor.tscn" id="13_erwvk"]
 [ext_resource type="PackedScene" uid="uid://fbmnlrdte340" path="res://Scenes/ItemBox.tscn" id="13_frkhe"]
 
 [node name="Main" type="Node2D"]
@@ -185,6 +186,9 @@ visible = false
 [node name="ThirdFloor" parent="FloorContainer" instance=ExtResource("11_hwpts")]
 visible = false
 
+[node name="SecondFloor" parent="FloorContainer" instance=ExtResource("13_erwvk")]
+visible = false
+
 [node name="CanvasHints" type="CanvasLayer" parent="."]
 
 [node name="HintE" type="Label" parent="CanvasHints"]
@@ -236,6 +240,13 @@ offset_right = 4.0
 offset_bottom = 14.5
 flat = true
 
+[node name="floorTwo" type="Button" parent="CanvasHints/ElevatorPop/Sprite2D"]
+offset_left = -8.0
+offset_top = 21.5
+offset_right = 4.0
+offset_bottom = 31.5
+flat = true
+
 [node name="ItemBox" parent="." instance=ExtResource("13_frkhe")]
 position = Vector2(956, 86)
 scale = Vector2(0.5, 0.5)
@@ -249,3 +260,4 @@ visible = false
 [connection signal="pressed" from="CanvasHints/ElevatorPop/Sprite2D/floorFive" to="." method="_on_floor_five_pressed"]
 [connection signal="pressed" from="CanvasHints/ElevatorPop/Sprite2D/floorFour" to="." method="_on_floor_four_pressed"]
 [connection signal="pressed" from="CanvasHints/ElevatorPop/Sprite2D/floorThree" to="." method="_on_floor_three_pressed"]
+[connection signal="pressed" from="CanvasHints/ElevatorPop/Sprite2D/floorTwo" to="." method="_on_floor_two_pressed"]
