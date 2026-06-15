@@ -62,26 +62,26 @@ expand_mode = 1
 [node name="RodentFace" type="TextureRect" parent="CanvasSideBar/TextureRect/AnimalFaces"]
 z_index = 24
 layout_mode = 0
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 42.0
-offset_bottom = 42.0
+offset_left = -1.0
+offset_top = 18.0
+offset_right = 19.0
+offset_bottom = 38.0
 
 [node name="CatFace" type="TextureRect" parent="CanvasSideBar/TextureRect/AnimalFaces"]
 z_index = 24
 layout_mode = 0
-offset_left = 66.0
-offset_top = 3.0
-offset_right = 106.0
-offset_bottom = 43.0
+offset_left = 63.0
+offset_top = 17.0
+offset_right = 83.0
+offset_bottom = 37.0
 
 [node name="DogFace" type="TextureRect" parent="CanvasSideBar/TextureRect/AnimalFaces"]
 z_index = 24
 layout_mode = 0
-offset_left = 129.0
-offset_top = 3.0
-offset_right = 169.0
-offset_bottom = 43.0
+offset_left = 131.0
+offset_top = 18.0
+offset_right = 151.0
+offset_bottom = 38.0
 
 [node name="SideBarUI" type="Control" parent="CanvasSideBar/TextureRect"]
 z_index = 22
@@ -210,12 +210,14 @@ offset_left = -9.0
 offset_top = -53.5
 offset_right = 4.5
 offset_bottom = -40.5
+flat = true
 
 [node name="floorFive" type="Button" parent="CanvasHints/ElevatorPop/Sprite2D"]
 offset_left = -9.0
 offset_top = -36.5
 offset_right = 4.5
 offset_bottom = -22.5
+flat = true
 
 [node name="floorFour" type="Button" parent="CanvasHints/ElevatorPop/Sprite2D"]
 anchors_preset = -1
@@ -225,18 +227,21 @@ offset_left = -8.0
 offset_top = -13.3
 offset_right = 5.0
 offset_bottom = -0.79999995
+flat = true
 
 [node name="floorThree" type="Button" parent="CanvasHints/ElevatorPop/Sprite2D"]
 offset_left = -8.5
 offset_top = 1.5
 offset_right = 4.0
 offset_bottom = 14.5
+flat = true
 
 [node name="ItemBox" parent="." instance=ExtResource("13_frkhe")]
 position = Vector2(956, 86)
 scale = Vector2(0.5, 0.5)
 
 [node name="NightManager" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Night" parent="NightManager" instance=ExtResource("12_grg3l")]
 

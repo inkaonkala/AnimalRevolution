@@ -1,29 +1,62 @@
-[gd_scene load_steps=6 format=3 uid="uid://c104nexrkrtat"]
+[gd_scene load_steps=10 format=3 uid="uid://c104nexrkrtat"]
 
 [ext_resource type="Script" uid="uid://c3u34a06chl7u" path="res://Scripts/hamster.gd" id="1_s70uv"]
 [ext_resource type="Texture2D" uid="uid://bhk3r8wh3kv44" path="res://Assets/characters/hamster.png" id="1_ts32c"]
 [ext_resource type="PackedScene" uid="uid://hm3q3v5kw6kc" path="res://Scenes/PickUpStuff.tscn" id="2_n55pr"]
+[ext_resource type="Texture2D" uid="uid://dtttek43xqfd" path="res://Assets/characters/hamster3.png" id="4_i0cjy"]
 [ext_resource type="Texture2D" uid="uid://cqp404krs6bxq" path="res://Assets/Collectables/hamsterbaby.png" id="4_uto4n"]
+[ext_resource type="Texture2D" uid="uid://demmi7f84ewmc" path="res://Assets/characters/hamster4.png" id="5_1eksa"]
+[ext_resource type="Texture2D" uid="uid://cuyo4tdu2akea" path="res://Assets/characters/hamster2.png" id="7_mugrc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tgfl8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_i0cjy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1eksa")
+}],
+"loop": true,
+"name": &"birth",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 8.11,
+"texture": ExtResource("1_ts32c")
+}, {
+"duration": 2.71,
+"texture": ExtResource("7_mugrc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ts32c"]
+radius = 6.0
+height = 18.0
 
 [node name="Hamster" type="Area2D"]
 script = ExtResource("1_s70uv")
 baby_picup_Scene = ExtResource("2_n55pr")
 baby_texture = ExtResource("4_uto4n")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_ts32c")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_tgfl8")
+animation = &"birth"
+frame_progress = 0.75198776
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -2)
+position = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_ts32c")
 
 [node name="Label" type="Label" parent="."]
 visible = false
 z_index = 11
+offset_top = -46.0
 offset_right = 40.0
-offset_bottom = 23.0
+offset_bottom = -23.0
 
 [node name="babySpawnPoint" type="Marker2D" parent="."]
 position = Vector2(18, 1)

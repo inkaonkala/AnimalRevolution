@@ -24,7 +24,7 @@ shape = SubResource("RectangleShape2D_i3pqv")
 debug_color = Color(0.012692624, 0.0030203839, 0.018063545, 0.41960785)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2.5, 2.5)
+zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 
 [node name="AttackArea" type="Area2D" parent="."]
