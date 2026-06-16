@@ -17,5 +17,6 @@ texture = ExtResource("1_syt6j")
 shape = SubResource("CapsuleShape2D_r5u08")
 
 [node name="Label" type="Label" parent="."]
+z_index = 50
 offset_right = 40.0
 offset_bottom = 23.0
