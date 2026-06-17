@@ -13,6 +13,7 @@ size = Vector2(23, 32)
 z_index = 10
 motion_mode = 1
 script = ExtResource("1_4flbx")
+speed = 220.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(1.2, 1.2)

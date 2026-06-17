@@ -161,22 +161,22 @@ visible = false
 
 [node name="Seed1" parent="FloorContainer/FifthFloor" instance=ExtResource("6_2w5on")]
 z_index = 9
-position = Vector2(430, 492)
+position = Vector2(916, 481)
 item_tex = ExtResource("7_346fj")
 
 [node name="Seed2" parent="FloorContainer/FifthFloor" instance=ExtResource("6_2w5on")]
 z_index = 9
-position = Vector2(354, 132)
+position = Vector2(104, 196)
 item_tex = ExtResource("7_346fj")
 
 [node name="Seed3" parent="FloorContainer/FifthFloor" instance=ExtResource("6_2w5on")]
 z_index = 9
-position = Vector2(653, 511)
+position = Vector2(1207, 925)
 item_tex = ExtResource("7_346fj")
 
 [node name="Bottle1" parent="FloorContainer/FifthFloor" instance=ExtResource("6_2w5on")]
 z_index = 9
-position = Vector2(921, 278)
+position = Vector2(571, 672)
 item_id = "bottle"
 item_tex = ExtResource("8_0sclb")
 
