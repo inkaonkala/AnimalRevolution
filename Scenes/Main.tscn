@@ -252,7 +252,6 @@ position = Vector2(956, 86)
 scale = Vector2(0.5, 0.5)
 
 [node name="NightManager" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Night" parent="NightManager" instance=ExtResource("12_grg3l")]
 
