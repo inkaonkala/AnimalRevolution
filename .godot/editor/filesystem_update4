@@ -1,1 +1,4 @@
-res://Scenes/Floors/5_DogFloor.tscn
+res://Scenes/InteractionTile.tscn
+res://Scripts/interaction_tile.gd
+res://Scenes/PickUpStuff.tscn
+res://Scripts/PickUpStuff.gd

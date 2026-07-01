@@ -19,3 +19,7 @@ func add_item_to_items(body: Node) -> void:
 		main.add_item(item_id, amount)
 		collected.emit(item_id)
 		queue_free()
+
+func update_texture() -> void:
+	if sprite != null and item_tex != null:
+		sprite.texture = item_tex

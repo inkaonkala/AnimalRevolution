@@ -6,6 +6,7 @@
 size = Vector2(21, 22)
 
 [node name="PickUpStuffArea" type="Area2D"]
+visible = false
 script = ExtResource("1_hhd5u")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

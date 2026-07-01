@@ -1,3 +1,8 @@
+Timer
+CollisionShape2D
+Marker2D
+Area2D
+Label
 TileMapLayer
 Control
 ColorRect
@@ -6,9 +11,5 @@ Button
 AnimatedSprite2D
 TextureRect
 Sprite2D
-Area2D
-Label
-CollisionShape2D
-Marker2D
 StaticBody2D
 VBoxContainer
