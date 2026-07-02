@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=4 uid="uid://ta717pvkxahs"]
+[gd_scene load_steps=56 format=4 uid="uid://ta717pvkxahs"]
 
 [ext_resource type="Texture2D" uid="uid://ep84bw43rbmw" path="res://Assets/RoomNDeco/dog_wall1.png" id="2_a3iq5"]
 [ext_resource type="Texture2D" uid="uid://cc13py1wb2ctl" path="res://Assets/RoomNDeco/wall_collider.png" id="2_lw74p"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://bn66ladvuamie" path="res://Assets/RoomNDeco/Deco/furniture/kaappi3.png" id="24_vd1ik"]
 [ext_resource type="Texture2D" uid="uid://b7rhk3g1d8spl" path="res://Assets/RoomNDeco/Deco/furniture/sohva3.png" id="25_wwv8k"]
 [ext_resource type="PackedScene" uid="uid://cubpskpjbnhkq" path="res://Scenes/NPC/Cat.tscn" id="26_r7dl1"]
+[ext_resource type="PackedScene" uid="uid://hm3q3v5kw6kc" path="res://Scenes/PickUpStuff.tscn" id="28_pncfg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x0c33"]
 texture = ExtResource("2_lw74p")
@@ -1308,3 +1309,9 @@ offset_top = 529.0
 offset_right = 633.0
 offset_bottom = 552.0
 text = "5"
+
+[node name="Items" type="Node2D" parent="."]
+
+[node name="PickUpStuffArea" parent="Items" instance=ExtResource("28_pncfg")]
+visible = true
+position = Vector2(1708, 238)

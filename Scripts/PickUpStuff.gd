@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var item_id := "seed"
+@export var item_id := "carrot_seed"
 @export var amount := 1
 @export var item_tex: Texture2D
 

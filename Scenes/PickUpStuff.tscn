@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://hm3q3v5kw6kc"]
+[gd_scene load_steps=4 format=3 uid="uid://hm3q3v5kw6kc"]
 
 [ext_resource type="Script" uid="uid://bthrqgvoun8wb" path="res://Scripts/PickUpStuff.gd" id="1_hhd5u"]
+[ext_resource type="Texture2D" uid="uid://cxbxfhvrof4ag" path="res://Assets/Collectables/ballB.png" id="2_7hmt1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hhd5u"]
 size = Vector2(21, 22)
@@ -11,6 +12,7 @@ script = ExtResource("1_hhd5u")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 8
+texture = ExtResource("2_7hmt1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_hhd5u")
