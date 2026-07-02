@@ -16,6 +16,10 @@ enum Stage
 @export var watered_tex: Texture2D
 @export var ready_tex: Texture2D
 
+@export var crop_id := "carrot"
+@export var crop_amount := 1
+@export var seed_return_amount := 1
+
 @export var growth_texs: Array[Texture2D]
 @export var wet_growth_texs: Array[Texture2D]
 
@@ -83,7 +87,7 @@ func try_plant_seed() -> void:
 	main.remove_item("seed")
 #	main.update_inventory_ui()
 	
-	seed_planted = "carrot"
+	seed_planted = crop_id #"carrot"
 	stage = Stage.SEEDED
 	growth_stage = 0
 	is_watered = false
@@ -139,8 +143,8 @@ func on_new_day(day_numb: int) -> void:
 func try_harvest() -> void:
 	var main = get_tree().current_scene
 	
-	main.add_item("carrot", 1)
-	main.add_item("seed", 1)
+	main.add_item(crop_id, crop_amount)
+	main.add_item(crop_id, crop_amount)
 	
 	seed_planted = ""
 	stage = Stage.EMPTY

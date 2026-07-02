@@ -826,3 +826,12 @@ position = Vector2(-372, 701)
 
 [node name="Thera4" type="Marker2D" parent="SpawnPoints/TherapySpawns"]
 position = Vector2(-555, 583)
+
+[node name="FloorNbr" type="Label" parent="."]
+modulate = Color(0, 0.080239765, 0.08253934, 1)
+z_index = 25
+offset_left = 593.0
+offset_top = 529.0
+offset_right = 633.0
+offset_bottom = 552.0
+text = "3"

@@ -896,8 +896,7 @@ position = Vector2(-2, 0)
 position = Vector2(595, 369)
 watered_tex = ExtResource("8_lblpy")
 ready_tex = ExtResource("6_uoa1a")
-growth_texs = Array[Texture2D]([ExtResource("5_tax82"), ExtResource("6_bmsl8"), ExtResource("7_3in2h"), null])
-wet_growth_texs = Array[Texture2D]([ExtResource("9_834rt"), ExtResource("10_n11cc"), ExtResource("11_t1jei"), ExtResource("11_t1jei")])
+growth_texs = Array[Texture2D]([ExtResource("5_tax82"), ExtResource("6_bmsl8"), ExtResource("7_3in2h"), null, null])
 
 [node name="plant2" parent="plantAreas" instance=ExtResource("4_wdo6w")]
 position = Vector2(635, 368)

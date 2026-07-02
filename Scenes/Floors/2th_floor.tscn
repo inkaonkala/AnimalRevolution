@@ -788,3 +788,12 @@ offset_top = -585.0
 offset_right = 3922.0
 offset_bottom = 4864.0
 color = Color(0.7432157, 1, 0.9984322, 1)
+
+[node name="FloorNbr" type="Label" parent="."]
+modulate = Color(0, 0.080239765, 0.08253934, 1)
+z_index = 25
+offset_left = 593.0
+offset_top = 529.0
+offset_right = 633.0
+offset_bottom = 552.0
+text = "2"
