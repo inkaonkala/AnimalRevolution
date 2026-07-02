@@ -27,7 +27,8 @@ extends CanvasLayer
 ]
 
 var item_icons := {
-	"seed": preload("res://Assets/Collectables/ballB.png"),
+	"carrot_seed": preload("res://Assets/Collectables/ballB.png"),
+	"eggplant_seed": preload("res://Assets/Collectables/munaseed.png"),
 	"bottle": preload("res://Assets/Collectables/bottle.png"),
 	"hamsterbaby": preload("res://Assets/Collectables/hamsterbaby.png"),
 	"carrot": preload("res://Assets/Plants/carrot.png")

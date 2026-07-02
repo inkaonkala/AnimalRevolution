@@ -5,7 +5,7 @@ extends Area2D
 
 @onready var talk_bubble = $Label
 @onready var baby_spawn_point = $babySpawnPoint
-
+@onready var anim: AnimatedSprite2D = $Sprite2D
 
 var has_talked1	 := false
 var baby_exists := false
@@ -30,7 +30,7 @@ func hamster_touched1(body: Node) -> void:
 		return
 	
 	await make_hamster_talk("Use my baby to dig the soil!")
-	spawn_baby()
+	await spawn_baby()
 	
 			
 func make_hamster_talk(text: String) ->void:
@@ -63,14 +63,22 @@ func spawn_baby() -> void:
 	if baby_picup_Scene == null:
 		print("No baby_pickup_scene")
 		return
+		
+	anim.play("birth")
+	await anim.animation_finished
+	anim.play("default")
 	var baby = baby_picup_Scene.instantiate()
 	
 	baby.item_id = "hamsterbaby"
 	baby.amount = 1
 	baby.item_tex = baby_texture
+	print(baby.item_tex)
 	
 	get_parent().add_child(baby)
 	baby.global_position = baby_spawn_point.global_position
+	
+	if baby.has_method("update_texture"):
+		baby.update_texture()
 	
 	baby.collected.connect(on_baby_collected)
 	baby_exists = true

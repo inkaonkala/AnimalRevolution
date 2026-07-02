@@ -12,3 +12,6 @@ res://Scripts/CropData.gd
 res://Data/Crops/Carrot.tres
 res://Data/Crops/Eggplant.tres
 res://Scenes/Main.tscn
+res://Scripts/SideBar.gd
+res://Scenes/NPC/hamster.tscn
+res://Scripts/hamster.gd

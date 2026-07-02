@@ -16,8 +16,14 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("5_1eksa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_i0cjy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1eksa")
 }],
-"loop": true,
+"loop": false,
 "name": &"birth",
 "speed": 5.0
 }, {
@@ -44,8 +50,6 @@ baby_texture = ExtResource("4_uto4n")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_tgfl8")
-animation = &"birth"
-frame_progress = 0.75198776
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 1)
@@ -59,4 +63,5 @@ offset_right = 40.0
 offset_bottom = -23.0
 
 [node name="babySpawnPoint" type="Marker2D" parent="."]
-position = Vector2(18, 1)
+z_index = 15
+position = Vector2(20, 0)

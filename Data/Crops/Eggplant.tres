@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CropData" load_steps=18 format=3 uid="uid://cy2xmd2765kra"]
+[gd_resource type="Resource" script_class="CropData" load_steps=17 format=3 uid="uid://cy2xmd2765kra"]
 
 [ext_resource type="Texture2D" uid="uid://dhr5ksuqgg7mo" path="res://Assets/Plants/muna1.png" id="1_ybb5c"]
 [ext_resource type="Texture2D" uid="uid://b0l48t4vvms7g" path="res://Assets/Plants/muna2.png" id="2_02o4d"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://csk3q626rys5x" path="res://Assets/Plants/muna7.png" id="7_u4g8w"]
 [ext_resource type="Texture2D" uid="uid://ba2jxn3dm6my6" path="res://Assets/Plants/munakoiso.png" id="8_uoiad"]
 [ext_resource type="Script" uid="uid://drflv58lrwr1v" path="res://Scripts/CropData.gd" id="9_0o3ti"]
-[ext_resource type="Texture2D" uid="uid://buwfcwtpwk6su" path="res://Assets/Collectables/munaseed.png" id="10_34m5i"]
 [ext_resource type="Texture2D" uid="uid://c0pir1xj3g6ju" path="res://Assets/Plants/muna1w.png" id="11_nxjtm"]
 [ext_resource type="Texture2D" uid="uid://cg0ao6ab2mgpx" path="res://Assets/Plants/muna2w.png" id="12_e2foe"]
 [ext_resource type="Texture2D" uid="uid://b7cik146qf5r2" path="res://Assets/Plants/muna3w.png" id="13_hqvgn"]
@@ -22,7 +21,8 @@
 script = ExtResource("9_0o3ti")
 seed_id = "eggplant_seed"
 crop_id = "Eggplant"
-seed_tex = ExtResource("10_34m5i")
+seed_tex = ExtResource("1_ybb5c")
+watered_tex = ExtResource("11_nxjtm")
 ready_tex = ExtResource("8_uoiad")
 growth_texs = Array[Texture2D]([ExtResource("1_ybb5c"), ExtResource("2_02o4d"), ExtResource("3_4ffhl"), ExtResource("4_iw3q1"), ExtResource("5_ly5ug"), ExtResource("6_amexk"), ExtResource("7_u4g8w")])
 wet_growth_texs = Array[Texture2D]([ExtResource("11_nxjtm"), ExtResource("12_e2foe"), ExtResource("13_hqvgn"), ExtResource("14_nhmmr"), ExtResource("15_7x5fy"), ExtResource("16_xwvm4"), ExtResource("17_dp6lk")])

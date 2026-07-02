@@ -1,11 +1,12 @@
-[gd_resource type="Resource" script_class="CropData" load_steps=10 format=3 uid="uid://bcon1vdps034c"]
+[gd_resource type="Resource" script_class="CropData" load_steps=11 format=3 uid="uid://bcon1vdps034c"]
 
 [ext_resource type="Texture2D" uid="uid://bo8ki4ir1vwhj" path="res://Assets/Plants/car1.png" id="1_fmj0i"]
 [ext_resource type="Texture2D" uid="uid://cvetf86b8b61" path="res://Assets/Plants/car2.png" id="2_ieixh"]
 [ext_resource type="Texture2D" uid="uid://d4mde1tenvmrs" path="res://Assets/Plants/car3.png" id="3_dd42a"]
 [ext_resource type="Texture2D" uid="uid://ccvd1hvy3i8r1" path="res://Assets/Plants/carrot.png" id="4_k3yx5"]
 [ext_resource type="Script" uid="uid://drflv58lrwr1v" path="res://Scripts/CropData.gd" id="5_8otma"]
-[ext_resource type="Texture2D" uid="uid://cxbxfhvrof4ag" path="res://Assets/Collectables/ballB.png" id="6_sokk4"]
+[ext_resource type="Texture2D" uid="uid://cbvi6a2xcgyxl" path="res://Assets/Plants/seeded.png" id="6_ieixh"]
+[ext_resource type="Texture2D" uid="uid://bydwgxna57gcr" path="res://Assets/Plants/watered.png" id="7_dd42a"]
 [ext_resource type="Texture2D" uid="uid://bro860t1l2tar" path="res://Assets/Plants/car1W.png" id="7_fdcf1"]
 [ext_resource type="Texture2D" uid="uid://cun2jqq85wfa3" path="res://Assets/Plants/ca2w.png" id="8_hlfbc"]
 [ext_resource type="Texture2D" uid="uid://cwu6jntqjpwfi" path="res://Assets/Plants/car3w.png" id="9_ar8ja"]
@@ -14,7 +15,8 @@
 script = ExtResource("5_8otma")
 seed_id = "carrot_seed"
 crop_id = "carrot"
-seed_tex = ExtResource("6_sokk4")
+seed_tex = ExtResource("6_ieixh")
+watered_tex = ExtResource("7_dd42a")
 ready_tex = ExtResource("4_k3yx5")
 growth_texs = Array[Texture2D]([ExtResource("1_fmj0i"), ExtResource("2_ieixh"), ExtResource("3_dd42a")])
 wet_growth_texs = Array[Texture2D]([ExtResource("7_fdcf1"), ExtResource("8_hlfbc"), ExtResource("9_ar8ja")])
