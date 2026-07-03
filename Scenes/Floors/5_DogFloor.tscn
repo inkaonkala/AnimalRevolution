@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=4 uid="uid://ta717pvkxahs"]
+[gd_scene load_steps=57 format=4 uid="uid://ta717pvkxahs"]
 
 [ext_resource type="Texture2D" uid="uid://ep84bw43rbmw" path="res://Assets/RoomNDeco/dog_wall1.png" id="2_a3iq5"]
 [ext_resource type="Texture2D" uid="uid://cc13py1wb2ctl" path="res://Assets/RoomNDeco/wall_collider.png" id="2_lw74p"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://b7nt34ls5enun" path="res://Assets/RoomNDeco/Deco/furniture/ped4.png" id="8_r7dl1"]
 [ext_resource type="Texture2D" uid="uid://b145sp8tradn4" path="res://Assets/characters/human_tagged.png" id="9_66ty1"]
 [ext_resource type="Texture2D" uid="uid://ijv84efic08p" path="res://Assets/RoomNDeco/Deco/furniture/tuoli1.png" id="9_nqr7x"]
+[ext_resource type="PackedScene" uid="uid://d1jk0i0cnkefw" path="res://Scenes/InteractionTile.tscn" id="12_h4037"]
 [ext_resource type="Texture2D" uid="uid://rht7ow3sbrro" path="res://Assets/RoomNDeco/Deco/furniture/armchair1.png" id="19_28yab"]
 [ext_resource type="Texture2D" uid="uid://csbj0lde35tum" path="res://Assets/RoomNDeco/Deco/furniture/bookcase.png" id="20_k6xds"]
 [ext_resource type="Texture2D" uid="uid://dpbgiwjcpca62" path="res://Assets/RoomNDeco/Deco/deco/taulu2.png" id="21_lnxe6"]
@@ -1230,6 +1231,10 @@ offset_right = 3922.0
 offset_bottom = 4864.0
 color = Color(0.7432157, 1, 0.9984322, 1)
 
+[node name="InteractionTile" parent="Tiles" instance=ExtResource("12_h4037")]
+position = Vector2(816, 45)
+pickup_scene = ExtResource("28_pncfg")
+
 [node name="FirstSpawn" type="Marker2D" parent="."]
 position = Vector2(1781, 140)
 
@@ -1265,7 +1270,7 @@ theme_override_font_sizes/font_size = 10
 text = "Press e to sleep on mat"
 
 [node name="Human" parent="." instance=ExtResource("5_6riwa")]
-position = Vector2(376, 143)
+position = Vector2(731, 122)
 normal_tex = ExtResource("6_66ty1")
 sleeping_tex = ExtResource("7_2g8k7")
 captured_tex = ExtResource("8_2rgad")
@@ -1313,5 +1318,4 @@ text = "5"
 [node name="Items" type="Node2D" parent="."]
 
 [node name="PickUpStuffArea" parent="Items" instance=ExtResource("28_pncfg")]
-visible = true
 position = Vector2(1708, 238)

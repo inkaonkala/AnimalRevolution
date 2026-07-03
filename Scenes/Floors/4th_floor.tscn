@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=4 uid="uid://ckmu5j1jfg43k"]
+[gd_scene load_steps=26 format=4 uid="uid://ckmu5j1jfg43k"]
 
 [ext_resource type="Texture2D" uid="uid://b4qa0jkjn0kan" path="res://Assets/RoomNDeco/floor_test.png" id="1_6n4f2"]
 [ext_resource type="Texture2D" uid="uid://cc13py1wb2ctl" path="res://Assets/RoomNDeco/wall_collider.png" id="2_irvgt"]
@@ -9,13 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://dpy4wyc1oojfq" path="res://Assets/RoomNDeco/elevator.png" id="5_wjrx3"]
 [ext_resource type="Texture2D" uid="uid://b33kqoqtgv187" path="res://Assets/RoomNDeco/floor2.png" id="9_txt4t"]
 [ext_resource type="Texture2D" uid="uid://cvv0t0klrqrpv" path="res://Assets/RoomNDeco/floor1.png" id="10_i6s3l"]
-[ext_resource type="Texture2D" uid="uid://rht7ow3sbrro" path="res://Assets/RoomNDeco/Deco/furniture/armchair1.png" id="11_2s8nq"]
-[ext_resource type="Texture2D" uid="uid://csbj0lde35tum" path="res://Assets/RoomNDeco/Deco/furniture/bookcase.png" id="12_r0guy"]
-[ext_resource type="Texture2D" uid="uid://bn66ladvuamie" path="res://Assets/RoomNDeco/Deco/furniture/kaappi3.png" id="13_304x2"]
-[ext_resource type="Texture2D" uid="uid://dpbgiwjcpca62" path="res://Assets/RoomNDeco/Deco/deco/taulu2.png" id="15_yekti"]
-[ext_resource type="Texture2D" uid="uid://oeq8agp0hcar" path="res://Assets/RoomNDeco/Deco/plants&animals/kasvi4.png" id="16_2mqil"]
-[ext_resource type="Texture2D" uid="uid://b7rhk3g1d8spl" path="res://Assets/RoomNDeco/Deco/furniture/sohva3.png" id="16_r0guy"]
-[ext_resource type="Texture2D" uid="uid://y70bwmh8p3uo" path="res://Assets/RoomNDeco/Deco/furniture/pöytä3.png" id="17_i6s3l"]
 [ext_resource type="PackedScene" uid="uid://duo6smjq7kw2j" path="res://Scenes/NPC/rodent.tscn" id="20_pqfgh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pqfgh"]
@@ -728,106 +721,6 @@ sources/2 = SubResource("TileSetAtlasSource_0hoi4")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bboc2"]
 size = Vector2(57, 28)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yekti"]
-texture = ExtResource("11_2s8nq")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2mqil"]
-texture = ExtResource("12_r0guy")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bx8hc"]
-texture = ExtResource("15_yekti")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-1:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ix67c"]
-texture = ExtResource("16_2mqil")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-1:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_myd80"]
-texture = ExtResource("17_i6s3l")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-1:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vkp30"]
-texture = ExtResource("13_304x2")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_304x2"]
-texture = ExtResource("16_r0guy")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-1:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_bx8hc"]
-tile_size = Vector2i(32, 32)
-sources/0 = SubResource("TileSetAtlasSource_yekti")
-sources/1 = SubResource("TileSetAtlasSource_2mqil")
-sources/2 = SubResource("TileSetAtlasSource_vkp30")
-sources/5 = SubResource("TileSetAtlasSource_304x2")
-sources/10 = SubResource("TileSetAtlasSource_bx8hc")
-sources/11 = SubResource("TileSetAtlasSource_ix67c")
-sources/13 = SubResource("TileSetAtlasSource_myd80")
-
 [node name="4th_floor" type="Node2D"]
 position = Vector2(-398, -65)
 
@@ -889,11 +782,6 @@ position = Vector2(748, 512)
 z_index = 1
 position = Vector2(659, 546)
 texture = ExtResource("5_wjrx3")
-
-[node name="TESTfurniture" type="TileMapLayer" parent="."]
-z_index = 20
-tile_map_data = PackedByteArray("AAAyAAUAAgAAAAAAAAAzAAUAAgABAAAAAAAyAAYAAgAAAAEAAAAzAAYAAgABAAEAAAA4AAcABQAAAAEAAAA5AAcABQABAAEAAAA4AAYABQAAAAAAAAA5AAYABQABAAAAAAAkABUACwAAAAAAAAAlABUACwABAAAAAAAkABYACwAAAAEAAAAlABYACwABAAEAAAAmABgACwAAAAAAAAAnABgACwABAAAAAAAmABkACwAAAAEAAAAnABkACwABAAEAAAATAAEADQAAAAAAAAAUAAEADQABAAAAAAATAAIADQAAAAEAAAAUAAIADQABAAEAAAA=")
-tile_set = SubResource("TileSet_bx8hc")
 
 [node name="Rodent" parent="." instance=ExtResource("20_pqfgh")]
 position = Vector2(439, 467)

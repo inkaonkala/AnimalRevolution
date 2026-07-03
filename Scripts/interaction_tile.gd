@@ -13,7 +13,7 @@ enum ResetMode {
 
 @export var loot_table: Array[Dictionary] = [
 	{
-		"item_id": "seed",
+		"item_id": "carrot_seed",
 		"weight": 10, #aprrox how often item will appear!
 		"texture": preload("res://Assets/Collectables/ballB.png")
 	}
