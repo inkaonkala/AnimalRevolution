@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://ckmu5j1jfg43k"]
+[gd_scene load_steps=28 format=4 uid="uid://ckmu5j1jfg43k"]
 
 [ext_resource type="Texture2D" uid="uid://b4qa0jkjn0kan" path="res://Assets/RoomNDeco/floor_test.png" id="1_6n4f2"]
 [ext_resource type="Texture2D" uid="uid://cc13py1wb2ctl" path="res://Assets/RoomNDeco/wall_collider.png" id="2_irvgt"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://dpy4wyc1oojfq" path="res://Assets/RoomNDeco/elevator.png" id="5_wjrx3"]
 [ext_resource type="Texture2D" uid="uid://b33kqoqtgv187" path="res://Assets/RoomNDeco/floor2.png" id="9_txt4t"]
 [ext_resource type="Texture2D" uid="uid://cvv0t0klrqrpv" path="res://Assets/RoomNDeco/floor1.png" id="10_i6s3l"]
+[ext_resource type="PackedScene" uid="uid://b7t4pvgmytemb" path="res://Scenes/NPC/Dog.tscn" id="11_7e6xu"]
+[ext_resource type="PackedScene" uid="uid://cubpskpjbnhkq" path="res://Scenes/NPC/Cat.tscn" id="12_7hdgp"]
 [ext_resource type="PackedScene" uid="uid://duo6smjq7kw2j" path="res://Scenes/NPC/rodent.tscn" id="20_pqfgh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pqfgh"]
@@ -783,15 +785,6 @@ z_index = 1
 position = Vector2(659, 546)
 texture = ExtResource("5_wjrx3")
 
-[node name="Rodent" parent="." instance=ExtResource("20_pqfgh")]
-position = Vector2(439, 467)
-rodent_name = "BunBun(0)"
-
-[node name="Rodent2" parent="." instance=ExtResource("20_pqfgh")]
-position = Vector2(674, 942)
-rodent_name = "Nip(1)"
-spawn_index = 1
-
 [node name="FloorNbr" type="Label" parent="."]
 modulate = Color(0, 0.080239765, 0.08253934, 1)
 z_index = 25
@@ -800,3 +793,39 @@ offset_top = 529.0
 offset_right = 633.0
 offset_bottom = 552.0
 text = "4"
+
+[node name="NPC" type="Node2D" parent="."]
+
+[node name="Rodent2" parent="NPC" instance=ExtResource("20_pqfgh")]
+position = Vector2(674, 942)
+rodent_name = "Nip(1)"
+spawn_index = 1
+
+[node name="Rodent" parent="NPC" instance=ExtResource("20_pqfgh")]
+position = Vector2(439, 467)
+rodent_name = "BunBun(0)"
+
+[node name="Dog" parent="NPC" instance=ExtResource("11_7e6xu")]
+position = Vector2(2861, 1536)
+dog_name = "Paws"
+
+[node name="Dog2" parent="NPC" instance=ExtResource("11_7e6xu")]
+position = Vector2(157, 1160)
+dog_name = "Buster"
+
+[node name="Dog3" parent="NPC" instance=ExtResource("11_7e6xu")]
+position = Vector2(-185, 546)
+dog_name = "Spot"
+
+[node name="Cat" parent="NPC" instance=ExtResource("12_7hdgp")]
+position = Vector2(1185, 199)
+cat_name = "Mimosa"
+
+[node name="Cat2" parent="NPC" instance=ExtResource("12_7hdgp")]
+z_index = 3
+position = Vector2(3104, 2704)
+cat_name = "Pepper"
+
+[node name="Cat3" parent="NPC" instance=ExtResource("12_7hdgp")]
+position = Vector2(3063, 2704)
+cat_name = "Salt"

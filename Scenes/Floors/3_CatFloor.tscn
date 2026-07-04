@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://bc6ou37n0x6el"]
+[gd_scene load_steps=24 format=4 uid="uid://bc6ou37n0x6el"]
 
 [ext_resource type="Texture2D" uid="uid://fy7wp51x2yif" path="res://Assets/RoomNDeco/cat_wall1.png" id="2_2ew4y"]
 [ext_resource type="Texture2D" uid="uid://ebifa0xl2g1i" path="res://Assets/RoomNDeco/cat_wall2.png" id="3_b1umu"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dpy4wyc1oojfq" path="res://Assets/RoomNDeco/elevator.png" id="5_424ii"]
 [ext_resource type="Texture2D" uid="uid://uupvwb7nj8ge" path="res://Assets/RoomNDeco/buildingSide.png" id="6_b1umu"]
 [ext_resource type="Texture2D" uid="uid://b33kqoqtgv187" path="res://Assets/RoomNDeco/floor2.png" id="6_ycr8e"]
+[ext_resource type="PackedScene" uid="uid://b7t4pvgmytemb" path="res://Scenes/NPC/Dog.tscn" id="9_cuuuw"]
 [ext_resource type="PackedScene" uid="uid://cubpskpjbnhkq" path="res://Scenes/NPC/Cat.tscn" id="12_5u5dx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cuuuw"]
@@ -784,10 +785,6 @@ shape = SubResource("RectangleShape2D_bboc2")
 position = Vector2(648, 546)
 texture = ExtResource("5_424ii")
 
-[node name="Cat" parent="." instance=ExtResource("12_5u5dx")]
-position = Vector2(389, 458)
-cat_name = "John(0)"
-
 [node name="SpawnPoints" type="Node2D" parent="."]
 
 [node name="TurtleSpawn" type="Marker2D" parent="SpawnPoints"]
@@ -813,13 +810,28 @@ position = Vector2(1857, 154)
 [node name="Spawn6" type="Marker2D" parent="SpawnPoints/CatSpawns"]
 position = Vector2(743, 410)
 
+[node name="Spawn7" type="Marker2D" parent="SpawnPoints/CatSpawns"]
+position = Vector2(1124, 132)
+
+[node name="Spawn8" type="Marker2D" parent="SpawnPoints/CatSpawns"]
+position = Vector2(-60, 463)
+
+[node name="Spawn9" type="Marker2D" parent="SpawnPoints/CatSpawns"]
+position = Vector2(40, 1069)
+
+[node name="Spawn10" type="Marker2D" parent="SpawnPoints/CatSpawns"]
+position = Vector2(1580, 1138)
+
+[node name="Spawn11" type="Marker2D" parent="SpawnPoints/CatSpawns"]
+position = Vector2(218, 88)
+
 [node name="TherapySpawns" type="Node2D" parent="SpawnPoints"]
 
 [node name="Thera1" type="Marker2D" parent="SpawnPoints/TherapySpawns"]
 position = Vector2(-457, 642)
 
 [node name="Thera2" type="Marker2D" parent="SpawnPoints/TherapySpawns"]
-position = Vector2(-467, 776)
+position = Vector2(-462, 735)
 
 [node name="Thera3" type="Marker2D" parent="SpawnPoints/TherapySpawns"]
 position = Vector2(-372, 701)
@@ -835,3 +847,21 @@ offset_top = 529.0
 offset_right = 633.0
 offset_bottom = 552.0
 text = "3"
+
+[node name="NPC" type="Node2D" parent="."]
+
+[node name="Cat" parent="NPC" instance=ExtResource("12_5u5dx")]
+position = Vector2(3048, 1408)
+cat_name = "John(0)"
+
+[node name="Cat2" parent="NPC" instance=ExtResource("12_5u5dx")]
+position = Vector2(1191, 958)
+cat_name = "Bellam"
+
+[node name="Cat3" parent="NPC" instance=ExtResource("12_5u5dx")]
+position = Vector2(1191, 958)
+cat_name = "John(0)"
+
+[node name="Dog" parent="NPC" instance=ExtResource("9_cuuuw")]
+position = Vector2(2601, 265)
+dog_name = "Samson"
