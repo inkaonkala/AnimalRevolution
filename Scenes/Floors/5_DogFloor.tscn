@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://ta717pvkxahs"]
+[gd_scene load_steps=46 format=4 uid="uid://ta717pvkxahs"]
 
 [ext_resource type="Texture2D" uid="uid://ep84bw43rbmw" path="res://Assets/RoomNDeco/dog_wall1.png" id="2_a3iq5"]
 [ext_resource type="Texture2D" uid="uid://cc13py1wb2ctl" path="res://Assets/RoomNDeco/wall_collider.png" id="2_lw74p"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://d1jk0i0cnkefw" path="res://Scenes/InteractionTile.tscn" id="12_h4037"]
 [ext_resource type="PackedScene" uid="uid://b0egu63vj6hvw" path="res://Scenes/door.tscn" id="17_12wab"]
 [ext_resource type="Texture2D" uid="uid://b4sld2pybl77o" path="res://Assets/Collectables/kukka2seed.png" id="17_vhcor"]
+[ext_resource type="Texture2D" uid="uid://buwfcwtpwk6su" path="res://Assets/Collectables/munaseed.png" id="18_r7dl1"]
 [ext_resource type="PackedScene" uid="uid://b7t4pvgmytemb" path="res://Scenes/NPC/Dog.tscn" id="23_eufh8"]
 [ext_resource type="PackedScene" uid="uid://cubpskpjbnhkq" path="res://Scenes/NPC/Cat.tscn" id="26_r7dl1"]
 [ext_resource type="PackedScene" uid="uid://hm3q3v5kw6kc" path="res://Scenes/PickUpStuff.tscn" id="28_pncfg"]
@@ -1196,6 +1197,14 @@ position = Vector2(-303, 1364)
 loot_table = Array[Dictionary]([{
 "item_id": "flower2_seed",
 "texture": ExtResource("17_vhcor"),
+"weight": 10
+}])
+
+[node name="InteractionTile2" parent="Items" instance=ExtResource("12_h4037")]
+position = Vector2(1473, 88)
+loot_table = Array[Dictionary]([{
+"item_id": "eggplant_seed",
+"texture": ExtResource("18_r7dl1"),
 "weight": 10
 }])
 

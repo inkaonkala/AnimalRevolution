@@ -20,7 +20,7 @@
 [resource]
 script = ExtResource("9_0o3ti")
 seed_id = "eggplant_seed"
-crop_id = "Eggplant"
+crop_id = "eggplant"
 seed_tex = ExtResource("1_ybb5c")
 watered_tex = ExtResource("11_nxjtm")
 ready_tex = ExtResource("8_uoiad")
