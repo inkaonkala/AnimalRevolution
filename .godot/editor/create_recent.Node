@@ -1,14 +1,14 @@
 Node2D
 Label
-Timer
 CollisionShape2D
-Marker2D
+Sprite2D
 Area2D
+Timer
+Marker2D
 TileMapLayer
 Control
 ColorRect
 Button
 AnimatedSprite2D
 TextureRect
-Sprite2D
 StaticBody2D

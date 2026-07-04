@@ -49,6 +49,7 @@ func should_be_open() -> bool:
 
 
 func open_door() -> void:
+	print("Door opens!")
 	is_open = true
 	$CollisionShape2D.disabled = true
 	visible = false

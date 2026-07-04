@@ -2,3 +2,8 @@ res://Scenes/Floors/Rooftop.tscn
 res://Data/Crops/Flower1.tres
 res://Scripts/plant_n_harvest.gd
 res://Data/Crops/Flower2.tres
+res://Scenes/NPC/Dog.tscn
+res://Scripts/dog.gd
+res://Scripts/GameState.gd
+res://Scenes/Floors/5_DogFloor.tscn
+res://Scripts/door.gd
