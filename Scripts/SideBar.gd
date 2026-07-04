@@ -31,7 +31,12 @@ var item_icons := {
 	"eggplant_seed": preload("res://Assets/Collectables/munaseed.png"),
 	"bottle": preload("res://Assets/Collectables/bottle.png"),
 	"hamsterbaby": preload("res://Assets/Collectables/hamsterbaby.png"),
-	"carrot": preload("res://Assets/Plants/carrot.png")
+	"carrot": preload("res://Assets/Plants/carrot.png"),
+	"flower1_seed": preload("res://Assets/Collectables/kukka1seed.png"),
+	"flower2_seed": preload("res://Assets/Collectables/kukka2seed.png"),
+	"flower1": preload("res://Assets/Plants/kukka1.png"),
+	"flower2": preload("res://Assets/Plants/kukka2.png"),
+	"eggplant": preload("res://Assets/Plants/munakoiso.png")
 }
 
 #FACES

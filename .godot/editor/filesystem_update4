@@ -2,3 +2,9 @@ res://Scenes/Floors/4th_floor.tscn
 res://Scenes/Floors/5_DogFloor.tscn
 res://Scripts/interaction_tile.gd
 res://Scenes/InteractionTile.tscn
+res://Data/Crops/Flower1.tres
+res://Data/Crops/Flower2.tres
+res://Scenes/Floors/Rooftop.tscn
+res://Scripts/SideBar.gd
+res://Scenes/NPC/hamster.tscn
+res://Scripts/hamster.gd

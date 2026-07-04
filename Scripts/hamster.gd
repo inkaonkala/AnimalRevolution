@@ -72,7 +72,6 @@ func spawn_baby() -> void:
 	baby.item_id = "hamsterbaby"
 	baby.amount = 1
 	baby.item_tex = baby_texture
-	print(baby.item_tex)
 	
 	get_parent().add_child(baby)
 	baby.global_position = baby_spawn_point.global_position

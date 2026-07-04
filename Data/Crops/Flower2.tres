@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CropData" load_steps=15 format=3 uid="uid://1w10ve1crrft"]
+
+[ext_resource type="Script" uid="uid://drflv58lrwr1v" path="res://Scripts/CropData.gd" id="1_lbjvl"]
+[ext_resource type="Texture2D" uid="uid://bqoubqpaam8wo" path="res://Assets/Plants/kukka1_2.png" id="1_psyny"]
+[ext_resource type="Texture2D" uid="uid://ded6i57nd2uu5" path="res://Assets/Plants/kukka1_3.png" id="2_u5phd"]
+[ext_resource type="Texture2D" uid="uid://uuoql8w6wsnd" path="res://Assets/Plants/kukka2_4.png" id="3_psyny"]
+[ext_resource type="Texture2D" uid="uid://cbmbv2o1v85t8" path="res://Assets/Plants/kukka2_5.png" id="4_u5phd"]
+[ext_resource type="Texture2D" uid="uid://bbil16hal1sy5" path="res://Assets/Plants/kukka2_6.png" id="5_63ync"]
+[ext_resource type="Texture2D" uid="uid://bpnlbmlc5q65" path="res://Assets/Plants/kukka2.png" id="6_sjeei"]
+[ext_resource type="Texture2D" uid="uid://b7jqph61vvlha" path="res://Assets/Plants/kukka1_1.png" id="8_hkclu"]
+[ext_resource type="Texture2D" uid="uid://dj60m60b27hk1" path="res://Assets/Plants/kukka1_1w.png" id="9_kg2rm"]
+[ext_resource type="Texture2D" uid="uid://cnynjcrrf4uiw" path="res://Assets/Plants/kukka1_2w.png" id="10_jhuen"]
+[ext_resource type="Texture2D" uid="uid://wrngjp3g7elx" path="res://Assets/Plants/kukka1_3w.png" id="11_yuaf3"]
+[ext_resource type="Texture2D" uid="uid://cesy7e63a6l2k" path="res://Assets/Plants/kukka2_4w.png" id="12_yahf8"]
+[ext_resource type="Texture2D" uid="uid://bpg26cuqu3sc1" path="res://Assets/Plants/kukka2_5w.png" id="13_658h0"]
+[ext_resource type="Texture2D" uid="uid://p6bll6jucyeb" path="res://Assets/Plants/kukka2_6w.png" id="14_hkclu"]
+
+[resource]
+script = ExtResource("1_lbjvl")
+seed_id = "flower2_seed"
+crop_id = "flower2"
+seed_tex = ExtResource("8_hkclu")
+watered_tex = ExtResource("9_kg2rm")
+ready_tex = ExtResource("6_sjeei")
+growth_texs = Array[Texture2D]([ExtResource("1_psyny"), ExtResource("2_u5phd"), ExtResource("3_psyny"), ExtResource("4_u5phd"), ExtResource("5_63ync")])
+wet_growth_texs = Array[Texture2D]([ExtResource("10_jhuen"), ExtResource("11_yuaf3"), ExtResource("12_yahf8"), ExtResource("13_658h0"), ExtResource("14_hkclu")])
+metadata/_custom_type_script = "uid://drflv58lrwr1v"

@@ -1233,7 +1233,6 @@ color = Color(0.7432157, 1, 0.9984322, 1)
 
 [node name="InteractionTile" parent="Tiles" instance=ExtResource("12_h4037")]
 position = Vector2(816, 45)
-pickup_scene = ExtResource("28_pncfg")
 
 [node name="FirstSpawn" type="Marker2D" parent="."]
 position = Vector2(1781, 140)
