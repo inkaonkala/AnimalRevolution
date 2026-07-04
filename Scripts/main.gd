@@ -181,6 +181,8 @@ func change_floor(floor_name: String) -> void:
 #			set_floor_collision(child, enabled)
 
 func set_floor_active(node: Node, enabled: bool) -> void:
+	if node is CanvasItem:
+		node.visible = enabled
 	if node is CollisionShape2D:
 		node.disabled = not enabled
 	elif node is CollisionPolygon2D:
