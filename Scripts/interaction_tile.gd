@@ -14,7 +14,7 @@ enum ResetMode {
 @export var loot_table: Array[Dictionary] = [
 	{
 		"item_id": "carrot_seed",
-		"weight": 10,
+		"weight": 40,
 		"texture": preload("res://Assets/Collectables/ballB.png")
 	},
 	{
@@ -29,7 +29,7 @@ enum ResetMode {
 	},
 	{
 		"item_id": "eggplant_seed",
-		"weight": 10,
+		"weight": 20,
 		"texture": preload("res://Assets/Collectables/munaseed.png")
 	}
 ]

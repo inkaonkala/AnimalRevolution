@@ -97,7 +97,6 @@ func try_plant_seed() -> void:
 
 	print("No usable seed!")
 
-
 func try_water() -> void:
 	if current_crop == null:
 		print("No crop planted!")

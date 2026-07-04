@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CropData" load_steps=15 format=3 uid="uid://1w10ve1crrft"]
+[gd_resource type="Resource" script_class="CropData" load_steps=15 format=3 uid="uid://ckn0bv8401hsb"]
 
 [ext_resource type="Script" uid="uid://drflv58lrwr1v" path="res://Scripts/CropData.gd" id="1_hsvee"]
 [ext_resource type="Texture2D" uid="uid://bqoubqpaam8wo" path="res://Assets/Plants/kukka1_2.png" id="1_jskmm"]

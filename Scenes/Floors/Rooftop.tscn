@@ -19,8 +19,8 @@
 [ext_resource type="Script" uid="uid://drflv58lrwr1v" path="res://Scripts/CropData.gd" id="16_m8qps"]
 [ext_resource type="Resource" uid="uid://bcon1vdps034c" path="res://Data/Crops/Carrot.tres" id="17_74cde"]
 [ext_resource type="Resource" uid="uid://cy2xmd2765kra" path="res://Data/Crops/Eggplant.tres" id="18_js5ft"]
+[ext_resource type="Resource" uid="uid://ckn0bv8401hsb" path="res://Data/Crops/Flower1.tres" id="19_74cde"]
 [ext_resource type="Resource" uid="uid://1w10ve1crrft" path="res://Data/Crops/Flower2.tres" id="20_js5ft"]
-[ext_resource type="Resource" uid="uid://1w10ve1crrft" path="res://Data/Crops/Flower1.tres" id="20_yx65s"]
 [ext_resource type="PackedScene" uid="uid://fbmnlrdte340" path="res://Scenes/ItemBox.tscn" id="23_mwpas"]
 [ext_resource type="PackedScene" uid="uid://cubpskpjbnhkq" path="res://Scenes/NPC/Cat.tscn" id="26_nvcb1"]
 [ext_resource type="PackedScene" uid="uid://b4vmme7x17pi8" path="res://Scenes/NPC/Turtle.tscn" id="27_i3pd6"]
@@ -891,27 +891,27 @@ position = Vector2(-2, 0)
 
 [node name="plant1" parent="plantAreas" instance=ExtResource("4_wdo6w")]
 position = Vector2(595, 369)
-available_crops = Array[ExtResource("16_m8qps")]([ExtResource("17_74cde"), ExtResource("18_js5ft"), ExtResource("20_yx65s"), ExtResource("20_js5ft")])
+available_crops = Array[ExtResource("16_m8qps")]([ExtResource("17_74cde"), ExtResource("18_js5ft"), ExtResource("19_74cde"), ExtResource("20_js5ft")])
 
 [node name="plant2" parent="plantAreas" instance=ExtResource("4_wdo6w")]
 position = Vector2(635, 368)
-available_crops = Array[ExtResource("16_m8qps")]([ExtResource("17_74cde"), ExtResource("18_js5ft"), ExtResource("20_yx65s"), ExtResource("20_js5ft")])
+available_crops = Array[ExtResource("16_m8qps")]([ExtResource("17_74cde"), ExtResource("18_js5ft"), ExtResource("19_74cde"), ExtResource("20_js5ft")])
 
 [node name="plant3" parent="plantAreas" instance=ExtResource("4_wdo6w")]
 position = Vector2(678, 368)
-available_crops = Array[ExtResource("16_m8qps")]([ExtResource("17_74cde"), ExtResource("18_js5ft"), ExtResource("20_yx65s"), ExtResource("20_js5ft")])
+available_crops = Array[ExtResource("16_m8qps")]([ExtResource("17_74cde"), ExtResource("18_js5ft"), ExtResource("19_74cde"), ExtResource("20_js5ft")])
 
 [node name="plant4" parent="plantAreas" instance=ExtResource("4_wdo6w")]
 position = Vector2(594, 402)
-available_crops = Array[ExtResource("16_m8qps")]([ExtResource("17_74cde"), ExtResource("18_js5ft"), ExtResource("20_yx65s"), ExtResource("20_js5ft")])
+available_crops = Array[ExtResource("16_m8qps")]([ExtResource("17_74cde"), ExtResource("18_js5ft"), ExtResource("19_74cde"), ExtResource("20_js5ft")])
 
 [node name="plant5" parent="plantAreas" instance=ExtResource("4_wdo6w")]
 position = Vector2(635, 402)
-available_crops = Array[ExtResource("16_m8qps")]([ExtResource("17_74cde"), ExtResource("18_js5ft"), ExtResource("20_yx65s"), ExtResource("20_js5ft")])
+available_crops = Array[ExtResource("16_m8qps")]([ExtResource("17_74cde"), ExtResource("18_js5ft"), ExtResource("19_74cde"), ExtResource("20_js5ft")])
 
 [node name="plant6" parent="plantAreas" instance=ExtResource("4_wdo6w")]
 position = Vector2(678, 402)
-available_crops = Array[ExtResource("16_m8qps")]([ExtResource("17_74cde"), ExtResource("18_js5ft"), ExtResource("20_yx65s"), ExtResource("20_js5ft")])
+available_crops = Array[ExtResource("16_m8qps")]([ExtResource("17_74cde"), ExtResource("18_js5ft"), ExtResource("19_74cde"), ExtResource("20_js5ft")])
 
 [node name="SpawnPoints" type="Control" parent="."]
 layout_mode = 3
