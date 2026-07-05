@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var speed := 200.0
 @onready var attack_area = $AttackArea
+@onready var animated_sprite = $Sprite2D
 
 var can_move := true
 
@@ -11,6 +12,7 @@ var enemies_in_attack_area: Array = []
 
 func _ready() -> void:
 	add_to_group("player")
+	animated_sprite.play()
 	attack_area.body_entered.connect(attackarea_entered)
 	attack_area.body_exited.connect(attackarea_exited)
 
@@ -30,6 +32,10 @@ func _physics_process(delta: float) -> void:
 
 	input_direction = input_direction.normalized()
 
+	if input_direction.x > 0:
+		animated_sprite.flip_h = true
+	elif input_direction.x < 0:
+		animated_sprite.flip_h = false
 	velocity = input_direction * speed
 	move_and_slide()
 	

@@ -11,6 +11,7 @@ height = 34.0
 script = ExtResource("1_6rxiq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_syt6j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -18,5 +19,6 @@ shape = SubResource("CapsuleShape2D_r5u08")
 
 [node name="Label" type="Label" parent="."]
 z_index = 50
+offset_top = -48.0
 offset_right = 40.0
-offset_bottom = 23.0
+offset_bottom = -25.0
