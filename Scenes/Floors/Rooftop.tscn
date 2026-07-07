@@ -943,7 +943,8 @@ texture = ExtResource("5_7hyk6")
 
 [node name="ItemBox" parent="." instance=ExtResource("23_mwpas")]
 position = Vector2(505, 356)
-box_name = "Hamster Food"
+box_name = "RodentFood"
+box_type = "rodent_food"
 allowed_items = Array[String](["carrot"])
 
 [node name="Cat" parent="." instance=ExtResource("26_nvcb1")]

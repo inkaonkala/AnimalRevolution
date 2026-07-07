@@ -44,6 +44,8 @@ offset_bottom = 40.0
 
 [node name="CloseButton" type="Button" parent="CanvasLayer/BoxMenu"]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = -340.0
+offset_top = 40.0
+offset_right = -282.0
+offset_bottom = 71.0
 text = "CLOSE"

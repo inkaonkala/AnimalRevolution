@@ -1,21 +1,27 @@
 extends Area2D
 
 @export var box_name := "Storage"
+@export var box_type := "storage"
 @export var allowed_items: Array[String] = []
 
+@onready var box_canvas = $CanvasLayer
 @onready var box_menu = $CanvasLayer/BoxMenu
 @onready var box_label = $CanvasLayer/BoxMenu/Label
 @onready var item_list = $CanvasLayer/BoxMenu/ItemList
 @onready var close_button = $CanvasLayer/BoxMenu/CloseButton
+
 
 var player_near := false
 var stored_items := {}
 var box_open := false
 
 func _ready() -> void:
+
+	add_to_group("item_boxes")
 	body_entered.connect(on_body_enter)
 	body_exited.connect(on_body_exit)
 	close_button.pressed.connect(close_box)
+	box_canvas.visible = false
 	box_menu.visible = false
 	
 func _process(_delta: float) -> void:
@@ -38,6 +44,7 @@ func close_box() -> void:
 	
 	box_open = false
 	box_menu.visible = false
+	box_canvas.visible = false
 	main.player.can_move = true
 	
 func refresh_menu() -> void:
@@ -90,6 +97,7 @@ func open_box() -> void:
 	
 	box_open = true 
 	box_label.text = box_name
+	box_canvas.visible = true
 	box_menu.visible = true
 	main.player.can_move = false
 	refresh_menu()
@@ -119,4 +127,15 @@ func take_one_item(item_id: String) -> void:
 	var main = get_tree().current_scene
 	main.add_item(item_id, 1)
 	refresh_menu()
+	
+func consume_one_item(item_id: String) -> bool:
+		if stored_items.get(item_id, 0) <= 0:
+			return false
+		stored_items[item_id] -= 1
+		
+		if stored_items[item_id] <= 0:
+			stored_items.erase(item_id)
+		print(box_name, "consumed 1 ", item_id, ". Left: ", stored_items)
+		return true
+	
 	

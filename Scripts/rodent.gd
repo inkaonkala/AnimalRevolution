@@ -27,6 +27,7 @@ signal emotion_hadler
 
 var state := State.LOST
 var has_talked := false
+var days_without_food := 0
 var plants_watered := 0
 
 func _ready() -> void:
@@ -93,6 +94,10 @@ func move_to_rooftop() -> void:
 		
 			
 func on_new_day(day_nmb: int) -> void:
+	if state == State.LOST:
+		return
+	eat_from_box()
+	
 	if state == State.NEUTRAL or state == State.HAPPY:
 		work_at_night()
 
@@ -130,6 +135,32 @@ func get_water_amount() -> int:
 		_:
 			return 0
 			
+
+func find_rodent_foodbox() -> Node:
+	#var main = get_tree().current_scene
+	var boxes = get_tree().get_nodes_in_group("item_boxes")
+	
+	for box in boxes:
+		if box.box_type == "rodent_food":
+			return box
+	return null
+			
+func eat_from_box() -> void:
+	var food_box = find_rodent_foodbox()
+	if food_box != null and food_box.consume_one_item("carrot"):
+		state = State.HAPPY
+		days_without_food = 0
+		print(rodent_name, " ate carrot. Is happy!")
+	else:
+		days_without_food += 1
+		
+		if days_without_food >= 3:
+			state = State.SAD
+		else:
+			state = State.NEUTRAL
+		
+	emotion_hadler.emit()
+	
 func get_emotion_value() -> int:
 	match state:
 		State.HAPPY:
