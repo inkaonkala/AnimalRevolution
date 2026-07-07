@@ -150,12 +150,14 @@ func eat_from_box() -> void:
 	if food_box != null and food_box.consume_one_item("carrot"):
 		state = State.HAPPY
 		days_without_food = 0
+		call_deferred("update_sidebar")
 		print(rodent_name, " ate carrot. Is happy!")
 	else:
 		days_without_food += 1
 		
 		if days_without_food >= 3:
 			state = State.SAD
+			call_deferred("update_sidebar")
 		else:
 			state = State.NEUTRAL
 		
@@ -171,3 +173,8 @@ func get_emotion_value() -> int:
 			return 0
 		_:
 			return 0
+
+func update_sidebar() -> void:
+	var main = get_tree().current_scene
+	if main.has_node("CanvasSideBar"):
+		main.get_node("CanvasSideBar").update_animal_emotions()

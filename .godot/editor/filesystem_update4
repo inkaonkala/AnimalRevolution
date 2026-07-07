@@ -1,6 +1,4 @@
-res://Scenes/Main.tscn
-res://Scripts/item_box.gd
-res://Scenes/Floors/Rooftop.tscn
-res://Scripts/rodent.gd
-res://Scenes/NPC/hamster.tscn
 res://Scenes/ItemBox.tscn
+res://Scripts/SideBar.gd
+res://Scripts/rodent.gd
+res://Scenes/NPC/rodent.tscn

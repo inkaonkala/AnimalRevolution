@@ -91,7 +91,7 @@ func _ready() -> void:
 	DayCycle.time_changed.connect(_on_time_changed)
 	_on_time_changed(DayCycle.get_time())
 
-	DayCycle.new_day.connect(func(_day): update_animal_emotions())
+	DayCycle.new_day.connect(func(_day): call_deferred("update_animal_emotions"))
 	update_animal_emotions()
 	
 func _on_time_changed(time_name: String) -> void:
@@ -108,6 +108,8 @@ func update_emotion(species_name: String) -> void:
 	var count := 0
 
 	for animal in get_tree().get_nodes_in_group("animals"):
+		if not ("species" in animal):
+			continue 
 		if animal.species == species_name and animal.has_method("get_emotion_value"):
 			total += animal.get_emotion_value()
 			count += 1
