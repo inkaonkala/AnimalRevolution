@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=4 uid="uid://ta717pvkxahs"]
+[gd_scene load_steps=47 format=4 uid="uid://ta717pvkxahs"]
 
 [ext_resource type="Texture2D" uid="uid://ep84bw43rbmw" path="res://Assets/RoomNDeco/dog_wall1.png" id="2_a3iq5"]
 [ext_resource type="Texture2D" uid="uid://cc13py1wb2ctl" path="res://Assets/RoomNDeco/wall_collider.png" id="2_lw74p"]
@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://b0egu63vj6hvw" path="res://Scenes/door.tscn" id="17_12wab"]
 [ext_resource type="Texture2D" uid="uid://b4sld2pybl77o" path="res://Assets/Collectables/kukka2seed.png" id="17_vhcor"]
 [ext_resource type="Texture2D" uid="uid://buwfcwtpwk6su" path="res://Assets/Collectables/munaseed.png" id="18_r7dl1"]
+[ext_resource type="PackedScene" uid="uid://fbmnlrdte340" path="res://Scenes/ItemBox.tscn" id="19_nqr7x"]
 [ext_resource type="PackedScene" uid="uid://b7t4pvgmytemb" path="res://Scenes/NPC/Dog.tscn" id="23_eufh8"]
 [ext_resource type="PackedScene" uid="uid://cubpskpjbnhkq" path="res://Scenes/NPC/Cat.tscn" id="26_r7dl1"]
 [ext_resource type="PackedScene" uid="uid://hm3q3v5kw6kc" path="res://Scenes/PickUpStuff.tscn" id="28_pncfg"]
@@ -1295,6 +1296,11 @@ loot_table = Array[Dictionary]([{
 "weight": 10
 }])
 
+[node name="GogFoodBox" parent="Items" instance=ExtResource("19_nqr7x")]
+position = Vector2(726, 413)
+box_name = "DogFood"
+box_type = "dog_food"
+
 [node name="Doors" type="Node2D" parent="."]
 position = Vector2(3067, 2146)
 
@@ -1329,8 +1335,15 @@ tagged_tex = ExtResource("9_66ty1")
 [node name="Dog" parent="NPC" instance=ExtResource("23_eufh8")]
 z_index = 11
 position = Vector2(1424, 480)
+dog_name = null
+spawn_index = null
+species = null
+intro_line = null
 
 [node name="Dog2" parent="NPC" instance=ExtResource("23_eufh8")]
 z_index = 11
 position = Vector2(3067, 2146)
 dog_name = "Charles"
+spawn_index = null
+species = null
+intro_line = null
