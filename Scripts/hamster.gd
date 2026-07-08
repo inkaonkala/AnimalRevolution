@@ -1,53 +1,33 @@
-extends Area2D
+extends AnimalBase
 
 @export var baby_picup_Scene: PackedScene
 @export var baby_texture: Texture2D
 
-@onready var talk_bubble = $Label
 @onready var baby_spawn_point = $babySpawnPoint
 @onready var anim: AnimatedSprite2D = $Sprite2D
 
-var has_talked1	 := false
 var baby_exists := false
 
 func _ready() -> void:
-	body_entered.connect(hamster_touched1)
-	
-func hamster_touched1(body: Node) -> void:
-	if body.name != "Player":
-		return
-	
-	if not has_talked1:	
-		has_talked1 = true
-		await make_hamster_talk("Hello! Nice to meet ya!")
-		await make_hamster_talk("My name is Yolanda!")
-		await make_hamster_talk("Come, and help me at the rooftop!")
-		move_to_rooftop()
-		return
-		
+	species = "hamster"
+	intro_lines = [
+		"Hello! Nice to meet ya!",
+		"My name is Yolanda!",
+		"Come, and help me at the rooftop!"
+	]
+	super._ready()
+
+func first_meeting() -> void:
+	await super.first_meeting()
+	move_to_rooftop()
+
+func talk() -> void:
 	if baby_exists:
-		await make_hamster_talk("My baby's there to help you!")
+		await say_this("My baby's there to help you!")
 		return
-	
-	await make_hamster_talk("Use my baby to dig the soil!")
+
+	await say_this("Use my baby to dig the soil!")
 	await spawn_baby()
-	
-			
-func make_hamster_talk(text: String) ->void:
-	talk_bubble.text = text
-	talk_bubble.visible = true
-	
-	await get_tree().create_timer(1.5).timeout
-	talk_bubble.visible = false
-	
-#func move_to_rooftop() -> void:
-#	var rooftop = get_node(rooftop_path)
-#	var spawn = get_node(rooftop_spawn)
-#	
-#	get_parent().remove_child(self)
-#	rooftop.add_child(self)
-#	
-#	global_position = spawn.global_position
 
 func move_to_rooftop() -> void:
 	var main = get_tree().current_scene

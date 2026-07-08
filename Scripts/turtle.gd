@@ -1,4 +1,5 @@
-extends Area2D
+extends AnimalBase
+
 
 enum State {
 	LOST,
@@ -11,65 +12,36 @@ enum State {
 
 @export var turtle_name := "Tilda"
 
-@export var intro_lines: Array[String] = [
-	"Hello, small revolution creature.",
-	"I am trained in emotional damage.",
-	"Take me to the cat floor."
-]
-
-@onready var talk_bubble = $Label
-
 var state := State.LOST
-var has_talked := false
 
 
 func _ready() -> void:
-	body_entered.connect(on_body_enter)
+	species = "turtle"
+	intro_lines = [
+	"Hello, small revolution creature.",
+	"I am trained in emotional damage.",
+	"Meet me on the cat floor."
+	]
+	super._ready()
 	DayCycle.new_day.connect(on_new_day)
-	talk_bubble.visible = false
-
-
-func on_body_enter(body: Node) -> void:
-	if body.name != "Player":
-		return
-
-	if state == State.LOST:
-		await first_meeting()
-	else:
-		await talk()
-
 
 func first_meeting() -> void:
-	if has_talked:
-		return
-
-	has_talked = true
-
-	for line in intro_lines:
-		await say_this(line)
-
+	await super.first_meeting()
 	move_to_catfloor()
-
+	emit_emotion_changed()
 
 func talk() -> void:
 	match state:
 		State.HAPPY:
 			await say_this("The cats are healing. Slowly. Dramatically.")
 		State.SAD:
-			await say_this("Even therapists need soup sometimes.")
+			await say_this("You could heal me with flowers .. ..")
 		State.WORKING:
 			await say_this("Please wait. A cat is processing its feelings.")
 		State.TIRED:
-			await say_this("I need a quiet corner and exactly one lettuce leaf.")
+			await say_this("I need a quiet corner and something pretty")
 		_:
 			await say_this("I live on the cat floor now.")
-
-
-func say_this(text: String) -> void:
-	talk_bubble.text = text
-	talk_bubble.visible = true
-	await get_tree().create_timer(1.8).timeout
-	talk_bubble.visible = false
 
 
 func move_to_catfloor() -> void:
@@ -85,9 +57,19 @@ func move_to_catfloor() -> void:
 
 
 func on_new_day(_day_number: int) -> void:
+	hide_talk_bubble()
 	if state == State.ON_SPOT or state == State.HAPPY:
 		do_therapy()
 
 
 func do_therapy() -> void:
 	print(turtle_name, " soothing cat feelings")
+
+func get_emotion_value() -> int:
+	match state:
+		State.HAPPY:
+			return 1
+		State.SAD, State.TIRED:
+			return -1
+		_:
+			return 0
