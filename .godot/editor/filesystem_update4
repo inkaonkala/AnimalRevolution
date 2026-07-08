@@ -9,3 +9,4 @@ res://Scenes/NPC/hamster.tscn
 res://Scripts/AnimalBase.gd
 res://Scripts/turtle.gd
 res://Scripts/hamster.gd
+res://Scripts/cat.gd

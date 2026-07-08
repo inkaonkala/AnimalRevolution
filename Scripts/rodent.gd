@@ -1,4 +1,4 @@
-extends Area2D
+extends AnimalBase
 
 enum State
 {
@@ -10,50 +10,28 @@ enum State
 	HUNGRY
 }
 
-signal emotion_hadler
-
-@export var species := "rodent"
 @export var rodent_name := "BunBun"
-@export var intro_line: Array[String] = [
-	"Hello!",
-	"I can help you on the rooftop!"
-]
-
-#@export var roof_path: NodePath
-#@export var roof_spawn_path: NodePath
 @export var spawn_index := 0
 
-@onready var talk_bubble = $Label
-
 var state := State.LOST
-var has_talked := false
 var days_without_food := 0
 var plants_watered := 0
 
 func _ready() -> void:
-	add_to_group("animals")
-	body_entered.connect(on_body_entered)
+	species = "rodent"
+	intro_lines = [
+		"Hello!",
+		"For some food,",
+		"I can help you on the rooftop!"
+	]
+	super._ready()
 	DayCycle.new_day.connect(on_new_day)
-	talk_bubble.visible = false
-	
-func on_body_entered(body: Node) -> void:
-	if body.name != "Player":
-		return
-	if state == State.LOST:
-		await first_meeting()
-	else:
-		await talk()
-		
-	print("Rodent found!")
+
+func should_first_meet() -> bool:
+	return state == State.LOST
 	
 func first_meeting() -> void:
-	if has_talked:
-		return
-	has_talked = true
-	
-	for line in intro_line:
-		await say_this(line)
-	
+	await super.first_meeting()
 	move_to_rooftop()
 	
 func talk() -> void:
@@ -67,14 +45,7 @@ func talk() -> void:
 		_:
 			await say_this("I live on the rooftop now")
 		
-func say_this(text: String) -> void:
-	talk_bubble.text = text
-	talk_bubble.visible = true
-	await get_tree().create_timer(1.5).timeout
-	talk_bubble.visible = false
-		
 func move_to_rooftop() -> void:
-	
 	var main = get_tree().current_scene
 	var rooftop = main.get_node("FloorContainer/Rooftop")
 	var spawn_points = rooftop.get_node("SpawnPoints").get_children()
@@ -94,6 +65,7 @@ func move_to_rooftop() -> void:
 		
 			
 func on_new_day(day_nmb: int) -> void:
+	hide_talk_bubble()
 	if state == State.LOST:
 		return
 	eat_from_box()
@@ -173,8 +145,3 @@ func get_emotion_value() -> int:
 			return 0
 		_:
 			return 0
-
-func update_sidebar() -> void:
-	var main = get_tree().current_scene
-	if main.has_node("CanvasSideBar"):
-		main.get_node("CanvasSideBar").update_animal_emotions()

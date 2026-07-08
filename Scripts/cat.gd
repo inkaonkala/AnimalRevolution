@@ -1,4 +1,4 @@
-extends Area2D
+extends AnimalBase
 
 enum State
 {
@@ -12,14 +12,10 @@ enum State
 	IN_THERAPY
 }
 
-signal emotion_hadler
 
 @export var cat_name := "John"
 @export var floorspawn_index := 0
 @export var therapyspaw_i := 0
-@export var species := "cat"
-
-@onready var speak_bubble = $Label
 
 var state := State.LOST
 var has_joined := false
@@ -34,15 +30,55 @@ var meat_per_happy_cat := 2
 var max_work_nights := 6
 
 func _ready() -> void:
-	add_to_group("animals")
-	DayCycle.new_day.connect(cat_new_day)
-	body_entered.connect(cat_activated)
-	speak_bubble.visible = false
+	species = "cat"
+	intro_lines = [ "I want to rule my world",
+		"I'll join your revolution",
+		"Found me on floor 3"
+	]
+	super._ready()
+	DayCycle.new_day.connect(on_new_day)
+
+func should_first_meet() -> bool:
+	return state == State.LOST
 	
-func cat_new_day(daynmb: int) -> void:
-	on_new_day()
+func first_meeting() -> void:
+	await super.first_meeting()
+	has_joined = true
+	GameState.cat_found = true
+	state = State.NEUTRAL
+	emit_emotion_changed()
 	
-func on_new_day() -> void:
+	if is_on_3thfloor():
+		activate_spotly()
+	else:
+		move_to_catfloor()
+
+func talk() -> void:
+	if state == State.HUNGRY and not GameState.tagging_unlocked:
+		GameState.tagging_unlocked = true
+		state = State.HAPPY
+		hunger_timer = 0
+		emit_emotion_changed()
+		await say_this("Use this TAG to mark humans good enough to eat")
+		return
+		
+	match state:
+		State.HAPPY:
+			await say_this("Why not to eat humans? They are simple creatures anyway.")
+		State.WORKING:
+			await say_this("Let's make some meat")
+		State.NEEDS_THERAPY:
+			await say_this("I should have not looked them in the eyes ...")
+		State.IN_THERAPY:
+			await say_this("Where else can we get our protein and vitamins?")
+		State.HUNGRY:
+			await say_this("I am hungry.")
+		_:
+			await say_this("I am hungry and bored")
+
+
+func on_new_day(_day_number: int) -> void:
+	hide_talk_bubble()
 	if state == State.LOST:
 		return
 
@@ -78,67 +114,13 @@ func on_new_day() -> void:
 		emotion_hadler.emit()
 		move_to_threapy()
 
-func cat_talk(text: String) -> void:
-		speak_bubble.text = text
-		speak_bubble.visible = true
-		await  get_tree().create_timer(1.5). timeout
-		speak_bubble.visible = false
-
-func cat_activated(body: Node) -> void:
-	if body.name != "Player":
-		return
-		
-	if state == State.LOST:
-		await first_meeting()
-		return
-	
-	#	state = State.HAPPY
-	#	GameState.cat_found = true
-	#	await cat_talk("Why not? I'll joi the revolution")
-	#	print("Cat found!")
-	#	return
-	
-	if state == State.HUNGRY and not GameState.tagging_unlocked:
-		GameState.tagging_unlocked = true
-		state = State.HAPPY
-		emotion_hadler.emit()
-		hunger_timer = 0
-		await cat_talk("Use this TAG to mark humans good wnought to eat")
-		return
-		
-	match state:
-		State.HAPPY:
-			await cat_talk("Why not to eat humans? They are simple creatures anyway.")
-		State.WORKING:
-			await cat_talk("Let's make some meat")
-		State.NEEDS_THERAPY:
-			await cat_talk("I should have not looked them in the eyes ...")
-		State.IN_THERAPY:
-			await cat_talk("Were else can we get our protein and vitamins?")
-		_:
-			await cat_talk("I am hungry and boored")
-			
-func first_meeting() -> void:
-	has_joined = true
-	GameState.cat_found = true
-	state = State.NEUTRAL
-	emotion_hadler.emit()
-	
-	await cat_talk("Why not? I'll join the revolution")
-	
-	print("Cat found: ", cat_name)
-	if is_on_3thfloor():
-		activate_spotly()
-	else:			
-		move_to_catfloor()
-		
 func is_on_3thfloor() -> bool:
 	var parent = get_parent()
 	return parent != null and parent.name == "ThirdFloor"
 	
 func activate_spotly() -> void:
 	state = State.NEUTRAL
-	emotion_hadler.emit()
+	emit_emotion_changed()
 	print(cat_name, " on CAT floor found")
 			
 func move_to_catfloor() -> void:
