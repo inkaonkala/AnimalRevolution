@@ -5,3 +5,5 @@ res://Scenes/NPC/rodent.tscn
 res://Scenes/Floors/5_DogFloor.tscn
 res://Scripts/dog.gd
 res://Scenes/NPC/Dog.tscn
+res://Scenes/NPC/hamster.tscn
+res://Scripts/AnimalBase.gd

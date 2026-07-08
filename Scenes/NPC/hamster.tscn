@@ -44,6 +44,7 @@ radius = 6.0
 height = 18.0
 
 [node name="Hamster" type="Area2D"]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_s70uv")
 baby_picup_Scene = ExtResource("2_n55pr")
 baby_texture = ExtResource("4_uto4n")
