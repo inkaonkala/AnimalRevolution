@@ -941,11 +941,12 @@ z_index = 2
 position = Vector2(126, 363)
 texture = ExtResource("5_7hyk6")
 
-[node name="ItemBox" parent="." instance=ExtResource("23_mwpas")]
-position = Vector2(505, 356)
+[node name="RodentFoodBox" parent="." instance=ExtResource("23_mwpas")]
+position = Vector2(398, 331)
 box_name = "RodentFood"
 box_type = "rodent_food"
 allowed_items = Array[String](["carrot"])
+starts_unlocked = false
 
 [node name="Cat" parent="." instance=ExtResource("26_nvcb1")]
 position = Vector2(171, 43)

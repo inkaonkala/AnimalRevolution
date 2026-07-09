@@ -77,3 +77,9 @@ func emit_emotion_changed() -> void:
 
 func get_emotion_value() -> int:
 	return 0
+	
+func unlock_object(node_path: String) -> void:
+	var main = get_tree().current_scene
+
+	if main.has_node(node_path):
+		main.get_node(node_path).visible = true

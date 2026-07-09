@@ -1,12 +1,7 @@
-res://Scenes/ItemBox.tscn
-res://Scripts/SideBar.gd
-res://Scripts/rodent.gd
-res://Scenes/NPC/rodent.tscn
-res://Scenes/Floors/5_DogFloor.tscn
-res://Scripts/dog.gd
-res://Scenes/NPC/Dog.tscn
 res://Scenes/NPC/hamster.tscn
 res://Scripts/AnimalBase.gd
-res://Scripts/turtle.gd
+res://Scenes/Floors/Rooftop.tscn
 res://Scripts/hamster.gd
-res://Scripts/cat.gd
+res://Scripts/item_box.gd
+res://Scripts/rodent.gd
+res://Scenes/ItemBox.tscn

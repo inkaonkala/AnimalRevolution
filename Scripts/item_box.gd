@@ -3,13 +3,14 @@ extends Area2D
 @export var box_name := "Storage"
 @export var box_type := "storage"
 @export var allowed_items: Array[String] = []
+@export var starts_unlocked := true
 
 @onready var box_canvas = $CanvasLayer
 @onready var box_menu = $CanvasLayer/BoxMenu
 @onready var box_label = $CanvasLayer/BoxMenu/Label
 @onready var item_list = $CanvasLayer/BoxMenu/ItemList
 @onready var close_button = $CanvasLayer/BoxMenu/CloseButton
-
+@onready var box_sprite = $Sprite2D
 
 var player_near := false
 var stored_items := {}
@@ -24,6 +25,12 @@ func _ready() -> void:
 	box_canvas.visible = false
 	box_menu.visible = false
 	
+	print(name, " starts_unlocked: ", starts_unlocked)
+	
+	box_sprite.visible = starts_unlocked
+	monitorable = starts_unlocked
+	monitoring = starts_unlocked
+	
 func _process(_delta: float) -> void:
 	if box_open:
 		return
@@ -33,7 +40,6 @@ func _process(_delta: float) -> void:
 func on_body_enter(body: Node) -> void:
 	if body.name == "Player":
 		player_near = true
-
 	
 func	 on_body_exit(body: Node) -> void:
 	if body.name == "Player":
@@ -138,4 +144,7 @@ func consume_one_item(item_id: String) -> bool:
 		print(box_name, "consumed 1 ", item_id, ". Left: ", stored_items)
 		return true
 	
-	
+func unlock_box() -> void:
+	box_sprite.visible = true
+	monitoring = true
+	monitorable = true	

@@ -38,7 +38,8 @@ func move_to_rooftop() -> void:
 	rooftop.add_child(self)
 	
 	global_position = spawn.global_position
-
+	unlock_object("FloorContainer/Rooftop/RodentFoodBox")
+	
 func spawn_baby() -> void:
 	if baby_picup_Scene == null:
 		print("No baby_pickup_scene")

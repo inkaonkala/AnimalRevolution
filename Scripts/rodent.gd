@@ -61,8 +61,10 @@ func move_to_rooftop() -> void:
 		
 	global_position = spawn.global_position
 	state = State.NEUTRAL
-	emotion_hadler.emit()
-		
+	emit_emotion_changed()
+	
+	var food_box = main.get_node("FloorContainer/Rooftop/RodentFoodBox")
+	food_box.unlock_box()
 			
 func on_new_day(day_nmb: int) -> void:
 	hide_talk_bubble()
@@ -133,7 +135,7 @@ func eat_from_box() -> void:
 		else:
 			state = State.NEUTRAL
 		
-	emotion_hadler.emit()
+	emit_emotion_changed()
 	
 func get_emotion_value() -> int:
 	match state:
