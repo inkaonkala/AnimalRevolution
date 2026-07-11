@@ -109,8 +109,15 @@ func update_emotion(species_name: String) -> void:
 
 	for animal in get_tree().get_nodes_in_group("animals"):
 		if not ("species" in animal):
-			continue 
-		if animal.species == species_name and animal.has_method("get_emotion_value"):
+			continue
+
+		if animal.species != species_name:
+			continue
+
+		if animal.has_method("is_unlocked") and not animal.is_unlocked():
+			continue
+
+		if animal.has_method("get_emotion_value"):
 			total += animal.get_emotion_value()
 			count += 1
 
@@ -119,8 +126,9 @@ func update_emotion(species_name: String) -> void:
 		return
 
 	var average := float(total) / float(count)
-	
+
 	animal_faces[species_name].visible = true
+
 	if average > 0.33:
 		animal_faces[species_name].texture = face_icons["happy"]
 	elif average < -0.33:

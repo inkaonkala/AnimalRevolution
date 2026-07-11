@@ -147,3 +147,6 @@ func get_emotion_value() -> int:
 			return 0
 		_:
 			return 0
+
+func is_unlocked() -> bool:
+	return state != State.LOST

@@ -83,3 +83,6 @@ func unlock_object(node_path: String) -> void:
 
 	if main.has_node(node_path):
 		main.get_node(node_path).visible = true
+
+func is_unlocked() -> bool:
+	return true
