@@ -31,6 +31,7 @@ func _ready() -> void:
 	monitorable = starts_unlocked
 	monitoring = starts_unlocked
 	
+	
 func _process(_delta: float) -> void:
 	if box_open:
 		return
@@ -52,6 +53,7 @@ func close_box() -> void:
 	box_menu.visible = false
 	box_canvas.visible = false
 	main.player.can_move = true
+	
 	
 func refresh_menu() -> void:
 	for child in item_list.get_children():

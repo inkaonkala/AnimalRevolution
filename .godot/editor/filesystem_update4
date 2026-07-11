@@ -1,7 +1,3 @@
-res://Scenes/NPC/hamster.tscn
-res://Scripts/AnimalBase.gd
 res://Scenes/Floors/Rooftop.tscn
-res://Scripts/hamster.gd
 res://Scripts/item_box.gd
-res://Scripts/rodent.gd
-res://Scenes/ItemBox.tscn
+res://Scripts/main.gd
