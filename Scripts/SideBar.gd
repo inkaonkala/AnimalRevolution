@@ -86,7 +86,6 @@ var icons := {
 	"night": preload("res://Assets/SideBar/night.png")
 }
 
-
 func _ready() -> void:
 	DayCycle.time_changed.connect(_on_time_changed)
 	_on_time_changed(DayCycle.get_time())

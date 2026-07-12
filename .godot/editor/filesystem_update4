@@ -8,3 +8,5 @@ res://Scripts/dog.gd
 res://Scripts/rodent.gd
 res://Scripts/turtle.gd
 res://Scripts/SideBar.gd
+res://Scenes/NPC/Fish.tscn
+res://Scripts/fish.gd
