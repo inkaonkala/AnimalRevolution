@@ -47,7 +47,7 @@ func get_emotion_value() -> int:
 	match state:
 		State.HAPPY:
 			return 1
-		State.SAD, State.ANGRY:
+		State.SAD:
 			return -1
 		_:
 			return 0
