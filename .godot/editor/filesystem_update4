@@ -1,12 +1,5 @@
-res://Scenes/Floors/Rooftop.tscn
-res://Scripts/item_box.gd
-res://Scripts/main.gd
-res://Scenes/Main.tscn
-res://Scripts/AnimalBase.gd
-res://Scripts/cat.gd
-res://Scripts/dog.gd
-res://Scripts/rodent.gd
-res://Scripts/turtle.gd
+res://Scenes/PickUpStuff.tscn
 res://Scripts/SideBar.gd
-res://Scenes/NPC/Fish.tscn
-res://Scripts/fish.gd
+res://Scenes/InteractionTile.tscn
+res://Scripts/interaction_tile.gd
+res://Scenes/Floors/5_DogFloor.tscn

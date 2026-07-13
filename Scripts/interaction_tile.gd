@@ -31,6 +31,11 @@ enum ResetMode {
 		"item_id": "eggplant_seed",
 		"weight": 20,
 		"texture": preload("res://Assets/Collectables/munaseed.png")
+	},
+		{
+		"item_id": "pipe",
+		"weight": 20,
+		"texture": preload("res://Assets/Collectables/pipe.png")
 	}
 ]
 

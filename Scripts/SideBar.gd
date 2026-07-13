@@ -36,7 +36,8 @@ var item_icons := {
 	"flower2_seed": preload("res://Assets/Collectables/kukka2seed.png"),
 	"flower1": preload("res://Assets/Plants/kukka1.png"),
 	"flower2": preload("res://Assets/Plants/kukka2.png"),
-	"eggplant": preload("res://Assets/Plants/munakoiso.png")
+	"eggplant": preload("res://Assets/Plants/munakoiso.png"),
+	"pipe": preload("res://Assets/Collectables/pipe.png")
 }
 
 #FACES
