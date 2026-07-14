@@ -1,23 +1,26 @@
 [gd_scene load_steps=4 format=3 uid="uid://c0kcdv4ownhlr"]
 
-[ext_resource type="Texture2D" uid="uid://cr6m0jxgi7cd8" path="res://Assets/characters/fish1.png" id="1_dg2k5"]
 [ext_resource type="Script" uid="uid://8ubb1ud8l8ne" path="res://Scripts/fish.gd" id="1_rd0ak"]
+[ext_resource type="Texture2D" uid="uid://bw36we6h6xrrm" path="res://Assets/characters/aqua.png" id="2_rd0ak"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rd0ak"]
-size = Vector2(46, 33.5)
+size = Vector2(128, 62)
 
 [node name="Fish" type="Area2D"]
 script = ExtResource("1_rd0ak")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_dg2k5")
+texture = ExtResource("2_rd0ak")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -2)
+position = Vector2(0, -14)
 shape = SubResource("RectangleShape2D_rd0ak")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -35.0
-offset_top = -53.0
-offset_right = 5.0
-offset_bottom = -30.0
+z_index = 50
+offset_left = -99.0
+offset_top = -88.0
+offset_right = -59.0
+offset_bottom = -65.0
+
+[node name="MiniGameDialog" type="ConfirmationDialog" parent="."]
