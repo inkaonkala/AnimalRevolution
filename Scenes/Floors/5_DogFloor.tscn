@@ -1298,14 +1298,95 @@ loot_table = Array[Dictionary]([{
 "weight": 10
 }])
 
-[node name="InteractionTile3" parent="Items" instance=ExtResource("12_h4037")]
+[node name="Pipe1" parent="Items" instance=ExtResource("12_h4037")]
 position = Vector2(1993, 402)
+loot_table = Array[Dictionary]([{
+"item_id": "pipe",
+ExtResource("19_pncfg"): "texture"
+}])
+reset_mode = 3
+set_day = 5
+cooldown_seconds = 3.0
+
+[node name="Pipe2" parent="Items" instance=ExtResource("12_h4037")]
+position = Vector2(456, 356)
+loot_table = Array[Dictionary]([{
+"item_id": "pipe",
+ExtResource("19_pncfg"): "texture"
+}])
+reset_mode = 2
+set_day = 11
+
+[node name="Pipe3" parent="Items" instance=ExtResource("12_h4037")]
+position = Vector2(665, 878)
+loot_table = Array[Dictionary]([{
+"item_id": "pipe",
+ExtResource("19_pncfg"): "texture"
+}])
+reset_mode = 2
+set_day = 8
+
+[node name="Pipe4" parent="Items" instance=ExtResource("12_h4037")]
+position = Vector2(698, 1183)
 loot_table = Array[Dictionary]([{
 "item_id": "pipe",
 ExtResource("19_pncfg"): "texture"
 }])
 reset_mode = 2
 set_day = 5
+
+[node name="Pipe5" parent="Items" instance=ExtResource("12_h4037")]
+position = Vector2(2490, 969)
+loot_table = Array[Dictionary]([{
+"item_id": "pipe",
+ExtResource("19_pncfg"): "texture"
+}])
+reset_mode = 2
+set_day = 2
+
+[node name="Pipe6" parent="Items" instance=ExtResource("12_h4037")]
+position = Vector2(2762, 1051)
+loot_table = Array[Dictionary]([{
+"item_id": "pipe",
+ExtResource("19_pncfg"): "texture"
+}])
+reset_mode = 2
+set_day = 12
+
+[node name="Pipe8" parent="Items" instance=ExtResource("12_h4037")]
+position = Vector2(2487, 2732)
+loot_table = Array[Dictionary]([{
+"item_id": "pipe",
+ExtResource("19_pncfg"): "texture"
+}])
+reset_mode = 2
+
+[node name="Pipe9" parent="Items" instance=ExtResource("12_h4037")]
+position = Vector2(3009, 2622)
+loot_table = Array[Dictionary]([{
+"item_id": "pipe",
+ExtResource("19_pncfg"): "texture"
+}])
+reset_mode = 2
+set_day = 6
+
+[node name="Pipe10" parent="Items" instance=ExtResource("12_h4037")]
+position = Vector2(3302, 2696)
+loot_table = Array[Dictionary]([{
+"item_id": "pipe",
+ExtResource("19_pncfg"): "texture"
+}])
+reset_mode = 2
+set_day = 5
+
+[node name="Pipe7" parent="Items" instance=ExtResource("12_h4037")]
+position = Vector2(1900, 421)
+loot_table = Array[Dictionary]([{
+"item_id": "pipe",
+ExtResource("19_pncfg"): "texture"
+}])
+reset_mode = 2
+set_day = 9
 
 [node name="DogFoodBox" parent="Items" instance=ExtResource("19_nqr7x")]
 position = Vector2(726, 413)

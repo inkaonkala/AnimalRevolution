@@ -20,6 +20,6 @@ loot_table = Array[Dictionary]([{
 shape = SubResource("RectangleShape2D_41vlg")
 
 [node name="ItemSpawn" type="Marker2D" parent="."]
-position = Vector2(0, 24)
+position = Vector2(6, 59)
 
 [node name="Timer" type="Timer" parent="."]
