@@ -1,13 +1,1 @@
 res://Scenes/Floors/5_DogFloor.tscn
-res://Scenes/InteractionTile.tscn
-res://Scripts/interaction_tile.gd
-res://Scenes/NPC/hamster.tscn
-res://Scripts/hamster.gd
-res://Scenes/NPC/Cat.tscn
-res://Scripts/cat.gd
-res://Scenes/NPC/Fish.tscn
-res://Scripts/fish.gd
-res://Scenes/player.tscn
-res://Scripts/Player.gd
-res://Scenes/Main.tscn
-res://Scripts/main.gd
