@@ -1,3 +1,4 @@
+AudioStreamPlayer2D      - Matches the "sound" keyword.
 ConfirmationDialog
 TextEdit
 Label
@@ -12,4 +13,3 @@ Marker2D
 TileMapLayer
 Control
 ColorRect
-Button

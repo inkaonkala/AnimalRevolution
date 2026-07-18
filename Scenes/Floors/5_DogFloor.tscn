@@ -1218,9 +1218,6 @@ offset_right = 3922.0
 offset_bottom = 4864.0
 color = Color(0.7432157, 1, 0.9984322, 1)
 
-[node name="InteractionTile" parent="Tiles" instance=ExtResource("12_h4037")]
-position = Vector2(816, 45)
-
 [node name="FirstSpawn" type="Marker2D" parent="."]
 position = Vector2(1781, 140)
 
@@ -1281,6 +1278,9 @@ text = "5"
 
 [node name="PickUpStuffArea" parent="Items" instance=ExtResource("28_pncfg")]
 position = Vector2(1708, 238)
+
+[node name="InteractionTile3" parent="Items" instance=ExtResource("12_h4037")]
+position = Vector2(816, 45)
 
 [node name="InteractionTile" parent="Items" instance=ExtResource("12_h4037")]
 position = Vector2(-303, 1364)

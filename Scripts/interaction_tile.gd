@@ -46,6 +46,8 @@ enum ResetMode {
 @onready var spawn_point: Marker2D = $ItemSpawn
 @onready var timer: Timer = $Timer
 
+@onready var pop_sound: AudioStreamPlayer2D = $AudioStreamPlayer2D
+
 var player_near := false
 var active := true
 var spawned_item: Node = null
@@ -106,14 +108,18 @@ func spawn_pickup(loot: Dictionary) -> void:
 	print("this is the loot: ", loot)
 
 	spawned_item = pickup_scene.instantiate()
-	get_parent().add_child(spawned_item)
-	spawned_item.global_position = spawn_point.global_position
-	
+
 	spawned_item.item_id = loot.get("item_id", "seed")
 	spawned_item.item_tex = loot.get("texture", null)
 
-	if spawned_item.has_method("update_texture"):
-		spawned_item.update_texture()
+#	if spawned_item.has_method("update_texture"):
+#		spawned_item.update_texture()
+	
+	get_parent().add_child(spawned_item)
+	spawned_item.global_position = spawn_point.global_position
+	
+	
+	pop_sound.play()
 	
 func deactivate_lootspot() -> void:
 	print("lootspot OFF")
