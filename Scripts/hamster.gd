@@ -5,6 +5,7 @@ extends AnimalBase
 
 @onready var baby_spawn_point = $babySpawnPoint
 @onready var anim: AnimatedSprite2D = $Sprite2D
+@onready var birthSound: AudioStreamPlayer2D = $BirthSound
 
 var baby_exists := false
 
@@ -46,6 +47,7 @@ func spawn_baby() -> void:
 		return
 		
 	anim.play("birth")
+	birthSound.play()
 	await anim.animation_finished
 	anim.play("default")
 	var baby = baby_picup_Scene.instantiate()

@@ -17,6 +17,8 @@ enum State
 @export var floorspawn_index := 0
 @export var therapyspaw_i := 0
 
+@onready var miau_sound: AudioStreamPlayer2D = $Miau
+
 var state := State.LOST
 var has_joined := false
 
@@ -42,6 +44,7 @@ func should_first_meet() -> bool:
 	return state == State.LOST
 	
 func first_meeting() -> void:
+	miau_sound.play()
 	await super.first_meeting()
 	has_joined = true
 	GameState.cat_found = true
@@ -54,6 +57,7 @@ func first_meeting() -> void:
 		move_to_catfloor()
 
 func talk() -> void:
+	miau_sound.play()
 	if state == State.HUNGRY and not GameState.tagging_unlocked:
 		GameState.tagging_unlocked = true
 		state = State.HAPPY

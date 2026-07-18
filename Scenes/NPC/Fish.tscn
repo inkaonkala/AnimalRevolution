@@ -24,3 +24,5 @@ offset_right = -59.0
 offset_bottom = -65.0
 
 [node name="MiniGameDialog" type="ConfirmationDialog" parent="."]
+
+[node name="GameStartSound" type="AudioStreamPlayer2D" parent="."]

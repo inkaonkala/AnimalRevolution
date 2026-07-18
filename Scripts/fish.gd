@@ -16,6 +16,8 @@ enum State {
 @onready var minigame_dialog: ConfirmationDialog = $MiniGameDialog
 @onready var fish_sprite: Sprite2D = $Sprite2D
 
+@onready var game_start: AudioStreamPlayer2D = $GameStartSound
+
 var state := State.LOST
 var has_joined := false
 var days_without_food := 0
@@ -92,6 +94,7 @@ func minigame_triggered() -> void:
 		return
 	has_triggered_minigame = true
 	
+	game_start.play()
 	print("Minigame would happen here!")
 	
 	var temp_minigameresult := true

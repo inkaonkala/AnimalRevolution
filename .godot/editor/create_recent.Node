@@ -1,3 +1,5 @@
+AudioStreamPlayer2D
+AudioListener2D      - Matches the "sound" keyword.
 AudioStreamPlayer2D      - Matches the "sound" keyword.
 ConfirmationDialog
 TextEdit
@@ -10,6 +12,3 @@ Node
 Node2D
 Timer
 Marker2D
-TileMapLayer
-Control
-ColorRect

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c104nexrkrtat"]
+[gd_scene load_steps=11 format=3 uid="uid://c104nexrkrtat"]
 
 [ext_resource type="Script" uid="uid://c3u34a06chl7u" path="res://Scripts/hamster.gd" id="1_s70uv"]
 [ext_resource type="Texture2D" uid="uid://bhk3r8wh3kv44" path="res://Assets/characters/hamster.png" id="1_ts32c"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cqp404krs6bxq" path="res://Assets/Collectables/hamsterbaby.png" id="4_uto4n"]
 [ext_resource type="Texture2D" uid="uid://demmi7f84ewmc" path="res://Assets/characters/hamster4.png" id="5_1eksa"]
 [ext_resource type="Texture2D" uid="uid://cuyo4tdu2akea" path="res://Assets/characters/hamster2.png" id="7_mugrc"]
+[ext_resource type="AudioStream" uid="uid://djqi02ke6qhmf" path="res://Assets/Sounds/scarry_bun.mp3" id="8_1eksa"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tgfl8"]
 animations = [{
@@ -66,3 +67,6 @@ offset_bottom = -23.0
 [node name="babySpawnPoint" type="Marker2D" parent="."]
 z_index = 15
 position = Vector2(20, 0)
+
+[node name="BirthSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_1eksa")
