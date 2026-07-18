@@ -7,3 +7,7 @@ res://Scenes/NPC/Cat.tscn
 res://Scripts/cat.gd
 res://Scenes/NPC/Fish.tscn
 res://Scripts/fish.gd
+res://Scenes/player.tscn
+res://Scripts/Player.gd
+res://Scenes/Main.tscn
+res://Scripts/main.gd

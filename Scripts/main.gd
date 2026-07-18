@@ -10,6 +10,8 @@ extends Node2D
 @onready var elevator_popup = $CanvasHints/ElevatorPop
 @onready var hint_e = $CanvasHints/HintE
 
+@onready var elevator_sound: AudioStreamPlayer2D = $elevatorSound
+@onready var main_music: AudioStreamPlayer2D = $MainMusic
 #var current_open_box = null
 
 var spawn_from := "first"
@@ -37,6 +39,7 @@ func _ready() -> void:
 	set_floor_active($FloorContainer/FifthFloor, true)
 	set_floor_active($FloorContainer/ThirdFloor, false)
 	set_floor_active($FloorContainer/SecondFloor, false)
+	main_music.play()
 
 func _process(delta: float) -> void:
 	if night_open:
@@ -59,6 +62,7 @@ func spawn_player() -> void:
 
 #NIGHT 
 func show_night_report() -> void:
+	main_music.stop()
 	night.visible = true
 	night_open = true
 	player.can_move = false
@@ -70,6 +74,7 @@ func close_night_report() -> void:
 	night.visible = false
 	night_open = false
 	player.can_move = true
+	main_music.play()
 
 #inventory
 
@@ -122,7 +127,7 @@ func exit_elevator(body: Node) -> void:
 	if body == player:
 		near_elevator = false
 		hint_e.visible = false
-		
+	elevator_sound.play()	
 
 func open_elevator_popup() -> void:
 	hint_e.visible = false

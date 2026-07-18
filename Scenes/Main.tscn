@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b68r2scjeqgfc"]
+[gd_scene load_steps=19 format=3 uid="uid://b68r2scjeqgfc"]
 
 [ext_resource type="Script" uid="uid://uux8owbv5jwo" path="res://Scripts/main.gd" id="1_grg3l"]
 [ext_resource type="PackedScene" uid="uid://b1phauu4lt1e8" path="res://Scenes/player.tscn" id="2_frkhe"]
@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://mhs4cjlvhox7" path="res://Assets/RoomNDeco/elevatorpopup.png" id="12_jyqft"]
 [ext_resource type="PackedScene" uid="uid://ciaqu6buaqm1t" path="res://Scenes/Floors/2th_floor.tscn" id="13_erwvk"]
 [ext_resource type="PackedScene" uid="uid://fbmnlrdte340" path="res://Scenes/ItemBox.tscn" id="13_frkhe"]
+[ext_resource type="AudioStream" uid="uid://dlpdqel2riu5p" path="res://Assets/Sounds/elevatori.mp3" id="17_346fj"]
+[ext_resource type="AudioStream" uid="uid://5cpvfs364ojq" path="res://Assets/Sounds/grand_project-elegant-background-347075.mp3" id="18_0sclb"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_grg3l")
@@ -254,6 +256,13 @@ scale = Vector2(0.5, 0.5)
 [node name="NightManager" type="CanvasLayer" parent="."]
 
 [node name="Night" parent="NightManager" instance=ExtResource("12_grg3l")]
+
+[node name="elevatorSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("17_346fj")
+
+[node name="MainMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("18_0sclb")
+volume_db = -10.948
 
 [connection signal="pressed" from="CanvasHints/ElevatorPop/Sprite2D/RoofTop" to="." method="_on_roof_top_pressed"]
 [connection signal="pressed" from="CanvasHints/ElevatorPop/Sprite2D/floorFive" to="." method="_on_floor_five_pressed"]

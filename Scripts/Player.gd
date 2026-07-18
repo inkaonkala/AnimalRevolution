@@ -3,6 +3,8 @@ extends CharacterBody2D
 @export var speed := 200.0
 @onready var attack_area = $AttackArea
 @onready var animated_sprite = $Sprite2D
+@onready var walk_sound: AudioStreamPlayer2D = $walkSound
+
 
 var can_move := true
 
@@ -31,7 +33,15 @@ func _physics_process(delta: float) -> void:
 	input_direction.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 
 	input_direction = input_direction.normalized()
-
+	
+	#SOUND
+	if input_direction != Vector2.ZERO:
+		if not walk_sound.playing:
+			walk_sound.play()
+	else:
+		walk_sound.stop()
+	
+	#TURN
 	if input_direction.x > 0:
 		animated_sprite.flip_h = true
 	elif input_direction.x < 0:
