@@ -14,7 +14,7 @@ var enemies_in_attack_area: Array = []
 
 func _ready() -> void:
 	add_to_group("player")
-	animated_sprite.play()
+	animated_sprite.play("idle")
 	attack_area.body_entered.connect(attackarea_entered)
 	attack_area.body_exited.connect(attackarea_exited)
 
@@ -36,9 +36,13 @@ func _physics_process(delta: float) -> void:
 	
 	#SOUND
 	if input_direction != Vector2.ZERO:
+		if animated_sprite.animation != "walk":
+			animated_sprite.play("walk")
 		if not walk_sound.playing:
 			walk_sound.play()
 	else:
+		if animated_sprite.animation != "idle":
+			animated_sprite.play("idle")
 		walk_sound.stop()
 	
 	#TURN
