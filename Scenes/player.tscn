@@ -1,26 +1,47 @@
-[gd_scene load_steps=8 format=3 uid="uid://b1phauu4lt1e8"]
+[gd_scene load_steps=12 format=3 uid="uid://b1phauu4lt1e8"]
 
 [ext_resource type="Script" uid="uid://c88tcoelsetil" path="res://Scripts/Player.gd" id="1_4flbx"]
-[ext_resource type="Texture2D" uid="uid://v7rtcfrel8xk" path="res://Assets/characters/dog2.png" id="2_onrkg"]
-[ext_resource type="Texture2D" uid="uid://doxpco62mn87e" path="res://Assets/characters/dog2_b.png" id="3_6t5aa"]
+[ext_resource type="Texture2D" uid="uid://255q601ny4q2" path="res://Assets/characters/player/idle1.png" id="2_fkybt"]
+[ext_resource type="Texture2D" uid="uid://biljbwqnin2si" path="res://Assets/characters/player/idle2.png" id="3_x3wgy"]
+[ext_resource type="Texture2D" uid="uid://dbumuetiptdb7" path="res://Assets/characters/player/idle3.png" id="4_3smsa"]
 [ext_resource type="AudioStream" uid="uid://dsopu101och0u" path="res://Assets/Sounds/dog_walk1.mp3" id="4_vgqql"]
+[ext_resource type="Texture2D" uid="uid://bqawfsv6immuk" path="res://Assets/characters/player/walk1.png" id="5_8erm5"]
+[ext_resource type="Texture2D" uid="uid://cxckiirnjwqaa" path="res://Assets/characters/player/walk2.png" id="6_f1ek2"]
+[ext_resource type="Texture2D" uid="uid://buk2g7x7byitw" path="res://Assets/characters/player/walk3.png" id="7_tx1dd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vgqql"]
 animations = [{
 "frames": [{
-"duration": 2.51,
-"texture": ExtResource("2_onrkg")
+"duration": 2.61,
+"texture": ExtResource("2_fkybt")
 }, {
-"duration": 1.0,
-"texture": ExtResource("3_6t5aa")
+"duration": 2.91,
+"texture": ExtResource("3_x3wgy")
+}, {
+"duration": 2.21,
+"texture": ExtResource("4_3smsa")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_8erm5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_f1ek2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_tx1dd")
+}],
+"loop": true,
+"name": &"walk",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
-size = Vector2(37, 40)
+size = Vector2(40, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
 size = Vector2(29, 20)
@@ -34,10 +55,10 @@ speed = 220.0
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_vgqql")
-frame_progress = 0.29798535
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3.5, 4)
+position = Vector2(-3, 4)
 shape = SubResource("RectangleShape2D_i3pqv")
 debug_color = Color(0.012692624, 0.0030203839, 0.018063545, 0.41960785)
 
