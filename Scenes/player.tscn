@@ -1,16 +1,36 @@
-[gd_scene load_steps=12 format=3 uid="uid://b1phauu4lt1e8"]
+[gd_scene load_steps=18 format=3 uid="uid://b1phauu4lt1e8"]
 
 [ext_resource type="Script" uid="uid://c88tcoelsetil" path="res://Scripts/Player.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://cq20orgri5p4a" path="res://Assets/characters/player/attack1.png" id="2_7dp3o"]
 [ext_resource type="Texture2D" uid="uid://255q601ny4q2" path="res://Assets/characters/player/idle1.png" id="2_fkybt"]
+[ext_resource type="Texture2D" uid="uid://d1jvwdg66odxt" path="res://Assets/characters/player/attack2.png" id="3_h4iuc"]
 [ext_resource type="Texture2D" uid="uid://biljbwqnin2si" path="res://Assets/characters/player/idle2.png" id="3_x3wgy"]
 [ext_resource type="Texture2D" uid="uid://dbumuetiptdb7" path="res://Assets/characters/player/idle3.png" id="4_3smsa"]
+[ext_resource type="Texture2D" uid="uid://cjff0v7sfkyu1" path="res://Assets/characters/player/attack3.png" id="4_fd4e3"]
 [ext_resource type="AudioStream" uid="uid://dsopu101och0u" path="res://Assets/Sounds/dog_walk1.mp3" id="4_vgqql"]
 [ext_resource type="Texture2D" uid="uid://bqawfsv6immuk" path="res://Assets/characters/player/walk1.png" id="5_8erm5"]
+[ext_resource type="Texture2D" uid="uid://n4xnmv5t3fga" path="res://Assets/characters/player/lick1_4.png" id="5_gymyn"]
 [ext_resource type="Texture2D" uid="uid://cxckiirnjwqaa" path="res://Assets/characters/player/walk2.png" id="6_f1ek2"]
+[ext_resource type="Texture2D" uid="uid://b50c32y2fv0ms" path="res://Assets/characters/player/lick2.png" id="6_pu2lt"]
 [ext_resource type="Texture2D" uid="uid://buk2g7x7byitw" path="res://Assets/characters/player/walk3.png" id="7_tx1dd"]
+[ext_resource type="Texture2D" uid="uid://cr3c6w5v6hssg" path="res://Assets/characters/player/lick3.png" id="7_ukyrk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vgqql"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7dp3o")
+}, {
+"duration": 2.01,
+"texture": ExtResource("3_h4iuc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fd4e3")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 2.61,
 "texture": ExtResource("2_fkybt")
@@ -23,6 +43,20 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_gymyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pu2lt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ukyrk")
+}],
+"loop": true,
+"name": &"interact",
 "speed": 5.0
 }, {
 "frames": [{
@@ -55,7 +89,7 @@ speed = 220.0
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_vgqql")
-animation = &"idle"
+animation = &"attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, 4)

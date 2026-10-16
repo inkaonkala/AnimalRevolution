@@ -1429,6 +1429,7 @@ position = Vector2(1781, 140)
 position = Vector2(657, 627)
 
 [node name="AreaElevator" type="Area2D" parent="."]
+visible = false
 position = Vector2(655, 635)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaElevator"]

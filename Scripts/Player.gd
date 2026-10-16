@@ -43,7 +43,13 @@ func _physics_process(delta: float) -> void:
 	else:
 		if animated_sprite.animation != "idle":
 			animated_sprite.play("idle")
+		else:
+			if Input.is_action_just_pressed("interact"):
+			#FIX HERE TO PLAY THE WHOLE LOOP!
+				animated_sprite.play("interact")
+			
 		walk_sound.stop()
+	
 	
 	#TURN
 	if input_direction.x > 0:
@@ -73,6 +79,8 @@ func attackarea_exited(body: Node) -> void:
 		enemies_in_attack_area.erase(body)
 
 func attack() -> void:
+	if animated_sprite.animation != "attack":
+		animated_sprite.play("attack")
 	print("Player attacks!")
 
 	if enemies_in_attack_area.size() <= 0:
