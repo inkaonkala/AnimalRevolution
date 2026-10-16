@@ -27,7 +27,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_fd4e3")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack",
 "speed": 5.0
 }, {
@@ -55,7 +55,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("7_ukyrk")
 }],
-"loop": true,
+"loop": false,
 "name": &"interact",
 "speed": 5.0
 }, {
@@ -89,7 +89,7 @@ speed = 220.0
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_vgqql")
-animation = &"attack"
+animation = &"interact"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, 4)

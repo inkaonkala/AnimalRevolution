@@ -7,6 +7,7 @@ extends CharacterBody2D
 
 
 var can_move := true
+var is_acting := false
 
 var attack_power := 1
 var hp := 10
@@ -22,8 +23,12 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("attack"):
 		attack()
 	
-	if not can_move:
+	if Input.is_action_just_pressed("interact"):
+		play_action("interact")
+	
+	if not can_move or (is_acting and animated_sprite.animation == "attack"):
 		velocity = Vector2.ZERO
+		walk_sound.stop()
 		move_and_slide()
 		return
 	
@@ -34,20 +39,22 @@ func _physics_process(delta: float) -> void:
 
 	input_direction = input_direction.normalized()
 	
+	#ANIMATION
+	if not is_acting:
+		if input_direction != Vector2.ZERO:
+			if animated_sprite.animation != "walk":
+				animated_sprite.play("walk")
+		else:
+			if animated_sprite.animation != "idle":
+				animated_sprite.play("idle")
+	
+			walk_sound.stop()
+	
 	#SOUND
 	if input_direction != Vector2.ZERO:
-		if animated_sprite.animation != "walk":
-			animated_sprite.play("walk")
 		if not walk_sound.playing:
 			walk_sound.play()
 	else:
-		if animated_sprite.animation != "idle":
-			animated_sprite.play("idle")
-		else:
-			if Input.is_action_just_pressed("interact"):
-			#FIX HERE TO PLAY THE WHOLE LOOP!
-				animated_sprite.play("interact")
-			
 		walk_sound.stop()
 	
 	
@@ -59,6 +66,15 @@ func _physics_process(delta: float) -> void:
 	velocity = input_direction * speed
 	move_and_slide()
 	
+
+func play_action(animation_name: String) -> void:
+	if is_acting:
+		return
+	is_acting = true
+	animated_sprite.play(animation_name)
+	await animated_sprite.animation_finished
+	is_acting = false
+
 func take_damage(amount: int) -> void:
 	hp -= amount
 	print("Player hp:", hp)
@@ -79,8 +95,10 @@ func attackarea_exited(body: Node) -> void:
 		enemies_in_attack_area.erase(body)
 
 func attack() -> void:
-	if animated_sprite.animation != "attack":
-		animated_sprite.play("attack")
+	if is_acting:
+		return
+	play_action("attack")
+	
 	print("Player attacks!")
 
 	if enemies_in_attack_area.size() <= 0:
