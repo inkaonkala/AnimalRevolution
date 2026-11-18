@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1792159512
+::res://::1795031338
 icon.svg::CompressedTexture2D::6591034252678938188::1777742166::1777742169::1::::<><><>0<>0<>22621e0f0c2036f90bae6eccb798ae8f<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1781522829::0::1::::<><><>0<>0<><>::
 ::res://Assets/::1784371806
@@ -235,7 +235,7 @@ Flower2.tres::Resource/CropData::1871950642191959913::1783179556::0::1::::<><><>
 playscreen1.png::CompressedTexture2D::969443399756309341::1777719847::1778153293::1::::<><><>0<>0<>f4ee773d9e9d967210fea6f52aae268f<>res://.godot/imported/playscreen1.png-49b2929499635d6b25a91253d8c2dbd0.ctex::
 protoTest.txt::TextFile::-1::1777742327::0::1::::<><><>0<>0<><>::
 revolution_gdd.txt::TextFile::-1::1778568792::0::1::::<><><>0<>0<><>::
-::res://Scenes/::1792143568
+::res://Scenes/::1792160450
 door.tscn::PackedScene::4149800975940622756::1780567421::0::1::::<><><>0<>0<><>::uid://c80ra0etdvbdi::::res://Scripts/door.gd
 InteractionTile.tscn::PackedScene::9003403659145522800::1784373176::0::1::::<><><>0<>0<><>::uid://b3omj3em3eu73::::res://Scripts/interaction_tile.gd<>uid://hm3q3v5kw6kc::::res://Scenes/PickUpStuff.tscn<>uid://vkwxjbiwxg7i::::res://Assets/Collectables/kukka1seed.png<>uid://c0l364a426kp5::::res://Assets/Sounds/pop-94319.mp3
 ItemBox.tscn::PackedScene::353761019358596819::1783762689::0::1::::<><><>0<>0<><>::uid://n8ltvw556afd::::res://Scripts/item_box.gd<>uid://bj1cbq82wqns0::::res://Assets/RoomNDeco/box.png
@@ -243,7 +243,7 @@ Main.tscn::PackedScene::4631480656593351204::1784400478::0::1::::<><><>0<>0<><>:
 Night.tscn::PackedScene::3169799712467533231::1780512854::0::1::::<><><>0<>0<><>::uid://we6di73g6jur::::res://Scripts/night.gd
 PickUpStuff.tscn::PackedScene::517824591486907042::1783937259::0::1::::<><><>0<>0<><>::uid://bthrqgvoun8wb::::res://Scripts/PickUpStuff.gd<>uid://cxbxfhvrof4ag::::res://Assets/Collectables/ballB.png
 plantNharvest.tscn::PackedScene::4505587332015815732::1778402467::0::1::::<><><>0<>0<><>::uid://i1a053l4gkgm::::res://Scripts/plant_n_harvest.gd<>uid://djxf2m177lgwy::::res://Assets/Plants/empty_plot.png<>uid://lv6j5ex11ryk::::res://Assets/Plants/dug.png<>uid://cbvi6a2xcgyxl::::res://Assets/Plants/seeded.png
-player.tscn::PackedScene::4242722386238400121::1792143568::0::1::::<><><>0<>0<><>::uid://c88tcoelsetil::::res://Scripts/Player.gd<>uid://cq20orgri5p4a::::res://Assets/characters/player/attack1.png<>uid://255q601ny4q2::::res://Assets/characters/player/idle1.png<>uid://d1jvwdg66odxt::::res://Assets/characters/player/attack2.png<>uid://biljbwqnin2si::::res://Assets/characters/player/idle2.png<>uid://dbumuetiptdb7::::res://Assets/characters/player/idle3.png<>uid://cjff0v7sfkyu1::::res://Assets/characters/player/attack3.png<>uid://dsopu101och0u::::res://Assets/Sounds/dog_walk1.mp3<>uid://bqawfsv6immuk::::res://Assets/characters/player/walk1.png<>uid://n4xnmv5t3fga::::res://Assets/characters/player/lick1_4.png<>uid://cxckiirnjwqaa::::res://Assets/characters/player/walk2.png<>uid://b50c32y2fv0ms::::res://Assets/characters/player/lick2.png<>uid://buk2g7x7byitw::::res://Assets/characters/player/walk3.png<>uid://cr3c6w5v6hssg::::res://Assets/characters/player/lick3.png
+player.tscn::PackedScene::4242722386238400121::1792160450::0::1::::<><><>0<>0<><>::uid://c88tcoelsetil::::res://Scripts/Player.gd<>uid://cq20orgri5p4a::::res://Assets/characters/player/attack1.png<>uid://255q601ny4q2::::res://Assets/characters/player/idle1.png<>uid://d1jvwdg66odxt::::res://Assets/characters/player/attack2.png<>uid://biljbwqnin2si::::res://Assets/characters/player/idle2.png<>uid://dbumuetiptdb7::::res://Assets/characters/player/idle3.png<>uid://cjff0v7sfkyu1::::res://Assets/characters/player/attack3.png<>uid://dsopu101och0u::::res://Assets/Sounds/dog_walk1.mp3<>uid://bqawfsv6immuk::::res://Assets/characters/player/walk1.png<>uid://n4xnmv5t3fga::::res://Assets/characters/player/lick1_4.png<>uid://cxckiirnjwqaa::::res://Assets/characters/player/walk2.png<>uid://b50c32y2fv0ms::::res://Assets/characters/player/lick2.png<>uid://buk2g7x7byitw::::res://Assets/characters/player/walk3.png<>uid://cr3c6w5v6hssg::::res://Assets/characters/player/lick3.png
 ::res://Scenes/Floors/::1792148354
 2th_floor.tscn::PackedScene::5335360934930833527::1783187221::0::1::::<><><>0<>0<><>::uid://cc13py1wb2ctl::::res://Assets/RoomNDeco/wall_collider.png<>uid://cqlyjnpp34xxm::::res://Assets/RoomNDeco/floor2_wall1.png<>uid://dbutgm4ioii13::::res://Assets/RoomNDeco/floor2_wall2.png<>uid://b4qa0jkjn0kan::::res://Assets/RoomNDeco/floor_test.png<>uid://uupvwb7nj8ge::::res://Assets/RoomNDeco/buildingSide.png<>uid://b33kqoqtgv187::::res://Assets/RoomNDeco/floor2.png<>uid://b7t4pvgmytemb::::res://Scenes/NPC/Dog.tscn<>uid://cvv0t0klrqrpv::::res://Assets/RoomNDeco/floor1.png<>uid://cubpskpjbnhkq::::res://Scenes/NPC/Cat.tscn<>uid://dpy4wyc1oojfq::::res://Assets/RoomNDeco/elevator.png<>uid://duo6smjq7kw2j::::res://Scenes/NPC/rodent.tscn
 3_CatFloor.tscn::PackedScene::2591681355834401527::1783186981::0::1::::<><><>0<>0<><>::uid://fy7wp51x2yif::::res://Assets/RoomNDeco/cat_wall1.png<>uid://ebifa0xl2g1i::::res://Assets/RoomNDeco/cat_wall2.png<>uid://cc13py1wb2ctl::::res://Assets/RoomNDeco/wall_collider.png<>uid://cvv0t0klrqrpv::::res://Assets/RoomNDeco/floor1.png<>uid://dpy4wyc1oojfq::::res://Assets/RoomNDeco/elevator.png<>uid://uupvwb7nj8ge::::res://Assets/RoomNDeco/buildingSide.png<>uid://b33kqoqtgv187::::res://Assets/RoomNDeco/floor2.png<>uid://b7t4pvgmytemb::::res://Scenes/NPC/Dog.tscn<>uid://cubpskpjbnhkq::::res://Scenes/NPC/Cat.tscn
@@ -258,7 +258,7 @@ hamster.tscn::PackedScene::6651145000347887463::1784394054::0::1::::<><><>0<>0<>
 Human.tscn::PackedScene::2616447484044272137::1778565899::0::1::::<><><>0<>0<><>::uid://g84w0ofilf1k::::res://Scripts/human.gd
 rodent.tscn::PackedScene::8593855228416426631::1783444540::0::1::::<><><>0<>0<><>::uid://by3xxcvnfwxlp::::res://Scripts/rodent.gd<>uid://cfc8uuyhdmont::::res://Assets/characters/bunny2.png
 Turtle.tscn::PackedScene::4465999376079528557::1780828090::0::1::::<><><>0<>0<><>::uid://dmg6lue4odvev::::res://Assets/characters/turtle1.png<>uid://djnvwtlpqxj8j::::res://Scripts/turtle.gd
-::res://Scripts/::1792148354
+::res://Scripts/::1792160450
 AnimalBase.gd::GDScript::8166351508569699542::1783764336::0::1::::AnimalBase<>Area2D<><>0<>0<><>::
 cat.gd::GDScript::1043610022870580891::1784398357::0::1::::<>AnimalBase<><>0<>0<><>::
 CropData.gd::GDScript::8363501297491029165::1783016047::0::1::::CropData<>Resource<><>0<>0<><>::
@@ -276,7 +276,7 @@ main.gd::GDScript::1446520619261621374::1784400419::0::1::::<>Node2D<><>0<>0<><>
 night.gd::GDScript::1554300126112408501::1779015135::0::1::::<>Control<><>0<>0<><>::
 PickUpStuff.gd::GDScript::3735520466918009113::1783018173::0::1::::<>Area2D<><>0<>0<><>::
 plant_n_harvest.gd::GDScript::615230835051254624::1783179326::0::1::::<>Area2D<><>0<>0<><>::
-Player.gd::GDScript::7158355609805758855::1792143568::0::1::::<>CharacterBody2D<><>0<>0<><>::
+Player.gd::GDScript::7158355609805758855::1792160450::0::1::::<>CharacterBody2D<><>0<>0<><>::
 rodent.gd::GDScript::4130193210298820161::1783764378::0::1::::<>AnimalBase<><>0<>0<><>::
 SideBar.gd::GDScript::5325324408795850249::1783937259::0::1::::<>CanvasLayer<><>0<>0<><>::
 sleepSpot.gd::GDScript::4801103597686821150::1779012442::0::1::::<>Area2D<><>0<>0<><>::

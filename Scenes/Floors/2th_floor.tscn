@@ -15,7 +15,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bboc2"]
 size = Vector2(57, 28)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wdo6w"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e8amw"]
 texture = ExtResource("1_2pd0q")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -24,7 +24,7 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_7hyk6"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
-sources/1 = SubResource("TileSetAtlasSource_wdo6w")
+sources/1 = SubResource("TileSetAtlasSource_e8amw")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dyicv"]
 texture = ExtResource("2_yuryy")

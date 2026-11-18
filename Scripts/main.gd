@@ -150,8 +150,8 @@ func _on_floor_three_pressed() -> void:
 func _on_floor_two_pressed() -> void:
 	change_floor("SecondFloor")
 
-
-#these are to make the collision work only on the floor the player is
+func _on_floor_one_pressed() -> void:
+	change_floor("FirstFloor")
 	
 func change_floor(floor_name: String) -> void:
 	elevator_popup.visible = false

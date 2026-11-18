@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b68r2scjeqgfc"]
+[gd_scene load_steps=20 format=3 uid="uid://b68r2scjeqgfc"]
 
 [ext_resource type="Script" uid="uid://uux8owbv5jwo" path="res://Scripts/main.gd" id="1_grg3l"]
 [ext_resource type="PackedScene" uid="uid://b1phauu4lt1e8" path="res://Scenes/player.tscn" id="2_frkhe"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://mhs4cjlvhox7" path="res://Assets/RoomNDeco/elevatorpopup.png" id="12_jyqft"]
 [ext_resource type="PackedScene" uid="uid://ciaqu6buaqm1t" path="res://Scenes/Floors/2th_floor.tscn" id="13_erwvk"]
 [ext_resource type="PackedScene" uid="uid://fbmnlrdte340" path="res://Scenes/ItemBox.tscn" id="13_frkhe"]
+[ext_resource type="PackedScene" uid="uid://cc61q1k4rn6ai" path="res://Scenes/Floors/1_th_floor.tscn" id="14_0sclb"]
 [ext_resource type="AudioStream" uid="uid://dlpdqel2riu5p" path="res://Assets/Sounds/elevatori.mp3" id="17_346fj"]
 [ext_resource type="AudioStream" uid="uid://5cpvfs364ojq" path="res://Assets/Sounds/grand_project-elegant-background-347075.mp3" id="18_0sclb"]
 
@@ -191,6 +192,9 @@ visible = false
 [node name="SecondFloor" parent="FloorContainer" instance=ExtResource("13_erwvk")]
 visible = false
 
+[node name="FirstFloor" parent="FloorContainer" instance=ExtResource("14_0sclb")]
+visible = false
+
 [node name="CanvasHints" type="CanvasLayer" parent="."]
 
 [node name="HintE" type="Label" parent="CanvasHints"]
@@ -249,6 +253,12 @@ offset_right = 4.0
 offset_bottom = 31.5
 flat = true
 
+[node name="floorOne" type="Button" parent="CanvasHints/ElevatorPop/Sprite2D"]
+offset_left = -8.0
+offset_top = 37.5
+offset_right = 5.5
+offset_bottom = 50.5
+
 [node name="ItemBox" parent="." instance=ExtResource("13_frkhe")]
 position = Vector2(956, 86)
 scale = Vector2(0.5, 0.5)
@@ -269,3 +279,4 @@ volume_db = -10.948
 [connection signal="pressed" from="CanvasHints/ElevatorPop/Sprite2D/floorFour" to="." method="_on_floor_four_pressed"]
 [connection signal="pressed" from="CanvasHints/ElevatorPop/Sprite2D/floorThree" to="." method="_on_floor_three_pressed"]
 [connection signal="pressed" from="CanvasHints/ElevatorPop/Sprite2D/floorTwo" to="." method="_on_floor_two_pressed"]
+[connection signal="pressed" from="CanvasHints/ElevatorPop/Sprite2D/floorOne" to="." method="_on_floor_one_pressed"]

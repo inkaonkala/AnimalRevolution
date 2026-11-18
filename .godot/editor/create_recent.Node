@@ -1,14 +1,15 @@
+Button
+Sprite2D
+CollisionShape2D
+Area2D
+Label
+Node
+Control
+Marker2D
 AudioStreamPlayer2D
 AudioListener2D      - Matches the "sound" keyword.
 AudioStreamPlayer2D      - Matches the "sound" keyword.
 ConfirmationDialog
 TextEdit
-Label
-CollisionShape2D
-Sprite2D
-Area2D
 AnimatedSprite2D
-Node
 Node2D
-Timer
-Marker2D
