@@ -1,36 +1,63 @@
 extends Node
 
-signal dialogue_requested(
-	text: String,
-	portrait: Texture2D
-)
-
+signal dialogue_requested(text: String, portrait: Texture2D)
 signal dialogue_closed
+signal next_line
 
-var dialog_active := false
+var dialogue_active := false
 var waiting_for_input := false
+var can_advance := false
+
+
+func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
+
 
 func speak(text: String, portrait: Texture2D) -> void:
-	dialog_active = true
+	dialogue_active = true
 	waiting_for_input = false
+	can_advance = false
+
+	get_tree().paused = true
 	dialogue_requested.emit(text, portrait)
-	
-	#little timer to forget the e was pressed to meet the animal
-	await get_tree().process_frame
-	
-	waiting_for_input = true
-	
-	while dialog_active and waiting_for_input:
+
+	# Wait until the E that started this line is released
+	while Input.is_action_pressed("interact"):
 		await get_tree().process_frame
 
-func unhandeled_input(event: InputEvent) -> void:
-	if not dialog_active or not waiting_for_input:
+	waiting_for_input = true
+	can_advance = true
+
+	await next_line
+
+	waiting_for_input = false
+	can_advance = false
+
+
+func _input(event: InputEvent) -> void:
+	if not dialogue_active:
 		return
+
 	if event.is_action_pressed("interact") and not event.is_echo():
-		waiting_for_input = false
 		get_viewport().set_input_as_handled()
 
+		if waiting_for_input and can_advance:
+			waiting_for_input = false
+			next_line.emit()
+
+
 func close() -> void:
-	dialog_active = false
+	if not dialogue_active:
+		return
+
+	dialogue_active = false
 	waiting_for_input = false
+	can_advance = false
+
 	dialogue_closed.emit()
+
+	# Wait until E is released before unpausing
+	while Input.is_action_pressed("interact"):
+		await get_tree().process_frame
+
+	get_tree().paused = false

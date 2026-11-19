@@ -6,6 +6,7 @@ extends CanvasLayer
 @onready var dialogue_text = $PanelContainer/HBoxContainer/Dialogue
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	panel.hide()
 
 	DialogueManager.dialogue_requested.connect(show_dialogue)

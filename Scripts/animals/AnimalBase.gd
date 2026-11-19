@@ -20,16 +20,20 @@ func _ready() -> void:
 	body_exited.connect(on_body_exit)
 	
 func _process(_delta: float) -> void:
-	if not player_near or is_talking:
+	if not player_near:
 		return
+
+	if is_talking or DialogueManager.dialogue_active:
+		return
+
 	if Input.is_action_just_pressed("interact"):
 		is_talking = true
-		
+
 		if should_first_meet():
 			await first_meeting()
 		else:
 			await talk()
-		
+
 		DialogueManager.close()
 		is_talking = false
 			
@@ -44,8 +48,9 @@ func on_body_exit(body: Node) -> void:
 	#	hide_talk_bubble()
 
 func hide_talk_bubble() -> void:
-	talk_bubble.visible = false
-	is_talking = false
+	pass
+	#talk_bubble.visible = false
+	#is_talking = false
 	
 #func say_this(text: String) -> void:
 #	if is_talking:
