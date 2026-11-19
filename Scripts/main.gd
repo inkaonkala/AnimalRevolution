@@ -24,6 +24,17 @@ var  night_open := false
 var inventory := {}
 var invi_order := []
 
+#floors
+var floor_names = {
+ #   "Basement": "Basement",
+	"FirstFloor": "1",
+	"SecondFloor": "2",
+	"ThirdFloor": "3",
+	"FourthFloor": "4",
+	"FifthFloor": "5",
+	"Rooftop": "Roof"
+}
+
 func _ready() -> void:
 	spawn_player()
 	update_inventory_ui()
@@ -39,6 +50,8 @@ func _ready() -> void:
 	set_floor_active($FloorContainer/FifthFloor, true)
 	set_floor_active($FloorContainer/ThirdFloor, false)
 	set_floor_active($FloorContainer/SecondFloor, false)
+	set_floor_active($FloorContainer/FirstFloor, false)
+	update_floor_ui()
 	main_music.play()
 
 func _process(delta: float) -> void:
@@ -110,6 +123,11 @@ func has_item(item_id: String, amount: int = 1) -> bool:
 #invi end
 
 #Elevator setup
+
+func update_floor_ui() -> void:
+	var floor_name = current_floor.name
+	side_bar.update_floor_label(floor_names.get(floor_name, floor_name))
+	
 func setup_elevator(floor_node: Node) -> void:
 	var elevator_area = floor_node.get_node("AreaElevator")
 	
@@ -171,7 +189,7 @@ func change_floor(floor_name: String) -> void:
 	
 	near_elevator = false
 	setup_elevator(current_floor)
-	
+	update_floor_ui()
 	player.can_move = true
 	
 #func set_floor_collision(node: Node, enabled: bool) -> void:

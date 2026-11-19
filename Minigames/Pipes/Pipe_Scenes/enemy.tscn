@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=3 uid="uid://cdykbgyjkukhk"]
+
+[ext_resource type="Texture2D" uid="uid://dqipcgp2oc0wd" path="res://Minigames/Pipes/Pipe_Assets/rat1.png" id="1_0830c"]
+[ext_resource type="Script" uid="uid://jonss8qujwbk" path="res://Minigames/Pipes/Pipe_Scripts/enemy.gd" id="1_ghaa6"]
+[ext_resource type="Texture2D" uid="uid://d1wv73cnvuipv" path="res://Minigames/Pipes/Pipe_Assets/rat2.png" id="2_ghaa6"]
+[ext_resource type="Texture2D" uid="uid://bgwq8nlt6ycou" path="res://Minigames/Pipes/Pipe_Assets/rat3.png" id="3_1dp5w"]
+[ext_resource type="Texture2D" uid="uid://dbx8531oiuwtw" path="res://Minigames/Pipes/Pipe_Assets/rat5.png" id="4_auwsv"]
+[ext_resource type="Texture2D" uid="uid://bnib1ggou4850" path="res://Minigames/Pipes/Pipe_Assets/rat4.png" id="5_8uf12"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_po0sg"]
+animations = [{
+"frames": [{
+"duration": 2.51,
+"texture": ExtResource("1_0830c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ghaa6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1dp5w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_auwsv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8uf12")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Enemy" type="Node2D"]
+script = ExtResource("1_ghaa6")
+
+[node name="rat" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_po0sg")
+frame_progress = 0.6710423
+centered = false

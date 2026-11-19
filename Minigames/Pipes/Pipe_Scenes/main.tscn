@@ -1,0 +1,80 @@
+[gd_scene load_steps=9 format=3 uid="uid://c8ihu0ytstyum"]
+
+[ext_resource type="Script" uid="uid://r0t84wkxx6vn" path="res://Minigames/Pipes/Pipe_Scripts/Board.gd" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://c00l1ls3spyiw" path="res://Minigames/Pipes/Pipe_Scenes/pipe_tile.tscn" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://cdykbgyjkukhk" path="res://Minigames/Pipes/Pipe_Scenes/enemy.tscn" id="3_8gbba"]
+[ext_resource type="Texture2D" uid="uid://tk0j0coh2nnk" path="res://Minigames/Pipes/Pipe_Assets/straight.png" id="4_6bp64"]
+[ext_resource type="PackedScene" uid="uid://df5ccoux4ahkg" path="res://Minigames/Pipes/Pipe_Scenes/start_n_end.tscn" id="4_344ge"]
+[ext_resource type="Texture2D" uid="uid://jhc504s1oexg" path="res://Minigames/Pipes/Pipe_Assets/corner.png" id="5_344ge"]
+[ext_resource type="Texture2D" uid="uid://blv1sow332aqw" path="res://Minigames/Pipes/Pipe_Assets/tee.png" id="6_ynf5e"]
+[ext_resource type="Texture2D" uid="uid://bcj4xii624qbw" path="res://Minigames/Pipes/Pipe_Assets/cross.png" id="7_hptm8"]
+
+[node name="Main" type="Node2D"]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2"]
+z_index = -10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0069119367, 0.42592338, 0.3746852, 1)
+
+[node name="Board" type="Node2D" parent="."]
+z_index = 2
+position = Vector2(294, 13)
+scale = Vector2(2, 2)
+script = ExtResource("1_jjgbg")
+pipe_tiles = ExtResource("2_bo1nx")
+enemy_scene = ExtResource("3_8gbba")
+start_end = ExtResource("4_344ge")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -237.0
+offset_top = -40.0
+offset_right = -65.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(2, 2)
+pivot_offset = Vector2(0, 64)
+
+[node name="Straight" type="Button" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("4_6bp64")
+
+[node name="Corner" type="Button" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("5_344ge")
+
+[node name="Tee" type="Button" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("6_ynf5e")
+
+[node name="Cross" type="Button" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("7_hptm8")
+
+[node name="BuildTimer" type="Timer" parent="CanvasLayer"]
+wait_time = 9.0
+one_shot = true
+
+[node name="TimeLabel" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Straight" to="Board" method="_on_straight_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Corner" to="Board" method="_on_corner_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Tee" to="Board" method="_on_tee_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Cross" to="Board" method="_on_cross_pressed"]

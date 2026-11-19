@@ -1,0 +1,16 @@
+[gd_scene load_steps=6 format=3 uid="uid://df5ccoux4ahkg"]
+
+[ext_resource type="Script" uid="uid://b6ahjk03g1jiy" path="res://Minigames/Pipes/Pipe_Scripts/start_n_end.gd" id="1_ff2fw"]
+[ext_resource type="Texture2D" uid="uid://bqx83lfp5ji0g" path="res://Minigames/Pipes/Pipe_Assets/start.png" id="2_803vj"]
+[ext_resource type="Texture2D" uid="uid://w1jhsdr4g25m" path="res://Minigames/Pipes/Pipe_Assets/end1.png" id="3_53yg7"]
+[ext_resource type="Texture2D" uid="uid://cree833emtfc3" path="res://Minigames/Pipes/Pipe_Assets/end2.png" id="4_75axg"]
+[ext_resource type="Texture2D" uid="uid://bkd36phfel0tn" path="res://Minigames/Pipes/Pipe_Assets/end3.png" id="5_wecid"]
+
+[node name="StartNEnd" type="Node2D"]
+script = ExtResource("1_ff2fw")
+start_texture = ExtResource("2_803vj")
+end1_texture = ExtResource("3_53yg7")
+end2_texture = ExtResource("4_75axg")
+end3_texture = ExtResource("5_wecid")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

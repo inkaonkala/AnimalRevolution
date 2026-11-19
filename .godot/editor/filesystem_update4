@@ -1,5 +1,7 @@
-res://Scenes/Floors/1_th_floor.tscn
-res://Scenes/Main.tscn
-res://Scripts/main.gd
+res://Scenes/Floors/3_CatFloor.tscn
 res://Scenes/Floors/2th_floor.tscn
-res://Scenes/NPC/Fish.tscn
+res://Scripts/main.gd
+res://Scenes/Floors/1_th_floor.tscn
+res://Scripts/SideBar.gd
+res://Scenes/Main.tscn
+res://Scenes/player.tscn

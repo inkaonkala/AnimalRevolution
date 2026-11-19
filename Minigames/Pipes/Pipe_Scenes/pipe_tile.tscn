@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c00l1ls3spyiw"]
+
+[ext_resource type="Script" uid="uid://cxi0ircwrrv0" path="res://Minigames/Pipes/Pipe_Scripts/PipeLine.gd" id="1_6rvd5"]
+[ext_resource type="Texture2D" uid="uid://meem07rsf6g" path="res://Minigames/Pipes/Pipe_Assets/pipesforpipes.png" id="2_kjl11"]
+
+[node name="PipeTile" type="Node2D"]
+script = ExtResource("1_6rvd5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_kjl11")
+region_enabled = true

@@ -58,6 +58,8 @@ var face_icons := {
 	"neutral": preload("res://Assets/characters/neutral.png")
 }
 
+func update_floor_label(floor_name: String) -> void:
+	$FloorLabel.text = floor_name
 
 func update_inventory_ui(inventory: Dictionary, item_order: Array) -> void:
 	for slot in inv_slots:

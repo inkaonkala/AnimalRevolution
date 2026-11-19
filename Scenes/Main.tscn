@@ -155,6 +155,17 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 
+[node name="FloorLabel" type="Label" parent="CanvasSideBar"]
+z_index = 21
+z_as_relative = false
+anchors_preset = -1
+offset_left = 1450.0
+offset_top = 280.0
+offset_right = 1490.0
+offset_bottom = 303.0
+scale = Vector2(4, 4)
+text = "test"
+
 [node name="FloorContainer" type="Node" parent="."]
 
 [node name="Rooftop" parent="FloorContainer" instance=ExtResource("4_h1m7h")]
