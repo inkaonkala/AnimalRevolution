@@ -269,6 +269,7 @@ offset_left = -8.0
 offset_top = 37.5
 offset_right = 5.5
 offset_bottom = 50.5
+flat = true
 
 [node name="ItemBox" parent="." instance=ExtResource("13_frkhe")]
 position = Vector2(956, 86)

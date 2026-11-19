@@ -10,3 +10,4 @@ res://Scripts/talk_box.gd
 res://Scripts/signals/DialogueManager.gd
 res://Scripts/animals/AnimalBase.gd
 res://Scenes/NPC/Dog.tscn
+res://Scenes/Floors/Rooftop.tscn
