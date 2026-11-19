@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b68r2scjeqgfc"]
+[gd_scene load_steps=21 format=3 uid="uid://b68r2scjeqgfc"]
 
 [ext_resource type="Script" uid="uid://uux8owbv5jwo" path="res://Scripts/main.gd" id="1_grg3l"]
 [ext_resource type="PackedScene" uid="uid://b1phauu4lt1e8" path="res://Scenes/player.tscn" id="2_frkhe"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://cc61q1k4rn6ai" path="res://Scenes/Floors/1_th_floor.tscn" id="14_0sclb"]
 [ext_resource type="AudioStream" uid="uid://dlpdqel2riu5p" path="res://Assets/Sounds/elevatori.mp3" id="17_346fj"]
 [ext_resource type="AudioStream" uid="uid://5cpvfs364ojq" path="res://Assets/Sounds/grand_project-elegant-background-347075.mp3" id="18_0sclb"]
+[ext_resource type="PackedScene" uid="uid://cma58rwxhuois" path="res://Scenes/TalkBox.tscn" id="20_sxkr1"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_grg3l")
@@ -158,7 +159,6 @@ offset_bottom = 23.0
 [node name="FloorLabel" type="Label" parent="CanvasSideBar"]
 z_index = 21
 z_as_relative = false
-anchors_preset = -1
 offset_left = 1450.0
 offset_top = 280.0
 offset_right = 1490.0
@@ -284,6 +284,8 @@ stream = ExtResource("17_346fj")
 [node name="MainMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("18_0sclb")
 volume_db = -10.948
+
+[node name="TalkBox" parent="." instance=ExtResource("20_sxkr1")]
 
 [connection signal="pressed" from="CanvasHints/ElevatorPop/Sprite2D/RoofTop" to="." method="_on_roof_top_pressed"]
 [connection signal="pressed" from="CanvasHints/ElevatorPop/Sprite2D/floorFive" to="." method="_on_floor_five_pressed"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b4vmme7x17pi8"]
 
 [ext_resource type="Texture2D" uid="uid://dmg6lue4odvev" path="res://Assets/characters/turtle1.png" id="1_45buw"]
-[ext_resource type="Script" uid="uid://djnvwtlpqxj8j" path="res://Scripts/turtle.gd" id="1_wwt0p"]
+[ext_resource type="Script" uid="uid://djnvwtlpqxj8j" path="res://Scripts/animals/turtle.gd" id="1_wwt0p"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r5u08"]
 radius = 27.0

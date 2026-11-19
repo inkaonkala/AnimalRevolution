@@ -14,6 +14,8 @@ extends Node2D
 @onready var main_music: AudioStreamPlayer2D = $MainMusic
 #var current_open_box = null
 
+@onready var talk_box = $TalkBox
+
 var spawn_from := "first"
 var near_elevator := false
 

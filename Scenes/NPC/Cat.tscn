@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cubpskpjbnhkq"]
 
-[ext_resource type="Script" uid="uid://o4sds6lhmych" path="res://Scripts/cat.gd" id="1_6rxiq"]
+[ext_resource type="Script" uid="uid://o4sds6lhmych" path="res://Scripts/animals/cat.gd" id="1_6rxiq"]
 [ext_resource type="Texture2D" uid="uid://c7ckg5gn4750x" path="res://Assets/characters/cat1.png" id="1_syt6j"]
 [ext_resource type="AudioStream" uid="uid://bhy2aresmq8jn" path="res://Assets/Sounds/cutie_cat.mp3" id="3_4wvxi"]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c0kcdv4ownhlr"]
 
-[ext_resource type="Script" uid="uid://8ubb1ud8l8ne" path="res://Scripts/fish.gd" id="1_rd0ak"]
+[ext_resource type="Script" uid="uid://8ubb1ud8l8ne" path="res://Scripts/animals/fish.gd" id="1_rd0ak"]
 [ext_resource type="Texture2D" uid="uid://bw36we6h6xrrm" path="res://Assets/characters/aqua.png" id="2_rd0ak"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rd0ak"]

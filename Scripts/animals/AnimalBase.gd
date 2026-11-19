@@ -5,6 +5,7 @@ signal emotion_hadler
 
 @export var species := "animal"
 @export var intro_lines: Array[String] = []
+@export var portrait_texture: Texture2D
 
 @onready var talk_bubble: Label = $Label
 
@@ -22,10 +23,15 @@ func _process(_delta: float) -> void:
 	if not player_near or is_talking:
 		return
 	if Input.is_action_just_pressed("interact"):
+		is_talking = true
+		
 		if should_first_meet():
 			await first_meeting()
 		else:
 			await talk()
+		
+		DialogueManager.close()
+		is_talking = false
 			
 
 func on_body_enter(body: Node) -> void:
@@ -35,24 +41,26 @@ func on_body_enter(body: Node) -> void:
 func on_body_exit(body: Node) -> void:
 	if body.name == "Player":
 		player_near = false
-		hide_talk_bubble()
+	#	hide_talk_bubble()
 
 func hide_talk_bubble() -> void:
 	talk_bubble.visible = false
 	is_talking = false
 	
+#func say_this(text: String) -> void:
+#	if is_talking:
+#		return
+#	is_talking = true
+#	talk_bubble.text = text
+#	talk_bubble.visible = true
+	
+#	await get_tree().create_timer(2).timeout
+	
+#	talk_bubble.visible = false
+#	is_talking = false
 func say_this(text: String) -> void:
-	if is_talking:
-		return
-	is_talking = true
-	talk_bubble.text = text
-	talk_bubble.visible = true
-	
-	await get_tree().create_timer(2).timeout
-	
-	talk_bubble.visible = false
-	is_talking = false
-	
+	await DialogueManager.speak(text, portrait_texture)
+
 func should_first_meet() -> bool:
 	return not has_talked
 	

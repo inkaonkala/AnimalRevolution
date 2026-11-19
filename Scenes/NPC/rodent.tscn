@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://duo6smjq7kw2j"]
 
-[ext_resource type="Script" uid="uid://by3xxcvnfwxlp" path="res://Scripts/rodent.gd" id="1_ni7lr"]
+[ext_resource type="Script" uid="uid://by3xxcvnfwxlp" path="res://Scripts/animals/rodent.gd" id="1_ni7lr"]
 [ext_resource type="Texture2D" uid="uid://cfc8uuyhdmont" path="res://Assets/characters/bunny2.png" id="2_gb78n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xlsn"]

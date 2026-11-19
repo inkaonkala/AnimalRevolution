@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://c104nexrkrtat"]
 
-[ext_resource type="Script" uid="uid://c3u34a06chl7u" path="res://Scripts/hamster.gd" id="1_s70uv"]
+[ext_resource type="Script" uid="uid://c3u34a06chl7u" path="res://Scripts/animals/hamster.gd" id="1_s70uv"]
 [ext_resource type="Texture2D" uid="uid://bhk3r8wh3kv44" path="res://Assets/characters/hamster.png" id="1_ts32c"]
 [ext_resource type="PackedScene" uid="uid://hm3q3v5kw6kc" path="res://Scenes/PickUpStuff.tscn" id="2_n55pr"]
 [ext_resource type="Texture2D" uid="uid://dtttek43xqfd" path="res://Assets/characters/hamster3.png" id="4_i0cjy"]

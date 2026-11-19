@@ -5,3 +5,8 @@ res://Scenes/Floors/1_th_floor.tscn
 res://Scripts/SideBar.gd
 res://Scenes/Main.tscn
 res://Scenes/player.tscn
+res://Scenes/TalkBox.tscn
+res://Scripts/talk_box.gd
+res://Scripts/signals/DialogueManager.gd
+res://Scripts/animals/AnimalBase.gd
+res://Scenes/NPC/Dog.tscn
