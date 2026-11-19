@@ -11,3 +11,4 @@ res://Scripts/signals/DialogueManager.gd
 res://Scripts/animals/AnimalBase.gd
 res://Scenes/NPC/Dog.tscn
 res://Scenes/Floors/Rooftop.tscn
+res://Scenes/Floors/5_DogFloor.tscn
