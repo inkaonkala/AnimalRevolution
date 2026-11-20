@@ -1,14 +1,1 @@
 res://Scenes/Floors/3_CatFloor.tscn
-res://Scenes/Floors/2th_floor.tscn
-res://Scripts/main.gd
-res://Scenes/Floors/1_th_floor.tscn
-res://Scripts/SideBar.gd
-res://Scenes/Main.tscn
-res://Scenes/player.tscn
-res://Scenes/TalkBox.tscn
-res://Scripts/talk_box.gd
-res://Scripts/signals/DialogueManager.gd
-res://Scripts/animals/AnimalBase.gd
-res://Scenes/NPC/Dog.tscn
-res://Scenes/Floors/Rooftop.tscn
-res://Scenes/Floors/5_DogFloor.tscn
