@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://d1jsgvyolfx1a" path="res://Assets/characters/human_sleep.png" id="7_2g8k7"]
 [ext_resource type="Texture2D" uid="uid://crgjm201l3m48" path="res://Assets/RoomNDeco/Deco/bathroom/bathroom1.png" id="7_r7dl1"]
 [ext_resource type="Texture2D" uid="uid://c84f6ly8b2ygl" path="res://Assets/characters/human_captured.png" id="8_2rgad"]
-[ext_resource type="Texture2D" uid="uid://c3gbhwg337t38" path="res://Assets/RoomNDeco/Deco/furniture/furniture1.png" id="8_nqr7x"]
+[ext_resource type="Texture2D" uid="uid://c3gbhwg337t38" path="res://Assets/Sheets/furniture1.png" id="8_nqr7x"]
 [ext_resource type="Texture2D" uid="uid://b145sp8tradn4" path="res://Assets/characters/human_tagged.png" id="9_66ty1"]
 [ext_resource type="Texture2D" uid="uid://cfgf6b4gxkuod" path="res://Assets/RoomNDeco/Deco/kitchen/kitchen1.png" id="9_msvxh"]
 [ext_resource type="PackedScene" uid="uid://d1jk0i0cnkefw" path="res://Scenes/InteractionTile.tscn" id="12_h4037"]

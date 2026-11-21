@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3gbhwg337t38"
-path="res://.godot/imported/furniture1.png-c9fba2725bfb61e73c7eb16a77b1e99c.ctex"
+uid="uid://qo4cvvs4u5jl"
+path="res://.godot/imported/dogmore1.png-775462ca1a238264ec27dd31088a47e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/RoomNDeco/Deco/furniture/furniture1.png"
-dest_files=["res://.godot/imported/furniture1.png-c9fba2725bfb61e73c7eb16a77b1e99c.ctex"]
+source_file="res://Assets/Sheets/dogmore1.png"
+dest_files=["res://.godot/imported/dogmore1.png-775462ca1a238264ec27dd31088a47e1.ctex"]
 
 [params]
 
